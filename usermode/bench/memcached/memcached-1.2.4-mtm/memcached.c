@@ -2494,16 +2494,19 @@ static int server_socket(const int port, const bool is_udp) {
     addr.sin_family = AF_INET;
     addr.sin_port = htons(port);
     addr.sin_addr = settings.interf;
-    if (bind(sfd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
+
+    if (bind(sfd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {  // <- Problematic
         perror("bind()");
         close(sfd);
         return -1;
     }
+
     if (!is_udp && listen(sfd, 1024) == -1) {
         perror("listen()");
         close(sfd);
         return -1;
     }
+
     return sfd;
 }
 
@@ -2688,7 +2691,7 @@ static void usage(void) {
            "-P <file>     save PID in <file>, only used with -d option\n"
            "-f <factor>   chunk size growth factor, default 1.25\n"
            "-n <bytes>    minimum space allocated for key+value+flags, default 48\n"
-	   "-x            enable trace (default:disable)\n");
+           "-x            enable trace (default:disable)\n");
 #ifdef USE_THREADS
     printf("-t <num>      number of threads to use, default 4\n");
 #endif
@@ -2800,6 +2803,16 @@ static void sigint_handler(const int sig) {
 }
 
 int main (int argc, char **argv) {
+
+// This is hell. 
+// We have to manually call the mcore initialization function
+// when statically linked
+// instead count on the __attribute__((constructor)) function 
+
+#ifndef _D_DYN_LINK_FLAG
+    mnemosyne_init_global();
+#endif
+
     int c, is_enable_trace = 0;
     struct in_addr addr;
     bool lock_memory = false;

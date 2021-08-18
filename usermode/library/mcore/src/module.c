@@ -53,6 +53,7 @@
 #include "list.h"
 #include "debug.h"
 #include <pm_instr.h>
+#include "segment.h"
 
 static m_result_t persistent_shdr_open(char *module_path, uint64_t module_inode, uintptr_t module_start, module_dsr_t *module_dsr);
 
@@ -220,6 +221,10 @@ persistent_shdr_close(module_dsr_t *module_dsr)
  *
  * \param module_dsr_listp should point to the head of the list. This structure will
  *  be written with the list of modules which should be loaded in this address space.
+ *
+ * This is hell. 
+ * You need to assume that the machines has /proc mounted to run this correctly
+ * Or you will have segmentation fault without any hints
  */
 m_result_t 
 m_module_create_module_dsr_list(struct list_head *module_dsr_listp)
@@ -232,7 +237,7 @@ m_module_create_module_dsr_list(struct list_head *module_dsr_listp)
 	uint64_t  start, end, inode, foo;
 	char      prev_mapname[M_MODULE_PATH_MAX];
 	module_dsr_t *module_dsr = NULL;
-	prev_mapname[0] = '\0';  /* Without it we get undefined behavior for strcmp() below */
+
 	
 	/* Get our PID and build the name of the link in /proc */
 	pid = getpid();

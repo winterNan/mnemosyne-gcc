@@ -63,8 +63,6 @@
 #define SEGMENTS_DIR mcore_runtime_settings.segments_dir
 
 
-#define M_DEBUG_SEGMENT 1
-
 m_segtbl_t m_segtbl;
 
 
@@ -137,7 +135,6 @@ create_backing_store(char *file, unsigned long long size)
 	int      fd;
 	unsigned long long  roundup_size;
 	char     buf[1]; 
-	buf[0] = 0;        /* Keeps valgrind happy by writting a well defined byte */
 	
 	fd = open(file, O_RDWR|O_CREAT|O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd < 0) {
@@ -736,7 +733,8 @@ segment_create_sections(m_segtbl_t *segtbl)
 
 	rv = m_module_create_module_dsr_list(&module_dsr_list);
 
-	list_for_each_entry(module_dsr, &module_dsr_list, list) {
+	list_for_each_entry(module_dsr, &module_dsr_list, list) { // <--- Problematic
+
 		M_DEBUG_PRINT(M_DEBUG_SEGMENT, "module_path = %s\n", module_dsr->module_path);
 		M_DEBUG_PRINT(M_DEBUG_SEGMENT, "module_id   = %lu\n", module_dsr->module_inode);
 

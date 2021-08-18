@@ -17,7 +17,10 @@
 #ifndef _ALPS_COMMON_LOG_H_
 #define _ALPS_COMMON_LOG_H_
 
-#define BOOST_LOG_DYN_LINK 1 // necessary when linking the boost_log library dynamically
+// This is hell 
+// #ifdef _DYN_LINK_FLAG
+// #define BOOST_LOG_DYN_LINK 1 // necessary when linking the boost_log library dynamically
+// #endif
  
 // trivial severity levels:
 //    trace,

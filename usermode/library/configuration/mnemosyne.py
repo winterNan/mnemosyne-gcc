@@ -8,7 +8,6 @@ from SCons.Script import ARGUMENTS
 from SCons.Variables import Variables, EnumVariable, BoolVariable
 import helper
 
-
 class Environment(SCons.Environment.Environment):
 	"""
 		A specialization of the SCons Environment class which does some particular

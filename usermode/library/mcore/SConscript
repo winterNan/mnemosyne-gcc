@@ -7,7 +7,9 @@ Import('mainEnv')
 buildEnv = configuration.mcore.Environment(mainEnv)
 
 buildEnv.Append(CCFLAGS = ' -DHAVE_CONFIG_H -pthread -D_GNU_SOURCE -march=native -w -fno-omit-frame-pointer')
-buildEnv.Append(LINKFLAGS = ' -T '+ buildEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
+
+if mainEnv['STATIC_LINK'] == False :
+  buildEnv.Append(LINKFLAGS = ' -T '+ buildEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
 
 buildEnv.Append(CPPPATH = ['#library/atomic_ops'])
 buildEnv.Append(CPPPATH = ['#library/common'])

@@ -10,7 +10,7 @@ buildEnv = configuration.mtm.Environment(mainEnv, mainEnv['BUILD_CONFIG_NAME'])
 # atomic intrinsics such as __sync_add_and_fetch_4, which are not available
 # in the version of ICC we use. We would like to fix this issue.
 
-buildEnv.Append(CCFLAGS = ' -march=native -fPIC -w -fno-omit-frame-pointer ')
+buildEnv.Append(CCFLAGS = ' -march=native -fPIC -w -fno-omit-frame-pointer')
 buildEnv.Append(ASFLAGS = ' -DHAVE_CONFIG_H ')
 buildEnv.Append(CPPPATH = ['#library/atomic_ops'])
 buildEnv.Append(CPPPATH = ['#library/common'])

@@ -1,24 +1,29 @@
-# Mnemosyne
+#MNEMOSYNE
 
-### Mnemosyne: Lightweight Persistent Memory (PM)
+###Mnemosyne: Lightweight Persistent Memory
+Haris Volos, Andres Jaan Tack and Michael M. Swift. ASPLOS 2012
 
 Mnemosyne provides a simple interface for programming with persistent 
-memory. Programmers declare global persistent data with the keyword 
+memory. Mnemosyne addresses two challenges: how to create and manage such 
+memory, and how to ensure consistency in the presence of failures. Without 
+additional mechanisms, a system failure may leave data structures in SCM in 
+an invalid state, crashing the program the next time it starts.
+
+In Mnemosyne, programmers declare global persistent data with the keyword 
 persistent or allocate it dynamically. Mnemosyne provides primitives for 
 directly modifying persistent variables and supports consistent updates 
-through a lightweight transaction mechanism. 
+through a lightweight transaction mechanism. Compared to past work on 
+disk-based persistent memory, Mnemosyne is much lighter weight, as it can 
+store data items as small as a word rather than a virtual memory page. In 
+tests emulating the performance characteristics of forthcoming SCMs, we 
+find that Mnemosyne provides a 20--280 percent performance increase for 
+small data sizes over alternative persistence strategies, such as 
+Berkeley DB or Boost serialization that are designed for disks.
 
-### Authors:
-
-* Haris Volos   <hvolos@cs.wisc.edu>
-* Andres Jaan Tack   <tack@cs.wisc.edu>
-* Sanketh Nalli <nalli@wisc.edu>
-
-### Dependencies:
+#DEPENDENCIES:
 
 * SCons: A software construction tool
-* GCC 6.2.1 or above
-* GLIBC 2.19 or above
+* Preferable, GCC 6.2.1 and above 
 * libconfig
 ```
 	Fedora : $ dnf install libconfig-devel.x86_64 libconfig.x86_64
@@ -38,32 +43,7 @@ through a lightweight transaction mechanism.
 	- The heap will be placed in segments_dir defined in mnemosyne.ini
 	- Please ensure you have at least 1.00 GB of space for the heap.
 
-* ALPS persistent memory allocator
-```
-ALPS Dependencies (on Ubuntu) :
-	cmake
-    	libattr1-dev
-    	libboost-all-dev
-    	libevent-dev
-    	libnuma1
-    	libnuma-dev
-    	libyaml-cpp-dev
-	
-Install the above dependencies and then type the commands below
-at your terminal. Please find equivalent packages for your 
-flavor of Linux. 
-
-	$ cd usermode/library/pmalloc/include/alps
-	$ mkdir build
-	$ cd build
-	$ cmake .. -DTARGET_ARCH_MEM=CC-NUMA -DCMAKE_BUILD_TYPE=Release
-	$ make
-	
-Learn more here on how to compile alps : 
-github.com/snalli/mnemosyne-gcc/tree/alps/usermode/library/pmalloc/include/alps
-```
-
-### Build Mnemosyne:
+#TO BUILD :
 ```
 $ cd usermode
 $ scons [--build-stats] [--config-ftrace] [--verbose]
@@ -71,7 +51,7 @@ $ scons [--build-stats] [--config-ftrace] [--verbose]
 * scons -h <For more options>
 ```
 
-### Run a simple example:
+#TO BUILD AND RUN A SIMPLE EXAMPLE:
 
 * Simple example
 	- Read and modify value of persistent flag across executions
@@ -101,22 +81,27 @@ persistent ptr & cl_mask = 0x100ba0035fc0
 (READER) persistent ptr =0x100ba0035fc0, sz=32
 ```
 
-### Run a complex benchmark:
+#TO BUILD AND RUN A COMPLEX BENCHMARK:
 
-### Build Vacation:
+##TO BUILD VACATION:
 ```
 $ cd usermode
 $ scons --build-bench=stamp-kozy [--verbose]
 ```
+##TO BUILD MEMCACHED:
+```
+$ scons --build-bench=memcached  [--verbose]
+* Check run_*.sh scripts to learn more on how to run memcached.
+```
 
-### Initialize Vacation:
+##TO INITIALIZE VACATION:
 ```
 $ cd usermode
 $ export LD_LIBRARY_PATH=`pwd`/library:$LD_LIBRARY_PATH
 $ ./build/bench/stamp-kozy/vacation/vacation -c0 -n1 -r65536 -q100
 ```
 
-### Run Vacation:
+##TO RUN VACATION:
 ```
 $ cd usermode
 $ export LD_LIBRARY_PATH=`pwd`/library:$LD_LIBRARY_PATH
@@ -157,20 +142,23 @@ Thread-1 finished 500 queries
 done.Time = 0.127621
 Deallocating memory... done.
 ```
-### Build Memcached:
-```
-$ scons --build-bench=memcached  [--verbose]
-* Check run_*.sh scripts to learn more on how to run memcached.
-```
 
-### Documentation:
+##DOCUMENTATION:
 For further information please refer to the Doxygen generated documentation.
 Running doxygen will create documentation under mnemosyne/doc/html
 
 $ cd ./usermode/..
 $ doxygen
 
-### License:
+
+##AUTHORS:
+
+* Haris Volos   <hvolos@cs.wisc.edu>
+* Andres Jaan Tack   <tack@cs.wisc.edu>
+* Sanketh Nalli <nalli@wisc.edu>
+
+
+##LICENSE:
 
 GPL-V2
 See license file under each module

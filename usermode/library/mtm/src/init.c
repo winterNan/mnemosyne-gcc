@@ -138,7 +138,7 @@ init_global()
 	if (s != NULL) {
 		cm_threshold = (int)strtol(s, NULL, 10);
 	} else {
-		cm_threshold = CM_THRESHOLD_DEFAULT;
+		cm_threshold = CM_THRESHOLD;
 	}	
 	PRINT_DEBUG("\tCM_THRESHOLD=%d\n", cm_threshold);
 #endif /* CM == CM_PRIORITY */

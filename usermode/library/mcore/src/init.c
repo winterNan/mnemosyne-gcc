@@ -69,7 +69,7 @@ do_global_init(void)
 		return;
 	}
 	
-	#ifdef _ENABLE_TRACE
+#ifdef _ENABLE_TRACE
         gettimeofday(&glb_time, NULL);          
         glb_tv_sec  = glb_time.tv_sec;
         glb_tv_usec = glb_time.tv_usec;
@@ -81,7 +81,7 @@ do_global_init(void)
 	/* MAZ_TBUF_SZ influences how often we compress and hence the overall execution speed. */
 	if(!tbuf)
 		M_WARNING("Failed to allocate trace buffer. Abort now.");
-	#elif _ENABLE_FTRACE
+#elif _ENABLE_FTRACE
         int debug_fd = -1, ret = 0;
         assert(trace_marker == -1);
         assert(tracing_on == -1);
@@ -121,9 +121,9 @@ do_global_init(void)
 fail:
 	if (ret < 0)
 		M_WARNING("failed to initialize tracing. need to be root. err = %d.\n",ret);
-	#else
+#else
         pthread_spin_init(&tot_epoch_lock, PTHREAD_PROCESS_SHARED);
-	#endif
+#endif
 		
 
 	pcm_storeset = pcm_storeset_get ();

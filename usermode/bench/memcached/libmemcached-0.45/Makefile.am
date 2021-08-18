@@ -34,7 +34,12 @@ TEST_DOCS=
 if BUILD_DOCS
 SUBDIRS = docs
 TEST_DOCS+=test-docs
+
+AM_CFLAGS +=-static -static-libgcc
+AM_LDFLAGS += -all-static
+
 endif
+
 
 test-docs:
 	(cd docs && $(MAKE) test-docs)
@@ -93,6 +98,7 @@ lcov-clean: clean
 	find . -name '*.gcno' | xargs rm -f
 	find . -name '*.gcda' | xargs rm -f
 
-CLEANFILES+= config/top.h
+# Why adding this?
+# CLEANFILES+= config/top.h
 
 

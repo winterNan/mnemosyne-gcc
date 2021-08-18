@@ -35,6 +35,13 @@ project (libbacktrace)
 
 set (BACKTRACE_SUPPORTED 1)
 
+if(BUILD_SHARED_LIBS)
+    add_definitions (-D_DYN_LINK_FLAG) 
+    add_definitions (-DBOOST_LOG_DYN_LINK)
+else()
+    add_definitions (-static -static-libgcc)
+endif()
+
 include (CheckSymbolExists)
 check_symbol_exists (_Unwind_Backtrace unwind.h HAVE_BACKTRACE)
 check_symbol_exists (_Unwind_GetIPInfo unwind.h HAVE_GETIPINFO)
@@ -104,6 +111,7 @@ else ()
 endif ()
 
 add_definitions (-D_GNU_SOURCE)
+
 set (CMAKE_REQUIRED_DEFINITIONS ${CMAKE_REQUIRED_DEFINITIONS} -D_GNU_SOURCE)
 check_symbol_exists (dl_iterate_phdr link.h HAVE_DL_ITERATE_PHDR)
 

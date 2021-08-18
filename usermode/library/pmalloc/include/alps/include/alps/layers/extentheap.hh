@@ -88,18 +88,14 @@ private:
         nvextent_ = nvexheap->block(interval_.start());
     }
 
-    void mark_alloc(Context& ctx)
+    void mark_alloc()
     {
-        if (ctx.do_nv) {
-            nvextentheader_->mark_alloc(interval_.len());
-        }
+        nvextentheader_->mark_alloc(interval_.len());
     }
 
-    void mark_free(Context& ctx)
+    void mark_free()
     {
-        if (ctx.do_nv) {
-            nvextentheader_->mark_free();
-        }
+        nvextentheader_->mark_free();
     }
     
     ExtentHeap<Context, TPtr, PPtr>* exheap_;
@@ -177,7 +173,7 @@ public:
         ExtentInterval exintv;
         if (fsmap_.alloc_extent(size_nblocks, &exintv) == 0) {
             *ex = Extent<Context, TPtr, PPtr>(this, exintv.start(), exintv.len());
-            ex->mark_alloc(ctx);
+            ex->mark_alloc();
             LOG(info) << "Allocated extent: " << ex;
             return kErrorCodeOk;
         }
@@ -186,8 +182,8 @@ public:
 
     ErrorCode free_extent(Context& ctx, Extent<Context, TPtr, PPtr>& ex)
     {
-        fsmap_.free_extent(ctx, ex.interval());
-        ex.mark_free(ctx);
+        fsmap_.free_extent(ex.interval());
+        ex.mark_free();
         return kErrorCodeOk;
     }
 
@@ -300,7 +296,7 @@ private:
 private:
     pthread_mutex_t mutex_;
     TPtr<nvExtentHeap<Context, TPtr, PPtr>> nvexheap_;
-    FreeSpaceMap<Context, TPtr> fsmap_;        
+    FreeSpaceMap<TPtr> fsmap_;        
 };
 
 

@@ -34,7 +34,16 @@ add_subdirectory(common)
 add_subdirectory(layers)
 
 get_property(TMP_ALL_ALPS_SRC GLOBAL PROPERTY ALL_ALPS_SRC)
-add_library(alps SHARED ${TMP_ALL_ALPS_SRC})
+
+# For static linking
+
+if(BUILD_SHARED_LIBS)
+	add_definitions(-D_DYN_LINK_FLAG) 
+	add_definitions(-DBOOST_LOG_DYN_LINK)
+	add_library(alps SHARED ${TMP_ALL_ALPS_SRC})
+else()
+	add_library(alps STATIC ${TMP_ALL_ALPS_SRC})
+endif()
 
 target_link_libraries(alps numa backtrace boost_serialization boost_log boost_system boost_program_options boost_filesystem yaml-cpp)
 target_link_libraries(alps ${ARCH_LIBS})

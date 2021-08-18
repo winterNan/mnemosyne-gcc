@@ -31,7 +31,7 @@
 
 namespace alps {
 
-template<typename Context, template<typename> class TPtr>
+template<template<typename> class TPtr>
 class FreeSpaceMap: public ExtentMap {
 public:
     bool exists_extent(size_t size_nblocks)
@@ -54,11 +54,9 @@ public:
         return -1;
     }
 
-    void free_extent(Context& ctx, const ExtentInterval& ex)
+    void free_extent(const ExtentInterval& ex)
     {
-        if (ctx.do_v) {
-            insert(ex);
-        }
+        insert(ex);
     }
 };
 

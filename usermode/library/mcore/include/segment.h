@@ -66,6 +66,12 @@
 #define SGTB_VALID_ENTRY              0x4
 #define SGTB_VALID_DATA               0x8
 
+// This is hell. 
+// Originally defined in segment.c
+// WTF???
+
+#define M_DEBUG_SEGMENT 1
+
 typedef struct m_segtbl_entry_s m_segtbl_entry_t;
 typedef struct m_segidx_entry_s m_segidx_entry_t;
 typedef struct m_segidx_s       m_segidx_t;

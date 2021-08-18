@@ -31,8 +31,7 @@ inline static ThreadHeap* getThreadHeap (void)
         return threadheap;
     }
     Heap* heap = getHeap();
-    threadheap = heap->threadheap();
-    return threadheap;
+    return heap->threadheap();
 }
 
 extern "C"

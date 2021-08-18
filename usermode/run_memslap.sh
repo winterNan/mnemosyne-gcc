@@ -1,5 +1,5 @@
 #!/bin/bash
-#meant to be run from mnemosyne-gcc/usermode/
+
 PWD=`pwd`
 export LD_LIBRARY_PATH=$PWD/library/:$LD_LIBRARY_PATH
 MEMCACHED_RUN_CNF="$PWD/run.cnf"

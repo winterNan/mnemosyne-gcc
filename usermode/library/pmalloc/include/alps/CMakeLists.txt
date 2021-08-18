@@ -22,8 +22,11 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 include(cmake/internal_utils.cmake)
 
-# compiler flags for all build types
-set(CMAKE_CXX_FLAGS "-std=c++11")
+if(BUILD_SHARED_LIBS)
+  set(CMAKE_CXX_FLAGS "-std=c++11 -D_DYN_LINK_FLAG -DBOOST_LOG_DYN_LINK")
+else()
+  set(CMAKE_CXX_FLAGS "-std=c++11 -static -static-libgcc")
+endif()
 
 # compiler flags for different build types
 set(CMAKE_CXX_FLAGS_DEBUG "-Wall -O0 -g")

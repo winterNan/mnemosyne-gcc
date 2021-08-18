@@ -2,10 +2,11 @@ Import('mtmLibrary')
 Import('mcoreLibrary')
 Import('pmallocLibrary')
 Import('benchEnv')
+Import('mainEnv')
 
 # $(CC) $(CCFLAGS) $(CPPPATH)
-benchEnv.Append(CCFLAGS = ' -m64 ')
-benchEnv.Append(CCFLAGS = ' -fgnu-tm -fPIC ')
+benchEnv.Append(CCFLAGS = ' -m64')
+benchEnv.Append(CCFLAGS = ' -fgnu-tm -fPIC')
 
 # The order of including the files also matters.
 # lib/common appears on the right in the cmd before
@@ -16,26 +17,55 @@ benchEnv.Append(CPPPATH = ['#library/pmalloc/include'])
 benchEnv.Append(CPPPATH = ['#library/common'])
 
 # (CC) $(LINKFLAGS) $(RPATH)
-benchEnv.Append(LINKFLAGS = ' -T '+ benchEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
 
-# The order of linking matters. Always link the libraries in the order below:
-# mtm, mcore, pmalloc, alps, pvar.
-# pthread can be anywhere.
-# The order of linking in the command line is right to left. The libraries on
-# the right are linked first followed by the ones of their left. This translates
-# to the order below. alps appears on the right and gets linked in first followed
-# by pthread, pmalloc, mcore and mtm at the end.
-benchEnv.Append(LIBS = [mtmLibrary])
-benchEnv.Append(LIBS = [mcoreLibrary])
-benchEnv.Append(LIBS = [pmallocLibrary])
-benchEnv.Append(LIBS = ['pthread'])
-benchEnv.Append(LIBS = ['alps'])
-benchEnv.Append(LIBPATH = ['#library/pmalloc/include/alps/build/src'])
+if mainEnv['STATIC_LINK'] == False :
+	benchEnv.Append(LINKFLAGS = ' -T '+ benchEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
 
-# RPATH is the path for library search during runtime.
-# It is baked into the executable so you don't need the 
-# LD_LIBRARY_PATH crap.
-benchEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src'])
+# Add the following for static linking
+
+if mainEnv['STATIC_LINK'] == False :
+
+	# The order of linking matters. Always link the libraries in the order below:
+	# mtm, mcore, pmalloc, alps, pvar.
+	# pthread can be anywhere.
+	# The order of linking in the command line is right to left. The libraries on
+	# the right are linked first followed by the ones of their left. This translates
+	# to the order below. alps appears on the right and gets linked in first followed
+	# by pthread, pmalloc, mcore and mtm at the end.
+
+	benchEnv.Append(LIBS = [mtmLibrary])
+	benchEnv.Append(LIBS = [mcoreLibrary])
+	benchEnv.Append(LIBS = [pmallocLibrary])
+	benchEnv.Append(LIBS = ['pthread'])
+	benchEnv.Append(LIBS = ['alps'])
+	benchEnv.Append(LIBPATH = ['#library/pmalloc/include/alps/build/src'])
+
+	# RPATH is the path for library search during runtime.
+	# It is baked into the executable so you don't need the 
+	# LD_LIBRARY_PATH crap.
+	benchEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src'])
+
+else:
+
+	benchEnv.Append(LIBS = [mtmLibrary])
+	benchEnv.Append(LIBS = [mcoreLibrary])
+	benchEnv.Append(LIBS = [pmallocLibrary])
+	benchEnv.Append(LIBS = [File('#library/pmalloc/include/alps/build/src/libalps.a')])
+
+	benchEnv.Append(LIBPATH = ['#library/pmalloc/include/alps/build/src'])
+	benchEnv.Append(RPATH = ['library/pmalloc/include/alps/build/src'])
+
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libboost_log_setup.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libboost_log.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libboost_thread.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libboost_system.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libconfig.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/x86_64-linux-gnu/libelf.a')])
+	benchEnv.Append(LIBS = [File('/usr/lib/gcc/x86_64-linux-gnu/5/libstdc++.a')])
+	benchEnv.Append(LIBS = [File('#library/pmalloc/include/alps/build/third-party/libbacktrace/libbacktrace.a')])
+	benchEnv.Append(LIBS = [File('/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/build/library/mtm/libmtm.a')])
+	benchEnv.Append(LIBS = ['z'])
+	benchEnv.Append(LIBS = ['pthread'])
 
 Export('benchEnv')
 

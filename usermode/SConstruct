@@ -24,6 +24,10 @@ AddOption("--test",
            action="store_true", dest="run_tests", 
            default = False,
            help="run tests")
+AddOption("--static-link",
+           action="store_true", dest="static_link", 
+           default = False,
+           help="run tests")
 AddOption('--test-filter',
            action="store", dest='test_filter',
            type='string',
@@ -39,7 +43,7 @@ AddOption('--config-ftrace',
  [DEFAULT : %default]')
 AddOption('--verbose',
            action="store_true", dest='verbose',
-           default = False,
+           default = True,
            help='Set verbosity of compilation messages \
            [DEFAULT : %default]')
 
@@ -65,14 +69,22 @@ option_help = '\n'.join(help_lines[count-1:])
 Help(option_help)
 
 mainEnv = mnemosyne.Environment(None)
-mainEnv['BUILD_LINKAGE'] = "dynamic"
+
+mainEnv['STATIC_LINK'] = GetOption('static_link')
+
+if mainEnv['STATIC_LINK'] == False :
+  mainEnv['BUILD_LINKAGE'] = "dynamic"
+else :
+  mainEnv['BUILD_LINKAGE'] = "static"
+
 mainEnv['BUILD_DEBUG'] = True
 mainEnv['BUILD_STATS'] = GetOption('build_stats')
 mainEnv['BUILD_EXAMPLE'] = GetOption('selected_example')
 mainEnv['BUILD_BENCH'] = GetOption('selected_bench')
 mainEnv['BUILD_CONFIG_NAME'] = GetOption('config_name')
+
 if mainEnv['BUILD_CONFIG_NAME'] is None:
-	mainEnv['BUILD_CONFIG_NAME'] = 'default'
+  mainEnv['BUILD_CONFIG_NAME'] = 'default'
 mainEnv['TEST_FILTER'] = GetOption('test_filter')
 mainEnv['ENABLE_FTRACE'] = GetOption('config_ftrace') 
 mainEnv['VERBOSE'] = GetOption('verbose')
@@ -83,8 +95,12 @@ mainEnv['MY_ROOT_DIR'] = rootDir
 mainEnv['MY_LINKER_DIR'] = os.path.join(rootDir, 'tool/linker')
 
 
-mainEnv['CC'] = 'gcc'
-mainEnv['CXX'] = 'g++'
+if mainEnv['STATIC_LINK'] == False :
+  mainEnv['CC'] = 'gcc -DBOOST_LOG_DYN_LINK -D_DYN_LINK_FLAG -g'
+  mainEnv['CXX'] = 'g++ -DBOOST_LOG_DYN_LINK -D_DYN_LINK_FLAG -g'
+else :
+  mainEnv['CC'] = 'gcc -static -static-libgcc -g ' # -D_M_BUILD_DEBUG
+  mainEnv['CXX'] = 'g++ -static -static-libgcc -g ' # -D_M_BUILD_DEBUG
 
 Export('mainEnv')
 

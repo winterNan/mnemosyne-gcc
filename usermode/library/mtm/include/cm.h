@@ -99,17 +99,17 @@ cm_conflict(mtm_tx_t *tx, volatile mtm_word_t *lock, mtm_word_t *l)
 			}
 		}
 give_up:
-		if (tx->priority < PRIORITY_MAX) {
-			tx->priority++;
-		} else {
-			PRINT_DEBUG("Reached maximum priority\n");
+			if (tx->priority < PRIORITY_MAX) {
+				tx->priority++;
+			} else {
+				PRINT_DEBUG("Reached maximum priority\n");
+			}
+			tx->c_lock = lock;
 		}
-		tx->c_lock = lock;
-	}
 #elif CM == CM_DELAY
-	tx->c_lock = lock;
+		tx->c_lock = lock;
 #endif /* CM == CM_DELAY */
-	return CM_RESTART_LOCKED;
+		return CM_RESTART_LOCKED;
 }
 
 

@@ -1,10 +1,16 @@
 Import('examplesEnv')
+Import('mainEnv')
 
 myEnv = examplesEnv.Clone()
 
 
 if myEnv['BUILD_PVAR'] == True:
-	pvarLibrary = myEnv.SharedLibrary('pvar', 'pvar.c')
+
+	if mainEnv['BUILD_LINKAGE'] == 'dynamic':
+		pvarLibrary = myEnv.SharedLibrary('pvar', 'pvar.c')
+	else:
+		pvarLibrary = myEnv.StaticLibrary('pvar', 'pvar.c')
+
 	Return('pvarLibrary')
 else:
 	sources = Split("""main.c""")

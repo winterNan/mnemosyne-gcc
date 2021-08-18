@@ -23,7 +23,7 @@ if buildEnv['BUILD_STATS'] == True:
 	buildEnv.Append(CCFLAGS = ' -D_M_STATS_BUILD')
 
 CCFLAGS = CCFLAGS + WARNINGS + string.join(DISABLE_WARNINGS, ' ') + ' -fgnu-tm -fpic -fno-omit-frame-pointer'
-CCFLAGS = CCFLAGS + ' -m64 '
+CCFLAGS = CCFLAGS + ' -m64'
 
 buildEnv.Append(CCFLAGS = CCFLAGS)
 buildEnv.Append(CXXFLAGS = CCFLAGS)
@@ -49,7 +49,8 @@ buildEnv.Append(CPPPATH = ['#library/pmalloc/include/alps/include/alps/common'])
 buildEnv.Append(CPPPATH = ['#library/pmalloc/include/alps/include/alps/layers'])
 buildEnv.Append(CPPPATH = ['#library/pmalloc/include/alps/include/alps/pegasus'])
 
-buildEnv.Append(LINKFLAGS = ' -T '+ buildEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
+if mainEnv['STATIC_LINK'] == False :
+	buildEnv.Append(LINKFLAGS = ' -T '+ buildEnv['MY_LINKER_DIR'] + '/linker_script_persistent_segment_m64')
 
 if mainEnv['ENABLE_FTRACE'] == True:
         buildEnv.Append(CCFLAGS = '-D_ENABLE_FTRACE')
@@ -60,7 +61,6 @@ CXX_SRC = Split("""
                 """)
 
 SRC = CXX_SRC
-
 
 if buildEnv['BUILD_LINKAGE'] == 'dynamic':
 	pmallocLibrary = buildEnv.SharedLibrary('pmalloc', SRC)

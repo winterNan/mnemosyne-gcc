@@ -4,6 +4,8 @@ memslap - Load testing and benchmarking tool for memcached
 
 =head1 SYNOPSIS
 
+=encoding utf8
+
   memslap [options]
 
 =head1 DESCRIPTION

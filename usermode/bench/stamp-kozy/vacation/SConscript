@@ -1,8 +1,15 @@
 Import('stampEnv')
+Import('mainEnv')
+
 myEnv = stampEnv.Clone()
 
 if myEnv['BUILD_PVAR'] == True:
-	pvarLibrary = myEnv.SharedLibrary('pvar', 'pvar.c')
+
+	if mainEnv['BUILD_LINKAGE'] == 'dynamic':
+		pvarLibrary = myEnv.SharedLibrary('pvar', 'pvar.c')
+	else:
+		pvarLibrary = myEnv.StaticLibrary('pvar', 'pvar.c')
+
 	Return('pvarLibrary')
 else:
 	# Can we use hash table instead ?

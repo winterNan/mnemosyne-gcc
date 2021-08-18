@@ -498,11 +498,22 @@ termination_handler (int signum)
         fprintf(OUT, "Total non-volatile memory consumption = %llu bytes\n", nv_mem_total);
         fprintf(OUT, "Total volatile memory free()'s        = %lu\n", v_free);
         fprintf(OUT, "Total non-volatile memory free()'s    = %lu\n", nv_free);
+
 	exit(-1);
 }
 
 MAIN(argc, argv)
 {
+
+// This is hell. 
+// We have to manually call the mcore initialization function
+// when statically linked
+// instead count on the __attribute__((constructor)) function 
+
+#ifndef _D_DYN_LINK_FLAG
+    mnemosyne_init_global();
+#endif
+
   struct sigaction new_action, old_action;
 
   /* Set up the structure to specify the new action. */
