@@ -1,0 +1,82 @@
+\hypertarget{classalps_1_1Mappable}{}\section{alps\+:\+:Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$ Class Template Reference}
+\label{classalps_1_1Mappable}\index{alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$@{alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$}}
+
+
+A template mixin class for defining mappable region types.  
+
+
+
+
+{\ttfamily \#include $<$mappable.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classalps_1_1Mappable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for alps\+:\+:Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classalps_1_1Mappable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries T\+Ptr} = typename Pointer\+Impl\+::template T\+Ptr$<$ \hyperlink{classalps_1_1Mappable}{Mappable}, T $>$\hypertarget{classalps_1_1Mappable_acaa8e7c54b38126cd6c25c5ed26fbe87}{}\label{classalps_1_1Mappable_acaa8e7c54b38126cd6c25c5ed26fbe87}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries P\+Ptr} = typename Pointer\+Impl\+::template P\+Ptr$<$ \hyperlink{classalps_1_1Mappable}{Mappable}, T $>$\hypertarget{classalps_1_1Mappable_ac29c1a848f5fae659e2f03296ddc4e8a}{}\label{classalps_1_1Mappable_ac29c1a848f5fae659e2f03296ddc4e8a}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries Z\+Ptr} = typename Pointer\+Impl\+::template Z\+Ptr$<$ \hyperlink{classalps_1_1Mappable}{Mappable}, T $>$\hypertarget{classalps_1_1Mappable_ace436b9205b93077e8b4696b394ccc97}{}\label{classalps_1_1Mappable_ace436b9205b93077e8b4696b394ccc97}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Mappable} (\hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$address\+\_\+space, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$file)\hypertarget{classalps_1_1Mappable_a0dd4c0bbb33fd9268b8459b184440705}{}\label{classalps_1_1Mappable_a0dd4c0bbb33fd9268b8459b184440705}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} ()\hypertarget{classalps_1_1Mappable_a5ae691f7e71cac7cc58155703ef4a5ac}{}\label{classalps_1_1Mappable_a5ae691f7e71cac7cc58155703ef4a5ac}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} ()\hypertarget{classalps_1_1Mappable_a8394bd3c972b7c8d4c98604d71217f25}{}\label{classalps_1_1Mappable_a8394bd3c972b7c8d4c98604d71217f25}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\T\+Ptr$<$ T $>$ {\bfseries base} (Linear\+Addr offset)\hypertarget{classalps_1_1Mappable_abe9367121a591f7b8a351a8a808bd838}{}\label{classalps_1_1Mappable_abe9367121a591f7b8a351a8a808bd838}
+
+\item 
+uintptr\+\_\+t {\bfseries trans} (Linear\+Addr offset)\hypertarget{classalps_1_1Mappable_a3a022abb4190c60948d60bece0188c48}{}\label{classalps_1_1Mappable_a3a022abb4190c60948d60bece0188c48}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Address\+Space}\hypertarget{classalps_1_1Mappable_a4c0de12c4816e1f285ed094ad8c7f9c8}{}\label{classalps_1_1Mappable_a4c0de12c4816e1f285ed094ad8c7f9c8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Region\+Type, class Memory\+Map\+Impl, class Pointer\+Impl$>$\\*
+class alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$}
+
+The Memory\+Map\+Impl class defines the mapping policy that implements mapping of the underlying region file(s) onto the logical address space.
+
+The Pointer\+Impl class defines smart pointer types for naming (addressing) and referencing locations within the region.
+
+There is no notion of a root pointer baked into the A\+PI. However, users may agree on a convention where offset 0x0 represents a root, and instantiate a smart pointer that points to offset 0x0 and use that as a root pointer. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/pegasus/mappable.\+hh\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+# CMake generated Testfile for 
+# Source directory: /home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common
+# Build directory: /home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/build/test/unit/common
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(tmpfs_test_options "/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/build/test/unit/common/test_options")
+set_tests_properties(tmpfs_test_options PROPERTIES  _BACKTRACE_TRIPLES "/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/CMakeLists.txt;29;add_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/CMakeLists.txt;44;__add_alps_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;18;add_alps_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;22;add_common_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;0;")
+add_test(tmpfs_test_os "/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/build/test/unit/common/test_os")
+set_tests_properties(tmpfs_test_os PROPERTIES  _BACKTRACE_TRIPLES "/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/CMakeLists.txt;29;add_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/CMakeLists.txt;44;__add_alps_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;18;add_alps_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;23;add_common_test;/home/yuan/Benchmarks/whisper/mnemosyne-gcc/usermode/library/pmalloc/include/alps/test/unit/common/CMakeLists.txt;0;")

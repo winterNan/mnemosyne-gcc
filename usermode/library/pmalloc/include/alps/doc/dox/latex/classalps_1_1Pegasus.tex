@@ -1,0 +1,107 @@
+\hypertarget{classalps_1_1Pegasus}{}\section{alps\+:\+:Pegasus Class Reference}
+\label{classalps_1_1Pegasus}\index{alps\+::\+Pegasus@{alps\+::\+Pegasus}}
+
+
+\hyperlink{classalps_1_1Pegasus}{Pegasus} environment.  
+
+
+
+
+{\ttfamily \#include $<$pegasus.\+hh$>$}
+
+
+
+Collaboration diagram for alps\+:\+:Pegasus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classalps_1_1Pegasus__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{classalps_1_1Pegasus_acc5a6c8a6a29fb20c52088fa01602c94}{load\+\_\+options} (const char $\ast$config\+\_\+file, bool use\+\_\+system\+\_\+wide\+\_\+conf, bool use\+\_\+environ, \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} $\ast$pegasus\+\_\+options)
+\begin{DoxyCompactList}\small\item\em Loads configuration options from configuration file into object pointed by {\itshape pegasus\+\_\+options}. \end{DoxyCompactList}\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{classalps_1_1Pegasus_a69e9d95ce8c4d350871dea4929fcf53b}{init} (const char $\ast$config\+\_\+file, bool use\+\_\+system\+\_\+wide\+\_\+conf, bool use\+\_\+environ)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classalps_1_1Pegasus}{Pegasus} singleton class by loading configuration options from a file. \end{DoxyCompactList}\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{classalps_1_1Pegasus_a7dd3ac592651ab750897104e6006d310}{init} (const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1Pegasus_a7dd3ac592651ab750897104e6006d310}{}\label{classalps_1_1Pegasus_a7dd3ac592651ab750897104e6006d310}
+
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classalps_1_1Pegasus}{Pegasus} singleton class by loading configuration options from options object {\itshape pegasus\+\_\+options}. \end{DoxyCompactList}\item 
+static \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries create\+\_\+region\+\_\+file} (const char $\ast$pathname, mode\+\_\+t mode, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$$\ast$region\+\_\+file)\hypertarget{classalps_1_1Pegasus_a5dedaa1c31fa7bd9be92e9773b1f5a0a}{}\label{classalps_1_1Pegasus_a5dedaa1c31fa7bd9be92e9773b1f5a0a}
+
+\item 
+static \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open\+\_\+region\+\_\+file} (const char $\ast$pathname, int flags, mode\+\_\+t mode, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$$\ast$region\+\_\+file)\hypertarget{classalps_1_1Pegasus_aa7330693d15beebbf829e296a984a5a7}{}\label{classalps_1_1Pegasus_aa7330693d15beebbf829e296a984a5a7}
+
+\item 
+static \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open\+\_\+region\+\_\+file} (const char $\ast$$\ast$pathnames, int npathnames, int flags, mode\+\_\+t mode, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$$\ast$region\+\_\+file)\hypertarget{classalps_1_1Pegasus_a1674c4a5dbb6b199f629294b7693b8db}{}\label{classalps_1_1Pegasus_a1674c4a5dbb6b199f629294b7693b8db}
+
+\item 
+static \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open\+\_\+region\+\_\+file} (const char $\ast$pathname, int flags, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$$\ast$region\+\_\+file)\hypertarget{classalps_1_1Pegasus_aa9131da83f3334082f097d6cf4126646}{}\label{classalps_1_1Pegasus_aa9131da83f3334082f097d6cf4126646}
+
+\item 
+static \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open\+\_\+region\+\_\+file} (const char $\ast$$\ast$pathnames, int npathnames, int flags, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$$\ast$region\+\_\+file)\hypertarget{classalps_1_1Pegasus_af7e9d5041fe8dd956fb1c16df120ec4e}{}\label{classalps_1_1Pegasus_af7e9d5041fe8dd956fb1c16df120ec4e}
+
+\item 
+static \hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$ {\bfseries address\+\_\+space} ()\hypertarget{classalps_1_1Pegasus_a0994d567bc6c509972d3f92223482445}{}\label{classalps_1_1Pegasus_a0994d567bc6c509972d3f92223482445}
+
+\item 
+static \hyperlink{classalps_1_1RegionFileFactory}{Region\+File\+Factory} $\ast$ {\bfseries region\+\_\+file\+\_\+factory} ()\hypertarget{classalps_1_1Pegasus_a5d35cbc08b21204f62dd47d901a81d44}{}\label{classalps_1_1Pegasus_a5d35cbc08b21204f62dd47d901a81d44}
+
+\item 
+static \hyperlink{classalps_1_1TopologyFactory}{Topology\+Factory} $\ast$ {\bfseries topology\+\_\+factory} ()\hypertarget{classalps_1_1Pegasus_a6959ebba3ef27f5baad94a2aaa25bd52}{}\label{classalps_1_1Pegasus_a6959ebba3ef27f5baad94a2aaa25bd52}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$ {\bfseries address\+\_\+space\+\_\+}\hypertarget{classalps_1_1Pegasus_aa36d35213146588133d73f4de0e049ad}{}\label{classalps_1_1Pegasus_aa36d35213146588133d73f4de0e049ad}
+
+\item 
+static \hyperlink{classalps_1_1RegionFileFactory}{Region\+File\+Factory} $\ast$ {\bfseries region\+\_\+file\+\_\+factory\+\_\+}\hypertarget{classalps_1_1Pegasus_a9adc08b25e2a59f03bf77fc52bfac30a}{}\label{classalps_1_1Pegasus_a9adc08b25e2a59f03bf77fc52bfac30a}
+
+\item 
+static \hyperlink{classalps_1_1TopologyFactory}{Topology\+Factory} $\ast$ {\bfseries topology\+\_\+factory\+\_\+}\hypertarget{classalps_1_1Pegasus_a5c73a1692f85dbfb278ba21f80dab228}{}\label{classalps_1_1Pegasus_a5c73a1692f85dbfb278ba21f80dab228}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A static singleton class that encapsulates a \hyperlink{classalps_1_1Pegasus}{Pegasus} environment 
+
+\subsection{Member Function Documentation}
+\index{alps\+::\+Pegasus@{alps\+::\+Pegasus}!init@{init}}
+\index{init@{init}!alps\+::\+Pegasus@{alps\+::\+Pegasus}}
+\subsubsection[{\texorpdfstring{init(const char $\ast$config\+\_\+file, bool use\+\_\+system\+\_\+wide\+\_\+conf, bool use\+\_\+environ)}{init(const char *config_file, bool use_system_wide_conf, bool use_environ)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Pegasus\+::init (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{config\+\_\+file, }
+\item[{bool}]{use\+\_\+system\+\_\+wide\+\_\+conf, }
+\item[{bool}]{use\+\_\+environ}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classalps_1_1Pegasus_a69e9d95ce8c4d350871dea4929fcf53b}{}\label{classalps_1_1Pegasus_a69e9d95ce8c4d350871dea4929fcf53b}
+A shorthand for \hyperlink{classalps_1_1Pegasus_acc5a6c8a6a29fb20c52088fa01602c94}{load\+\_\+options()} followed by init(\+Pegasus\+Options$\ast$).
+
+Load configurations options in the order described under load\+\_\+options. \index{alps\+::\+Pegasus@{alps\+::\+Pegasus}!load\+\_\+options@{load\+\_\+options}}
+\index{load\+\_\+options@{load\+\_\+options}!alps\+::\+Pegasus@{alps\+::\+Pegasus}}
+\subsubsection[{\texorpdfstring{load\+\_\+options(const char $\ast$config\+\_\+file, bool use\+\_\+system\+\_\+wide\+\_\+conf, bool use\+\_\+environ, Pegasus\+Options $\ast$pegasus\+\_\+options)}{load_options(const char *config_file, bool use_system_wide_conf, bool use_environ, PegasusOptions *pegasus_options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Pegasus\+::load\+\_\+options (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{config\+\_\+file, }
+\item[{bool}]{use\+\_\+system\+\_\+wide\+\_\+conf, }
+\item[{bool}]{use\+\_\+environ, }
+\item[{{\bf Pegasus\+Options} $\ast$}]{pegasus\+\_\+options}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classalps_1_1Pegasus_acc5a6c8a6a29fb20c52088fa01602c94}{}\label{classalps_1_1Pegasus_acc5a6c8a6a29fb20c52088fa01602c94}
+Caller is responsible to pass a valid \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} object
+
+Load configuration options in the following order\+:
+\begin{DoxyItemize}
+\item If {\itshape use\+\_\+system\+\_\+wide\+\_\+conf} is then load configuration options from the system wide configuration file (/etc/default/alps.yml), and then
+\item If path {\itshape use\+\_\+environ} is set then load configuration options from the file declared by environment variable A\+L\+P\+S\+\_\+\+C\+O\+NF, and then
+\item Load configuration options from {\itshape config\+\_\+file}. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/pegasus/pegasus.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/pegasus.\+cc\end{DoxyCompactItemize}

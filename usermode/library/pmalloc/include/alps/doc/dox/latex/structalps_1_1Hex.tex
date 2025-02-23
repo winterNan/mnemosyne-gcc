@@ -1,0 +1,46 @@
+\hypertarget{structalps_1_1Hex}{}\section{alps\+:\+:Hex Struct Reference}
+\label{structalps_1_1Hex}\index{alps\+::\+Hex@{alps\+::\+Hex}}
+
+
+Convenient way of writing hex integers to stream.  
+
+
+
+
+{\ttfamily \#include $<$assorted\+\_\+func.\+hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\{\bfseries Hex} (T val, int fix\+\_\+digits=-\/1)\hypertarget{structalps_1_1Hex_ae91734bbb2e7af06b66bdff364ad0c95}{}\label{structalps_1_1Hex_ae91734bbb2e7af06b66bdff364ad0c95}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t {\bfseries val\+\_\+}\hypertarget{structalps_1_1Hex_a6ddf3a48e9e049b8b4ec4ac5a103cce0}{}\label{structalps_1_1Hex_a6ddf3a48e9e049b8b4ec4ac5a103cce0}
+
+\item 
+int {\bfseries fix\+\_\+digits\+\_\+}\hypertarget{structalps_1_1Hex_a6a4b41c69846b38cf8d5a5a46c593a04}{}\label{structalps_1_1Hex_a6a4b41c69846b38cf8d5a5a46c593a04}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \hyperlink{structalps_1_1Hex}{Hex} \&v)\hypertarget{structalps_1_1Hex_a6acdff21ed9b4ee3996f6d6297e0a63a}{}\label{structalps_1_1Hex_a6acdff21ed9b4ee3996f6d6297e0a63a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Use it as follows. 
+\begin{DoxyCode}
+std::cout << Hex(1234) << ...
+\textcolor{comment}{// same output as:}
+\textcolor{comment}{// std::cout << "0x" << std::hex << std::uppercase << 1234 << std::nouppercase << std::dec << ...}
+\end{DoxyCode}
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/common/assorted\+\_\+func.\+hh\end{DoxyCompactItemize}

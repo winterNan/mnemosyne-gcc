@@ -1,0 +1,105 @@
+\hypertarget{classalps_1_1TmpfsRegionFile}{}\section{alps\+:\+:Tmpfs\+Region\+File Class Reference}
+\label{classalps_1_1TmpfsRegionFile}\index{alps\+::\+Tmpfs\+Region\+File@{alps\+::\+Tmpfs\+Region\+File}}
+
+
+Represents a region file backed by T\+M\+P\+FS.  
+
+
+
+
+{\ttfamily \#include $<$tmpfs\+\_\+region\+\_\+file.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Tmpfs\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classalps_1_1TmpfsRegionFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for alps\+:\+:Tmpfs\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classalps_1_1TmpfsRegionFile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Interleave\+Policy} \{ {\bfseries k\+Precise\+Allocate} = 0, 
+{\bfseries k\+Round\+Robin}
+ \}\hypertarget{classalps_1_1TmpfsRegionFile_a4c77cd5eea6561a439c3e0507428864a}{}\label{classalps_1_1TmpfsRegionFile_a4c77cd5eea6561a439c3e0507428864a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Tmpfs\+Region\+File} (boost\+::filesystem\+::path pathname, boost\+::filesystem\+::path xpathname, const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1TmpfsRegionFile_a64efd95e0f04958b38848f00ba625398}{}\label{classalps_1_1TmpfsRegionFile_a64efd95e0f04958b38848f00ba625398}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries create} (mode\+\_\+t mode)\hypertarget{classalps_1_1TmpfsRegionFile_af056c20aaaba28a3773c86e00978dfef}{}\label{classalps_1_1TmpfsRegionFile_af056c20aaaba28a3773c86e00978dfef}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags, mode\+\_\+t mode)\hypertarget{classalps_1_1TmpfsRegionFile_a2d41f9debc39a99d4dc8d3dd8829fb14}{}\label{classalps_1_1TmpfsRegionFile_a2d41f9debc39a99d4dc8d3dd8829fb14}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags)\hypertarget{classalps_1_1TmpfsRegionFile_afe41df2a968e570755ff6053e1d50836}{}\label{classalps_1_1TmpfsRegionFile_afe41df2a968e570755ff6053e1d50836}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unlink} ()\hypertarget{classalps_1_1TmpfsRegionFile_a47210b5f2e7af168672fa36e845bf4fa}{}\label{classalps_1_1TmpfsRegionFile_a47210b5f2e7af168672fa36e845bf4fa}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries close} ()\hypertarget{classalps_1_1TmpfsRegionFile_a3823425d2b9d276066a66ef09eadea7b}{}\label{classalps_1_1TmpfsRegionFile_a3823425d2b9d276066a66ef09eadea7b}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries truncate} (loff\+\_\+t length)\hypertarget{classalps_1_1TmpfsRegionFile_af5c68479c8c306464ef9a6ac936d7e16}{}\label{classalps_1_1TmpfsRegionFile_af5c68479c8c306464ef9a6ac936d7e16}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries size} (loff\+\_\+t $\ast$length)\hypertarget{classalps_1_1TmpfsRegionFile_a3595a7f5562fb4979dcc8d0e3a527b0d}{}\label{classalps_1_1TmpfsRegionFile_a3595a7f5562fb4979dcc8d0e3a527b0d}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} (void $\ast$addr\+\_\+hint, size\+\_\+t length, int prot, int flags, loff\+\_\+t offset, void $\ast$$\ast$mapped\+\_\+addr)\hypertarget{classalps_1_1TmpfsRegionFile_aecbcd4faa44978e67c2c035ad625f50f}{}\label{classalps_1_1TmpfsRegionFile_aecbcd4faa44978e67c2c035ad625f50f}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} (void $\ast$addr, size\+\_\+t length)\hypertarget{classalps_1_1TmpfsRegionFile_ad1239e1fbf298cf231eaab669804a969}{}\label{classalps_1_1TmpfsRegionFile_ad1239e1fbf298cf231eaab669804a969}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries getxattr} (const char $\ast$name, void $\ast$value, size\+\_\+t size)\hypertarget{classalps_1_1TmpfsRegionFile_ac9ff7ea5c734c98a6e083350c17acf54}{}\label{classalps_1_1TmpfsRegionFile_ac9ff7ea5c734c98a6e083350c17acf54}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries setxattr} (const char $\ast$name, const void $\ast$value, size\+\_\+t size, int flags)\hypertarget{classalps_1_1TmpfsRegionFile_af122bc9e41a0ad54b3148999c61db27e}{}\label{classalps_1_1TmpfsRegionFile_af122bc9e41a0ad54b3148999c61db27e}
+
+\item 
+size\+\_\+t {\bfseries booksize} ()\hypertarget{classalps_1_1TmpfsRegionFile_acff37cfb3764b1d9bd889bd15f95b884}{}\label{classalps_1_1TmpfsRegionFile_acff37cfb3764b1d9bd889bd15f95b884}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$ {\bfseries construct} (const boost\+::filesystem\+::path \&pathname, const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1TmpfsRegionFile_a7bf70ed90d3632cac14e8238d81fd57c}{}\label{classalps_1_1TmpfsRegionFile_a7bf70ed90d3632cac14e8238d81fd57c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bfseries k\+Lock\+File\+Name} = \char`\"{}/dev/shm/@@lockfile@@\char`\"{}\hypertarget{classalps_1_1TmpfsRegionFile_a95e31e53958f0fb9e6989bfd4f4c33c6}{}\label{classalps_1_1TmpfsRegionFile_a95e31e53958f0fb9e6989bfd4f4c33c6}
+
+\item 
+static const char $\ast$ {\bfseries k\+Xattr\+Extension} = \char`\"{}.xattr\char`\"{}\hypertarget{classalps_1_1TmpfsRegionFile_a41052c07862762ae01b6dde6aea3c1d7}{}\label{classalps_1_1TmpfsRegionFile_a41052c07862762ae01b6dde6aea3c1d7}
+
+\item 
+static Interleave\+Policy {\bfseries interleave\+\_\+policy\+\_\+} = Tmpfs\+Region\+File\+::k\+Precise\+Allocate\hypertarget{classalps_1_1TmpfsRegionFile_a0ba492a78a1ea43617083b958ef61ab6}{}\label{classalps_1_1TmpfsRegionFile_a0ba492a78a1ea43617083b958ef61ab6}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/tmpfs\+\_\+region\+\_\+file.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/tmpfs\+\_\+region\+\_\+file.\+cc\end{DoxyCompactItemize}

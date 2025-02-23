@@ -1,0 +1,45 @@
+\hypertarget{structalps_1_1HexString}{}\section{alps\+:\+:Hex\+String Struct Reference}
+\label{structalps_1_1HexString}\index{alps\+::\+Hex\+String@{alps\+::\+Hex\+String}}
+
+
+Equivalent to std\+::hex in case the stream doesn\textquotesingle{}t support it.  
+
+
+
+
+{\ttfamily \#include $<$assorted\+\_\+func.\+hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Hex\+String} (const std\+::string \&str, uint32\+\_\+t max\+\_\+bytes=64\+U)\hypertarget{structalps_1_1HexString_afa5504a05106a11ffb7f69068a884e65}{}\label{structalps_1_1HexString_afa5504a05106a11ffb7f69068a884e65}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries str\+\_\+}\hypertarget{structalps_1_1HexString_ac709fb9811ba9096e3abd674d8005d9e}{}\label{structalps_1_1HexString_ac709fb9811ba9096e3abd674d8005d9e}
+
+\item 
+uint32\+\_\+t {\bfseries max\+\_\+bytes\+\_\+}\hypertarget{structalps_1_1HexString_a8d22bbb5bd9b5286565cfee493980438}{}\label{structalps_1_1HexString_a8d22bbb5bd9b5286565cfee493980438}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \hyperlink{structalps_1_1HexString}{Hex\+String} \&v)\hypertarget{structalps_1_1HexString_afa34b229589abd954002d8e3ec4520c4}{}\label{structalps_1_1HexString_afa34b229589abd954002d8e3ec4520c4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Use it as follows. 
+\begin{DoxyCode}
+std::cout << Hex(\textcolor{stringliteral}{"aabc"}) << ...
+\textcolor{comment}{// will output "0x61616263".}
+\end{DoxyCode}
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/common/assorted\+\_\+func.\+hh\end{DoxyCompactItemize}

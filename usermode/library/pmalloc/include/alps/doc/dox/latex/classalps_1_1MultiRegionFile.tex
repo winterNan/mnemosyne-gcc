@@ -1,0 +1,88 @@
+\hypertarget{classalps_1_1MultiRegionFile}{}\section{alps\+:\+:Multi\+Region\+File Class Reference}
+\label{classalps_1_1MultiRegionFile}\index{alps\+::\+Multi\+Region\+File@{alps\+::\+Multi\+Region\+File}}
+
+
+Represents a pseudo region file comprising multiple region files.  
+
+
+
+
+{\ttfamily \#include $<$multi\+\_\+region\+\_\+file.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Multi\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classalps_1_1MultiRegionFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for alps\+:\+:Multi\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classalps_1_1MultiRegionFile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Multi\+Region\+File} (const std\+::vector$<$ \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$ $>$ region\+\_\+files)\hypertarget{classalps_1_1MultiRegionFile_ae4e25dd6261d7a1745a2e355c14ed11e}{}\label{classalps_1_1MultiRegionFile_ae4e25dd6261d7a1745a2e355c14ed11e}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1MultiRegionFile_a914948b93698e5bf84792f793a2c6df0}{create} (mode\+\_\+t mode)\hypertarget{classalps_1_1MultiRegionFile_a914948b93698e5bf84792f793a2c6df0}{}\label{classalps_1_1MultiRegionFile_a914948b93698e5bf84792f793a2c6df0}
+
+\begin{DoxyCompactList}\small\item\em Operation not supported for this region file type. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags, mode\+\_\+t mode)\hypertarget{classalps_1_1MultiRegionFile_ada71637b82174b46b183fbae8587734e}{}\label{classalps_1_1MultiRegionFile_ada71637b82174b46b183fbae8587734e}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags)\hypertarget{classalps_1_1MultiRegionFile_a2fb08745a10e08b8a3428396761cf9ff}{}\label{classalps_1_1MultiRegionFile_a2fb08745a10e08b8a3428396761cf9ff}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1MultiRegionFile_ac3b66aae57953f47d15618d4a6f9f4bf}{unlink} ()\hypertarget{classalps_1_1MultiRegionFile_ac3b66aae57953f47d15618d4a6f9f4bf}{}\label{classalps_1_1MultiRegionFile_ac3b66aae57953f47d15618d4a6f9f4bf}
+
+\begin{DoxyCompactList}\small\item\em Operation not supported for this region file type. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries close} ()\hypertarget{classalps_1_1MultiRegionFile_a9fe28ebb5704731c642fe2203648016a}{}\label{classalps_1_1MultiRegionFile_a9fe28ebb5704731c642fe2203648016a}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1MultiRegionFile_af330f12ef62f3a140130ef5c58370513}{truncate} (loff\+\_\+t length)\hypertarget{classalps_1_1MultiRegionFile_af330f12ef62f3a140130ef5c58370513}{}\label{classalps_1_1MultiRegionFile_af330f12ef62f3a140130ef5c58370513}
+
+\begin{DoxyCompactList}\small\item\em Operation not supported for this region file type. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries size} (loff\+\_\+t $\ast$length)\hypertarget{classalps_1_1MultiRegionFile_a083ab071bc83e2f9e647e978d0afa0c1}{}\label{classalps_1_1MultiRegionFile_a083ab071bc83e2f9e647e978d0afa0c1}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} (void $\ast$addr\+\_\+hint, size\+\_\+t length, int prot, int flags, loff\+\_\+t offset, void $\ast$$\ast$mapped\+\_\+addr)\hypertarget{classalps_1_1MultiRegionFile_adce5e1dde0d9b3b2f170f7c5d9cd2718}{}\label{classalps_1_1MultiRegionFile_adce5e1dde0d9b3b2f170f7c5d9cd2718}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} (void $\ast$addr, size\+\_\+t length)\hypertarget{classalps_1_1MultiRegionFile_a0dedb7bee4b25f26f0f86bdf40dac35b}{}\label{classalps_1_1MultiRegionFile_a0dedb7bee4b25f26f0f86bdf40dac35b}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1MultiRegionFile_ab1121b16b2a12746f87fb5c1af75ad52}{getxattr} (const char $\ast$name, void $\ast$value, size\+\_\+t size)\hypertarget{classalps_1_1MultiRegionFile_ab1121b16b2a12746f87fb5c1af75ad52}{}\label{classalps_1_1MultiRegionFile_ab1121b16b2a12746f87fb5c1af75ad52}
+
+\begin{DoxyCompactList}\small\item\em Operation not supported for this region file type. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1MultiRegionFile_a610085fd92e3e5effb9ba6c872981831}{setxattr} (const char $\ast$name, const void $\ast$value, size\+\_\+t size, int flags)\hypertarget{classalps_1_1MultiRegionFile_a610085fd92e3e5effb9ba6c872981831}{}\label{classalps_1_1MultiRegionFile_a610085fd92e3e5effb9ba6c872981831}
+
+\begin{DoxyCompactList}\small\item\em Operation not supported for this region file type. \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries booksize} ()\hypertarget{classalps_1_1MultiRegionFile_a4140e32344954ef79c2dce39bf942a7d}{}\label{classalps_1_1MultiRegionFile_a4140e32344954ef79c2dce39bf942a7d}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries set\+\_\+interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, const std\+::vector$<$ Interleave\+Group $>$ \&vig)\hypertarget{classalps_1_1MultiRegionFile_aa5d9db02bcb0450caf1df87fc45a09f7}{}\label{classalps_1_1MultiRegionFile_aa5d9db02bcb0450caf1df87fc45a09f7}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, std\+::vector$<$ Interleave\+Group $>$ $\ast$vig)\hypertarget{classalps_1_1MultiRegionFile_a9cbdd991f99da438edaf5c697f282f47}{}\label{classalps_1_1MultiRegionFile_a9cbdd991f99da438edaf5c697f282f47}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+We provide this pseudo region file as a helper class for glueing and mapping multiple existing region files as a single contiguous file. This class does not support operations that require modifying file-\/system metadata of underlying region files, including create, truncate, unlink, set/get attributes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/multi\+\_\+region\+\_\+file.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/multi\+\_\+region\+\_\+file.\+cc\end{DoxyCompactItemize}

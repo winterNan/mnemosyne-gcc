@@ -1,0 +1,54 @@
+\hypertarget{structalps_1_1BacktraceContext}{}\section{alps\+:\+:Backtrace\+Context Struct Reference}
+\label{structalps_1_1BacktraceContext}\index{alps\+::\+Backtrace\+Context@{alps\+::\+Backtrace\+Context}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structalps_1_1BacktraceContext_1_1GlibcBacktraceInfo}{Glibc\+Backtrace\+Info}
+\item 
+struct \hyperlink{structalps_1_1BacktraceContext_1_1LibBacktraceInfo}{Lib\+Backtrace\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Constants} \{ {\bfseries k\+Max\+Depth} = 64
+ \}\hypertarget{structalps_1_1BacktraceContext_ab3446800cb2eb7430805f58d18b5f5e8}{}\label{structalps_1_1BacktraceContext_ab3446800cb2eb7430805f58d18b5f5e8}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries release} ()\hypertarget{structalps_1_1BacktraceContext_a937b2b9142142e160635cc13936f896c}{}\label{structalps_1_1BacktraceContext_a937b2b9142142e160635cc13936f896c}
+
+\item 
+void {\bfseries call\+\_\+glibc\+\_\+backtrace} ()\hypertarget{structalps_1_1BacktraceContext_a42c19d83492f8ff5901f97b71790af57}{}\label{structalps_1_1BacktraceContext_a42c19d83492f8ff5901f97b71790af57}
+
+\item 
+void {\bfseries on\+\_\+libbt\+\_\+create\+\_\+state\+\_\+error} (const char $\ast$msg, int errnum)\hypertarget{structalps_1_1BacktraceContext_a2dfa89eef1db391b241659d852e90bba}{}\label{structalps_1_1BacktraceContext_a2dfa89eef1db391b241659d852e90bba}
+
+\item 
+void {\bfseries on\+\_\+libbt\+\_\+full\+\_\+error} (const char $\ast$msg, int errnum)\hypertarget{structalps_1_1BacktraceContext_a008aed155d81d3e65d46543c72363470}{}\label{structalps_1_1BacktraceContext_a008aed155d81d3e65d46543c72363470}
+
+\item 
+void {\bfseries on\+\_\+libbt\+\_\+full} (uintptr\+\_\+t pc, const char $\ast$filename, int lineno, const char $\ast$function)\hypertarget{structalps_1_1BacktraceContext_a0adf3b6e197546585be28575dfc445f1}{}\label{structalps_1_1BacktraceContext_a0adf3b6e197546585be28575dfc445f1}
+
+\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries get\+\_\+results} (uint16\+\_\+t skip)\hypertarget{structalps_1_1BacktraceContext_a44d0d8ee89d984f60e6c35f18689a502}{}\label{structalps_1_1BacktraceContext_a44d0d8ee89d984f60e6c35f18689a502}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries error\+\_\+}\hypertarget{structalps_1_1BacktraceContext_a07243a40f28635c9fd8a7142458f5d03}{}\label{structalps_1_1BacktraceContext_a07243a40f28635c9fd8a7142458f5d03}
+
+\item 
+std\+::vector$<$ \hyperlink{structalps_1_1BacktraceContext_1_1GlibcBacktraceInfo}{Glibc\+Backtrace\+Info} $>$ {\bfseries glibc\+\_\+bt\+\_\+info\+\_\+}\hypertarget{structalps_1_1BacktraceContext_a6209c0529da5d3ee7a9ffc15cd68cfdc}{}\label{structalps_1_1BacktraceContext_a6209c0529da5d3ee7a9ffc15cd68cfdc}
+
+\item 
+std\+::vector$<$ \hyperlink{structalps_1_1BacktraceContext_1_1LibBacktraceInfo}{Lib\+Backtrace\+Info} $>$ {\bfseries libbt\+\_\+info\+\_\+}\hypertarget{structalps_1_1BacktraceContext_a4b87abda6b6d9f3ce5e6096269a61500}{}\label{structalps_1_1BacktraceContext_a4b87abda6b6d9f3ce5e6096269a61500}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/common/rich\+\_\+backtrace.\+cc\end{DoxyCompactItemize}

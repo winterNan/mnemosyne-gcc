@@ -1,0 +1,29 @@
+\hypertarget{group__SMARTPOINTERS}{}\section{Smart Pointers}
+\label{group__SMARTPOINTERS}\index{Smart Pointers@{Smart Pointers}}
+
+
+Smart pointers for referencing locations within persistent regions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classalps_1_1BaseRelativePointer_1_1IPtr}{alps\+::\+Base\+Relative\+Pointer\+::\+I\+Ptr$<$ Region\+Type, Pointed\+Type $>$}
+\begin{DoxyCompactList}\small\item\em Intermediate representation of a relocatable pointer. \end{DoxyCompactList}\item 
+class \hyperlink{classalps_1_1BaseRelativePointer_1_1TPtr}{alps\+::\+Base\+Relative\+Pointer\+::\+T\+Ptr$<$ Region\+Type, Pointed\+Type $>$}
+\begin{DoxyCompactList}\small\item\em Represents a transient pointer. \end{DoxyCompactList}\item 
+class \hyperlink{classalps_1_1BaseRelativePointer_1_1PPtr}{alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$}
+\begin{DoxyCompactList}\small\item\em Represents a linear persistent pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Transient pointers are useful for temporarily referencing persistent memory locations.
+
+Persistent pointers are useful for persistently storing references in persistent regions (region files).
+
+A special null\+\_\+ptr handle refers to the null pointer that points nowhere.
+
+I\+N\+V\+A\+R\+I\+A\+N\+TS
+\begin{DoxyItemize}
+\item Invariant 1\+: The virtual and linear persistent pointers do not cross regions. The invariant is met at runtime by ensuring that pointers never get assigned a memory location that is mapped to a different region. 
+\end{DoxyItemize}

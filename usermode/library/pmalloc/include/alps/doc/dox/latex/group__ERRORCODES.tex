@@ -1,0 +1,358 @@
+\hypertarget{group__ERRORCODES}{}\section{Error codes, messages, and stacktraces}
+\label{group__ERRORCODES}\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+
+
+Error codes (alps\+::\+Error\+Code), their error messages defined in error\+\_\+code.\+xmacro, and stacktrace information (\hyperlink{classalps_1_1ErrorStack}{Error\+Stack}) returned by our A\+PI functions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classalps_1_1ErrorStack}{alps\+::\+Error\+Stack}
+\begin{DoxyCompactList}\small\item\em Brings error stacktrace information as return value of functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}(x)
+\begin{DoxyCompactList}\small\item\em This macro calls {\bfseries x} and checks its returned error code. If the code is N\+OT k\+Error\+Code\+Ok, it immediately returns from the current function or method, returning the error code code. For example, use it as follows\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga283b8666b5462568e91bf8b7f1fb950e}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}(x,  cleanup)
+\begin{DoxyCompactList}\small\item\em This macro calls {\bfseries x} and checks its returned error code. If the code is N\+OT k\+Error\+Code\+Ok, it executes the associated cleanup method, and immediately returns from the current function or method, returning the error code code. For example, use it as follows\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}(e)~\hyperlink{classalps_1_1ErrorStack}{alps\+::\+Error\+Stack}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, e)
+\begin{DoxyCompactList}\small\item\em Instantiates Error\+Stack with the given alps\+::error\+\_\+code, creating an error stack with the current file, line, and error code. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga8393b83844a39ac9c2d80e86c1afd073}{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}(e,  m)~\hyperlink{classalps_1_1ErrorStack}{alps\+::\+Error\+Stack}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, e, m)
+\begin{DoxyCompactList}\small\item\em Overload of \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K(e)} to receive a custom error message. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}(x)
+\begin{DoxyCompactList}\small\item\em This macro calls {\bfseries x} and checks its returned value. If an error is encountered, it immediately returns from the current function or method, augmenting the stack trace held by the return code. For example, use it as follows\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}(x)
+\begin{DoxyCompactList}\small\item\em Same as \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R(x)} except it receives only an error code, thus more efficient. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga4ee877172bb56ddb8b6221537ab0e4ab}{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}(x)
+\begin{DoxyCompactList}\small\item\em Similar to \hyperlink{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)}, but this one converts Error\+Stack to Error\+Code. This reduces information, so use it carefully. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_gab7af3b4927e4ef68ce0ddf76e93cd3b1}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}(x,  m)
+\begin{DoxyCompactList}\small\item\em Overload of E\+R\+R\+O\+R\+\_\+\+C\+H\+E\+C\+K(x) to receive a custom error message. For example, use it as follows\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga45dae2ea7a9e0bc6aa3b3139c4bcf1dd}{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}(ptr)
+\begin{DoxyCompactList}\small\item\em This macro checks if {\bfseries ptr} is nullptr, and if so exists with k\+Error\+Code\+Outofmemory error stack. This is useful as a null check after new/malloc. For example\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}(x)
+\begin{DoxyCompactList}\small\item\em This macro calls {\bfseries x} and aborts if encounters an error. This should be used only in places that expects no error. For example, use it as follows\+: \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ERRORCODES_ga39492dd44529de33e90a87050542ab6c}{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}(x)
+\begin{DoxyCompactList}\small\item\em Same as \hyperlink{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R(x)} except this received Error\+Code, not Error\+Stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{alps\+::\+Error\+Code} \{ {\bfseries alps\+::k\+Error\+Code\+Ok} = 0, 
+{\bfseries X}
+ \}\begin{DoxyCompactList}\small\item\em Enum of error codes defined in error\+\_\+code.\+xmacro. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__ERRORCODES_ga1f9f68d3e1a7d17985e648ee002ff930}{alps\+::get\+\_\+error\+\_\+name} (Error\+Code code)\hypertarget{group__ERRORCODES_ga1f9f68d3e1a7d17985e648ee002ff930}{}\label{group__ERRORCODES_ga1f9f68d3e1a7d17985e648ee002ff930}
+
+\begin{DoxyCompactList}\small\item\em Returns the names of Error\+Code enum defined in error\+\_\+code.\+xmacro. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__ERRORCODES_gac002d42f81c3c276057ce14abe44425d}{alps\+::get\+\_\+error\+\_\+message} (Error\+Code code)\hypertarget{group__ERRORCODES_gac002d42f81c3c276057ce14abe44425d}{}\label{group__ERRORCODES_gac002d42f81c3c276057ce14abe44425d}
+
+\begin{DoxyCompactList}\small\item\em Returns the error messages corresponding to Error\+Code enum defined in error\+\_\+code.\+xmacro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const Error\+Stack \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{alps\+::k\+Ret\+Ok}
+\begin{DoxyCompactList}\small\item\em Normal return value for no-\/error case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyParagraph}{What it is}
+We define all error codes and their error messages here. Whenever you want a new error message, add a new line in error\+\_\+code.\+xmacro like existing lines. This file is completely independent and header-\/only. Just include this file to use.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{X-\/\+Macros}
+To concisely define error codes, error names, and error messages, we use the so-\/called \char`\"{}\+X Macro\char`\"{} style, which doesn\textquotesingle{}t require any code generation. 
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\href{http://en.wikipedia.org/wiki/X_Macro}{\tt http\+://en.\+wikipedia.\+org/wiki/\+X\+\_\+\+Macro} 
+
+\href{http://www.drdobbs.com/the-new-c-x-macros/184401387}{\tt http\+://www.\+drdobbs.\+com/the-\/new-\/c-\/x-\/macros/184401387}
+\end{DoxySeeAlso}
+\begin{DoxyParagraph}{Error\+Code vs Error\+Stack}
+alps\+::\+Error\+Code is merely an integer to identify the type of error. You can get a correponding error message and name of the error via \hyperlink{group__ERRORCODES_ga1f9f68d3e1a7d17985e648ee002ff930}{get\+\_\+error\+\_\+name()} and \hyperlink{group__ERRORCODES_gac002d42f81c3c276057ce14abe44425d}{get\+\_\+error\+\_\+message()}, but you can\textquotesingle{}t get stacktrace information. For lightweight functions used internally, it might be enough. However, public A\+PI methods might need stacktrace information for ease of use. In that case, you should return \hyperlink{classalps_1_1ErrorStack}{Error\+Stack}, which additionally contains stacktrace and custom error message. \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} is much more costly if it returns an error (if it\textquotesingle{}s k\+Error\+Code\+Ok, very efficient) and especially when it contains a custom error message (See \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} for more details).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{How to use Error\+Stack}
+To use \hyperlink{classalps_1_1ErrorStack}{Error\+Stack}, you should be familiar with how to use the following macros\+: alps\+::k\+Ret\+Ok, \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)}, \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R(x)}, \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K(e)}, \hyperlink{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R(x)}, and a few others. For example, use it as follows\+: 
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \textcolor{keywordflow}{if} (out-of-memory-observed) \{
+     \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{ERROR\_STACK}(kErrorCodeOutofmemory);
+  \}
+  \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{CHECK\_ERROR\_CODE}(another\_func());
+  \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{CHECK\_ERROR\_CODE}(yet\_another\_func());
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Current List of Error\+Code}
+See alps\+::\+Error\+Code. 
+\end{DoxyParagraph}
+
+
+\subsection{Macro Definition Documentation}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}}
+\index{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}{CHECK_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{}\label{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+  alps::ErrorStack \_\_e(x);\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e.is\_error())) \{\(\backslash\)
+    return \hyperlink{classalps_1_1ErrorStack}{alps::ErrorStack}(\_\_e, \_\_FILE\_\_, \_\_FUNCTION\_\_, \_\_LINE\_\_);\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{CHECK\_ERROR}(another\_func());
+  \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{CHECK\_ERROR}(yet\_another\_func());
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+The name is C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR, not C\+H\+E\+CK, because Google-\/logging defines C\+H\+E\+CK. 
+\end{DoxyNote}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+\index{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}{CHECK_ERROR_CODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{}\label{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{\(\backslash\)}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{  alps::ErrorCode} \_\_e = x;\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e != kErrorCodeOk)) \{\(\backslash\)
+    return \_\_e;\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} another\_func();
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} yet\_another\_func();
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} your\_func() \{
+  \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{CHECK\_ERROR\_CODE}(another\_func());
+  \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{CHECK\_ERROR\_CODE}(yet\_another\_func());
+  \textcolor{keywordflow}{return} kErrorCodeOk;
+\}
+\end{DoxyCode}
+
+
+This macro is used in performance-\/critical functions that do not return Error\+Stack but returns Error\+Code to save overheads. For a function that is called billion times per second, Error\+Stack {\bfseries does} cause bottleneck, especially because it requires to allocate hundreds bytes on stack, which would purge other data from cache lines. We actually did observe such situations in a few experiments. If your C\+PU profiling tells that Error\+Stack-\/related methods cause more than 10\% cpu costs, replace Error\+Stack with Error\+Code. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)} 
+\end{DoxySeeAlso}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}}
+\index{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}{CHECK_ERROR_CODE2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{cleanup}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga283b8666b5462568e91bf8b7f1fb950e}{}\label{group__ERRORCODES_ga283b8666b5462568e91bf8b7f1fb950e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{\(\backslash\)}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{  alps::ErrorCode} \_\_e = x;\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e != kErrorCodeOk)) \{\(\backslash\)
+    cleanup; \(\backslash\)
+    return \_\_e;\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} another\_func();
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} yet\_another\_func();
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{ErrorCode} your\_func() \{
+  \hyperlink{group__ERRORCODES_ga283b8666b5462568e91bf8b7f1fb950e}{CHECK\_ERROR\_CODE2}(another\_func(),cleanup\_statement);
+  \hyperlink{group__ERRORCODES_ga283b8666b5462568e91bf8b7f1fb950e}{CHECK\_ERROR\_CODE2}(yet\_another\_func(),cleanup\_statement);
+  \textcolor{keywordflow}{return} kErrorCodeOk;
+\}
+\end{DoxyCode}
+
+
+This macro is used in performance-\/critical functions that do not return Error\+Stack but returns Error\+Code to save overheads. For a function that is called billion times per second, Error\+Stack {\bfseries does} cause bottleneck, especially because it requires to allocate hundreds bytes on stack, which would purge other data from cache lines. We actually did observe such situations in a few experiments. If your C\+PU profiling tells that Error\+Stack-\/related methods cause more than 10\% cpu costs, replace Error\+Stack with Error\+Code. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)} 
+\end{DoxySeeAlso}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}
+\index{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}{CHECK_ERROR_MSG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_gab7af3b4927e4ef68ce0ddf76e93cd3b1}{}\label{group__ERRORCODES_gab7af3b4927e4ef68ce0ddf76e93cd3b1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+  alps::ErrorStack \_\_e(x);\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e.is\_error())) \{\(\backslash\)
+    return \hyperlink{classalps_1_1ErrorStack}{alps::ErrorStack}(\_\_e, \_\_FILE\_\_, \_\_FUNCTION\_\_, \_\_LINE\_\_, m);\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \hyperlink{group__ERRORCODES_gab7af3b4927e4ef68ce0ddf76e93cd3b1}{CHECK\_ERROR\_MSG}(another\_func(), \textcolor{stringliteral}{"I was doing xxx"});
+  \hyperlink{group__ERRORCODES_gab7af3b4927e4ef68ce0ddf76e93cd3b1}{CHECK\_ERROR\_MSG}(yet\_another\_func(), \textcolor{stringliteral}{"I was doing yyy"});
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+ \index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY@{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}}
+\index{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY@{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}{CHECK_OUTOFMEMORY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga45dae2ea7a9e0bc6aa3b3139c4bcf1dd}{}\label{group__ERRORCODES_ga45dae2ea7a9e0bc6aa3b3139c4bcf1dd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(!ptr)) \{\(\backslash\)
+  return \hyperlink{classalps_1_1ErrorStack}{alps::ErrorStack}(\_\_FILE\_\_, \_\_FUNCTION\_\_, \_\_LINE\_\_, kErrorCodeOutofmemory);\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \textcolor{keywordtype}{int}* ptr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[123];
+  \hyperlink{group__ERRORCODES_ga45dae2ea7a9e0bc6aa3b3139c4bcf1dd}{CHECK\_OUTOFMEMORY}(ptr);
+  ...
+  \textcolor{keyword}{delete}[] ptr;
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+ \index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}}
+\index{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}{COERCE_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}{}\label{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+  alps::ErrorStack \_\_e(x);\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e.is\_error())) \{\(\backslash\)
+    \_\_e.dump\_and\_abort(\textcolor{stringliteral}{"Unexpected error happened"});\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} YourThread::run() \{
+  \textcolor{comment}{// the signature of thread::run() is defined elsewhere, so you can't return ErrorStack.}
+  \textcolor{comment}{// and you are sure an error won't happen here, or an error would be anyway catastrophic.}
+  \hyperlink{group__ERRORCODES_gaffe5682593fcb16d1afef651612f5909}{COERCE\_ERROR}(another\_func());
+\}
+\end{DoxyCode}
+ \index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+\index{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}{COERCE_ERROR_CODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga39492dd44529de33e90a87050542ab6c}{}\label{group__ERRORCODES_ga39492dd44529de33e90a87050542ab6c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{\(\backslash\)}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{  alps::ErrorCode} \_\_e = x;\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e != alps::kErrorCodeOk)) \{\hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{\(\backslash\)}
+\hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{    ERROR\_STACK}(\_\_e).dump\_and\_abort(\textcolor{stringliteral}{"Unexpected error happened"});\(\backslash\)
+  \}\(\backslash\)
+\}
+\end{DoxyCode}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}{ERROR_STACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~{\bf alps\+::\+Error\+Stack}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, e)}\hypertarget{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{}\label{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}
+For example, use it as follows\+: 
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \textcolor{keywordflow}{if} (out-of-memory-observed) \{
+     \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{ERROR\_STACK}(kErrorCodeOutofmemory);
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+ \index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}}
+\index{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}{ERROR_STACK_MSG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG(
+\begin{DoxyParamCaption}
+\item[{}]{e, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~{\bf alps\+::\+Error\+Stack}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, e, m)}\hypertarget{group__ERRORCODES_ga8393b83844a39ac9c2d80e86c1afd073}{}\label{group__ERRORCODES_ga8393b83844a39ac9c2d80e86c1afd073}
+For example, use it as follows\+: 
+\begin{DoxyCode}
+ErrorStack your\_func() \{
+  \textcolor{keywordflow}{if} (out-of-memory-observed) \{
+     std::string additional\_message = ...;
+     \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga8393b83844a39ac9c2d80e86c1afd073}{ERROR\_STACK\_MSG}(kErrorCodeOutofmemory, additional\_message.c\_str());
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{kRetOk};
+\}
+\end{DoxyCode}
+ \index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}}
+\index{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}{UNWRAP_ERROR_STACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga4ee877172bb56ddb8b6221537ab0e4ab}{}\label{group__ERRORCODES_ga4ee877172bb56ddb8b6221537ab0e4ab}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\(\backslash\)
+  alps::ErrorStack \_\_e = x;\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e.is\_error())) \{ \textcolor{keywordflow}{return} \_\_e.get\_error\_code(); \}\(\backslash\)
+\}
+\end{DoxyCode}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)} 
+\end{DoxySeeAlso}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+\index{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}{WRAP_ERROR_CODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}{}\label{group__ERRORCODES_ga952ce4f5f860d7b28a70095b450d3f4d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{\(\backslash\)}
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{  alps::ErrorCode} \_\_e = x;\(\backslash\)
+  if (\hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{UNLIKELY}(\_\_e != alps::kErrorCodeOk)) \{\textcolor{keywordflow}{return} \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{ERROR\_STACK}(\_\_e);\}\(\backslash\)
+\}
+\end{DoxyCode}
+\begin{DoxyNote}{Note}
+Unlike \hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)}, this returns Error\+Stack. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__ERRORCODES_gaa3832e1d1faf1540161d389edf2a9c17}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E(x)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!Error\+Code@{Error\+Code}}
+\index{Error\+Code@{Error\+Code}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{Error\+Code}{ErrorCode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf alps\+::\+Error\+Code}}\hypertarget{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{}\label{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}
+This is often used as a return value of lightweight functions. If you need more informative information, such as error stack, use \hyperlink{classalps_1_1ErrorStack}{Error\+Stack}. But, note that returning this value is M\+U\+CH more efficient. 
+
+\subsection{Variable Documentation}
+\index{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!k\+Ret\+Ok@{k\+Ret\+Ok}}
+\index{k\+Ret\+Ok@{k\+Ret\+Ok}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}}
+\subsubsection[{\texorpdfstring{k\+Ret\+Ok}{kRetOk}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::k\+Ret\+Ok}\hypertarget{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}{}\label{group__ERRORCODES_ga61cb36ecdcc8115b0d7bca4a0877222b}
+Const return code that indicates no error. This is the normal way to return from a method or function. 

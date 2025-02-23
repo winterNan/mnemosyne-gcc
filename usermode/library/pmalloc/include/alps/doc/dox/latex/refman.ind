@@ -1,0 +1,341 @@
+\begin{theindex}
+
+  \item {$\sim$\+Error\+Stack}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{35}
+
+  \indexspace
+
+  \item {add\+\_\+child\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39}
+  \item {add\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39}
+  \item {add\+\_\+enum\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39}
+  \item {Address\+Space\+Options}
+    \subitem {alps\+::\+Address\+Space\+Options}, \hyperpage{28}
+  \item {alps\+::\+Address\+Space}, \hyperpage{25}
+    \subitem {bind}, \hyperpage{26}
+    \subitem {map}, \hyperpage{26}
+    \subitem {region}, \hyperpage{27}
+    \subitem {rtrans}, \hyperpage{27}
+    \subitem {unmap}, \hyperpage{27}
+  \item {alps\+::\+Address\+Space\+Options}, \hyperpage{28}
+    \subitem {Address\+Space\+Options}, \hyperpage{28}
+  \item {alps\+::\+Backtrace\+Context}, \hyperpage{29}
+  \item {alps\+::\+Backtrace\+Context\+::\+Glibc\+Backtrace\+Info}, 
+		\hyperpage{43}
+  \item {alps\+::\+Backtrace\+Context\+::\+Lib\+Backtrace\+Info}, 
+		\hyperpage{50}
+  \item {alps\+::\+Base\+Relative\+Pointer}, \hyperpage{29}
+  \item {alps\+::\+Base\+Relative\+Pointer\+::\+I\+Ptr$<$ Region\+Type, Pointed\+Type $>$}, 
+		\hyperpage{45}
+  \item {alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$}, 
+		\hyperpage{58}
+  \item {alps\+::\+Base\+Relative\+Pointer\+::\+T\+Ptr$<$ Region\+Type, Pointed\+Type $>$}, 
+		\hyperpage{69}
+  \item {alps\+::\+Base\+Relative\+Pointer\+::\+Z\+Ptr$<$ Region\+Type, Pointed\+Type $>$}, 
+		\hyperpage{71}
+  \item {alps\+::\+Command\+Option}, \hyperpage{30}
+  \item {alps\+::\+Command\+Option\+T$<$ T $>$}, \hyperpage{30}
+  \item {alps\+::\+Debug\+Options}, \hyperpage{31}
+    \subitem {Debug\+Options}, \hyperpage{32}
+    \subitem {log\+\_\+filename}, \hyperpage{32}
+    \subitem {log\+\_\+level}, \hyperpage{32}
+  \item {alps\+::\+Error\+Stack}, \hyperpage{33}
+    \subitem {$\sim$\+Error\+Stack}, \hyperpage{35}
+    \subitem {append\+\_\+custom\+\_\+message}, \hyperpage{35}
+    \subitem {clear\+\_\+custom\+\_\+message}, \hyperpage{35}
+    \subitem {Constants}, \hyperpage{34}
+    \subitem {copy\+\_\+custom\+\_\+message}, \hyperpage{35}
+    \subitem {dump\+\_\+and\+\_\+abort}, \hyperpage{36}
+    \subitem {Error\+Stack}, \hyperpage{34, 35}
+    \subitem {get\+\_\+custom\+\_\+message}, \hyperpage{36}
+    \subitem {get\+\_\+error\+\_\+code}, \hyperpage{36}
+    \subitem {get\+\_\+filename}, \hyperpage{36}
+    \subitem {get\+\_\+func}, \hyperpage{36}
+    \subitem {get\+\_\+linenum}, \hyperpage{36}
+    \subitem {get\+\_\+message}, \hyperpage{36}
+    \subitem {get\+\_\+os\+\_\+errno}, \hyperpage{36}
+    \subitem {get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}, 
+		\hyperpage{36}
+    \subitem {get\+\_\+stack\+\_\+depth}, \hyperpage{36}
+    \subitem {is\+\_\+error}, \hyperpage{37}
+    \subitem {k\+Max\+Stack\+Depth}, \hyperpage{34}
+    \subitem {operator=}, \hyperpage{37}
+    \subitem {output}, \hyperpage{37}
+    \subitem {verify}, \hyperpage{37}
+  \item {alps\+::\+Externalizable}, \hyperpage{37}
+    \subitem {add\+\_\+child\+\_\+element}, \hyperpage{39}
+    \subitem {add\+\_\+element}, \hyperpage{39}
+    \subitem {add\+\_\+enum\+\_\+element}, \hyperpage{39}
+    \subitem {assign}, \hyperpage{39}
+    \subitem {get\+\_\+child\+\_\+element}, \hyperpage{39}
+    \subitem {get\+\_\+element}, \hyperpage{39, 40}
+    \subitem {get\+\_\+enum\+\_\+element}, \hyperpage{40}
+    \subitem {get\+\_\+size\+\_\+element}, \hyperpage{40}
+    \subitem {get\+\_\+tag\+\_\+name}, \hyperpage{40}
+    \subitem {load}, \hyperpage{40}
+    \subitem {load\+\_\+from\+\_\+command\+\_\+options}, \hyperpage{40}
+    \subitem {load\+\_\+from\+\_\+file}, \hyperpage{40}
+    \subitem {load\+\_\+from\+\_\+string}, \hyperpage{41}
+    \subitem {save}, \hyperpage{41}
+    \subitem {save\+\_\+to\+\_\+file}, \hyperpage{41}
+    \subitem {save\+\_\+to\+\_\+stream}, \hyperpage{41}
+  \item {alps\+::\+F\+R\+D\+Node}, \hyperpage{43}
+  \item {alps\+::\+File\+System\+Type\+Factory$<$ Object\+Type $>$}, 
+		\hyperpage{42}
+  \item {alps\+::\+Hex}, \hyperpage{43}
+  \item {alps\+::\+Hex\+String}, \hyperpage{44}
+  \item {alps\+::\+Inverted\+Table}, \hyperpage{45}
+  \item {alps\+::\+Lfs\+Options}, \hyperpage{46}
+    \subitem {Lfs\+Options}, \hyperpage{47}
+  \item {alps\+::\+Lfs\+Region\+File}, \hyperpage{47}
+  \item {alps\+::\+Lfs\+Topology}, \hyperpage{49}
+  \item {alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$}, 
+		\hyperpage{50}
+  \item {alps\+::\+Memory\+Manager}, \hyperpage{51}
+  \item {alps\+::\+Multi\+Region\+File}, \hyperpage{52}
+  \item {alps\+::\+P\+Addr}, \hyperpage{54}
+  \item {alps\+::\+Pegas\+Thread}, \hyperpage{54}
+  \item {alps\+::\+Pegasus}, \hyperpage{55}
+    \subitem {init}, \hyperpage{56}
+    \subitem {load\+\_\+options}, \hyperpage{56}
+  \item {alps\+::\+Pegasus\+Options}, \hyperpage{57}
+  \item {alps\+::\+Process\+Map}, \hyperpage{59}
+  \item {alps\+::\+Region}, \hyperpage{59}
+  \item {alps\+::\+Region\+File}, \hyperpage{60}
+  \item {alps\+::\+Region\+File\+Factory}, \hyperpage{62}
+  \item {alps\+::\+Rvma\+Region\+File}, \hyperpage{63}
+  \item {alps\+::\+Tmpfs\+Options}, \hyperpage{64}
+    \subitem {Tmpfs\+Options}, \hyperpage{64}
+  \item {alps\+::\+Tmpfs\+Region\+File}, \hyperpage{65}
+  \item {alps\+::\+Tmpfs\+Topology}, \hyperpage{66}
+  \item {alps\+::\+Topology}, \hyperpage{67}
+  \item {alps\+::\+Topology\+Factory}, \hyperpage{68}
+  \item {alps\+::\+Vm\+Area}, \hyperpage{70}
+  \item {alps\+::\+Z\+Addr}, \hyperpage{71}
+  \item {append\+\_\+custom\+\_\+message}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{35}
+  \item {assign}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39}
+
+  \indexspace
+
+  \item {bind}
+    \subitem {alps\+::\+Address\+Space}, \hyperpage{26}
+
+  \indexspace
+
+  \item {C++11 Keywords in Public Headers}, \hyperpage{15}
+    \subitem {C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR}, \hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+F\+I\+N\+AL}, \hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+		\hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE}, 
+		\hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT}, \hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}, \hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE}, \hyperpage{16}
+    \subitem {C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}, 
+		\hyperpage{16}
+  \item {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{19}
+  \item {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{19}
+  \item {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{20}
+  \item {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{19}
+  \item {C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{20}
+  \item {C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{21}
+  \item {C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{20}
+  \item {C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+F\+I\+N\+AL}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}
+    \subitem {C++11 Keywords in Public Headers}, \hyperpage{16}
+  \item {clear\+\_\+custom\+\_\+message}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{35}
+  \item {Compiler Specific Optimizations}, \hyperpage{13}
+    \subitem {M\+A\+Y\+\_\+\+A\+L\+I\+AS}, \hyperpage{14}
+    \subitem {R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}, 
+		\hyperpage{14}
+  \item {Constants}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{34}
+  \item {copy\+\_\+custom\+\_\+message}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{35}
+
+  \indexspace
+
+  \item {Debug\+Options}
+    \subitem {alps\+::\+Debug\+Options}, \hyperpage{32}
+  \item {dump\+\_\+and\+\_\+abort}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+
+  \indexspace
+
+  \item {E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{21}
+  \item {E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{21}
+  \item {Error codes, messages, and stacktraces}, \hyperpage{17}
+    \subitem {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}, 
+		\hyperpage{19}
+    \subitem {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, 
+		\hyperpage{19}
+    \subitem {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}, 
+		\hyperpage{20}
+    \subitem {C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}, \hyperpage{19}
+    \subitem {C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}, 
+		\hyperpage{20}
+    \subitem {C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, 
+		\hyperpage{21}
+    \subitem {C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}, \hyperpage{20}
+    \subitem {E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}, 
+		\hyperpage{21}
+    \subitem {E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}, \hyperpage{21}
+    \subitem {Error\+Code}, \hyperpage{22}
+    \subitem {k\+Ret\+Ok}, \hyperpage{22}
+    \subitem {U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}, 
+		\hyperpage{21}
+    \subitem {W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, 
+		\hyperpage{22}
+  \item {Error\+Code}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{22}
+  \item {Error\+Stack}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{34, 35}
+
+  \indexspace
+
+  \item {get\+\_\+child\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39}
+  \item {get\+\_\+custom\+\_\+message}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{39, 40}
+  \item {get\+\_\+enum\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+  \item {get\+\_\+error\+\_\+code}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+filename}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+func}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+linenum}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+message}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+os\+\_\+errno}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+size\+\_\+element}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+  \item {get\+\_\+stack\+\_\+depth}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{36}
+  \item {get\+\_\+tag\+\_\+name}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+
+  \indexspace
+
+  \item {init}
+    \subitem {alps\+::\+Pegasus}, \hyperpage{56}
+  \item {is\+\_\+error}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{37}
+
+  \indexspace
+
+  \item {k\+Max\+Stack\+Depth}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{34}
+  \item {k\+Ret\+Ok}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Lfs\+Options}
+    \subitem {alps\+::\+Lfs\+Options}, \hyperpage{47}
+  \item {load}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+  \item {load\+\_\+from\+\_\+command\+\_\+options}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+  \item {load\+\_\+from\+\_\+file}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{40}
+  \item {load\+\_\+from\+\_\+string}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{41}
+  \item {load\+\_\+options}
+    \subitem {alps\+::\+Pegasus}, \hyperpage{56}
+  \item {log\+\_\+filename}
+    \subitem {alps\+::\+Debug\+Options}, \hyperpage{32}
+  \item {log\+\_\+level}
+    \subitem {alps\+::\+Debug\+Options}, \hyperpage{32}
+
+  \indexspace
+
+  \item {M\+A\+Y\+\_\+\+A\+L\+I\+AS}
+    \subitem {Compiler Specific Optimizations}, \hyperpage{14}
+  \item {map}
+    \subitem {alps\+::\+Address\+Space}, \hyperpage{26}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{37}
+  \item {output}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{37}
+
+  \indexspace
+
+  \item {R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}
+    \subitem {Compiler Specific Optimizations}, \hyperpage{14}
+  \item {region}
+    \subitem {alps\+::\+Address\+Space}, \hyperpage{27}
+  \item {rtrans}
+    \subitem {alps\+::\+Address\+Space}, \hyperpage{27}
+
+  \indexspace
+
+  \item {save}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{41}
+  \item {save\+\_\+to\+\_\+file}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{41}
+  \item {save\+\_\+to\+\_\+stream}
+    \subitem {alps\+::\+Externalizable}, \hyperpage{41}
+  \item {Smart Pointers}, \hyperpage{23}
+
+  \indexspace
+
+  \item {Tmpfs\+Options}
+    \subitem {alps\+::\+Tmpfs\+Options}, \hyperpage{64}
+
+  \indexspace
+
+  \item {U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{21}
+  \item {unmap}
+    \subitem {alps\+::\+Address\+Space}, \hyperpage{27}
+
+  \indexspace
+
+  \item {verify}
+    \subitem {alps\+::\+Error\+Stack}, \hyperpage{37}
+
+  \indexspace
+
+  \item {W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}
+    \subitem {Error codes, messages, and stacktraces}, \hyperpage{22}
+
+\end{theindex}

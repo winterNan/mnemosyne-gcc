@@ -1,0 +1,206 @@
+\indexentry{Compiler Specific Optimizations@{Compiler Specific Optimizations}|hyperpage}{13}
+\indexentry{Compiler Specific Optimizations@{Compiler Specific Optimizations}!M\+A\+Y\+\_\+\+A\+L\+I\+AS@{M\+A\+Y\+\_\+\+A\+L\+I\+AS}|hyperpage}{14}
+\indexentry{M\+A\+Y\+\_\+\+A\+L\+I\+AS@{M\+A\+Y\+\_\+\+A\+L\+I\+AS}!Compiler Specific Optimizations@{Compiler Specific Optimizations}|hyperpage}{14}
+\indexentry{Compiler Specific Optimizations@{Compiler Specific Optimizations}!R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS@{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}|hyperpage}{14}
+\indexentry{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS@{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}!Compiler Specific Optimizations@{Compiler Specific Optimizations}|hyperpage}{14}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{15}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR@{C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR@{C\+X\+X11\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+F\+I\+N\+AL@{C\+X\+X11\+\_\+\+F\+I\+N\+AL}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+F\+I\+N\+AL@{C\+X\+X11\+\_\+\+F\+I\+N\+AL}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT@{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT@{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+F\+A\+U\+LT}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE@{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE@{C\+X\+X11\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+L\+E\+TE}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT@{C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT@{C\+X\+X11\+\_\+\+N\+O\+E\+X\+C\+E\+PT}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR@{C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR@{C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{C\+X\+X11\+\_\+\+O\+V\+E\+R\+R\+I\+DE}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}!C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT@{C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}|hyperpage}{16}
+\indexentry{C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT@{C\+X\+X11\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}!C++11 Keywords in Public Headers@{C++11 Keywords in Public Headers}|hyperpage}{16}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{17}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}|hyperpage}{19}
+\indexentry{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+OR}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{19}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}|hyperpage}{19}
+\indexentry{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{19}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}|hyperpage}{19}
+\indexentry{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E2}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{19}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}|hyperpage}{20}
+\indexentry{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG@{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{20}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY@{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}|hyperpage}{20}
+\indexentry{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY@{C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+O\+F\+M\+E\+M\+O\+RY}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{20}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}|hyperpage}{20}
+\indexentry{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+OR}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{20}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}|hyperpage}{21}
+\indexentry{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{C\+O\+E\+R\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{21}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}|hyperpage}{21}
+\indexentry{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{21}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}|hyperpage}{21}
+\indexentry{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG@{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+SG}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{21}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}|hyperpage}{21}
+\indexentry{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK@{U\+N\+W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+CK}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{21}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}|hyperpage}{22}
+\indexentry{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{W\+R\+A\+P\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{22}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!Error\+Code@{Error\+Code}|hyperpage}{22}
+\indexentry{Error\+Code@{Error\+Code}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{22}
+\indexentry{Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}!k\+Ret\+Ok@{k\+Ret\+Ok}|hyperpage}{22}
+\indexentry{k\+Ret\+Ok@{k\+Ret\+Ok}!Error codes, messages, and stacktraces@{Error codes, messages, and stacktraces}|hyperpage}{22}
+\indexentry{Smart Pointers@{Smart Pointers}|hyperpage}{23}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{25}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!bind@{bind}|hyperpage}{26}
+\indexentry{bind@{bind}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{26}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!map@{map}|hyperpage}{26}
+\indexentry{map@{map}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{26}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!region@{region}|hyperpage}{27}
+\indexentry{region@{region}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{27}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!rtrans@{rtrans}|hyperpage}{27}
+\indexentry{rtrans@{rtrans}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{27}
+\indexentry{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!unmap@{unmap}|hyperpage}{27}
+\indexentry{unmap@{unmap}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}|hyperpage}{27}
+\indexentry{alps\+::\+Address\+Space\+Options@{alps\+::\+Address\+Space\+Options}|hyperpage}{28}
+\indexentry{alps\+::\+Address\+Space\+Options@{alps\+::\+Address\+Space\+Options}!Address\+Space\+Options@{Address\+Space\+Options}|hyperpage}{28}
+\indexentry{Address\+Space\+Options@{Address\+Space\+Options}!alps\+::\+Address\+Space\+Options@{alps\+::\+Address\+Space\+Options}|hyperpage}{28}
+\indexentry{alps\+::\+Backtrace\+Context@{alps\+::\+Backtrace\+Context}|hyperpage}{29}
+\indexentry{alps\+::\+Base\+Relative\+Pointer@{alps\+::\+Base\+Relative\+Pointer}|hyperpage}{29}
+\indexentry{alps\+::\+Command\+Option@{alps\+::\+Command\+Option}|hyperpage}{30}
+\indexentry{alps\+::\+Command\+Option\+T$<$ T $>$@{alps\+::\+Command\+Option\+T$<$ T $>$}|hyperpage}{30}
+\indexentry{alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}|hyperpage}{31}
+\indexentry{alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}!Debug\+Options@{Debug\+Options}|hyperpage}{32}
+\indexentry{Debug\+Options@{Debug\+Options}!alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}|hyperpage}{32}
+\indexentry{alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}!log\+\_\+filename@{log\+\_\+filename}|hyperpage}{32}
+\indexentry{log\+\_\+filename@{log\+\_\+filename}!alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}|hyperpage}{32}
+\indexentry{alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}!log\+\_\+level@{log\+\_\+level}|hyperpage}{32}
+\indexentry{log\+\_\+level@{log\+\_\+level}!alps\+::\+Debug\+Options@{alps\+::\+Debug\+Options}|hyperpage}{32}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{33}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Constants@{Constants}|hyperpage}{34}
+\indexentry{Constants@{Constants}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{34}
+\indexentry{k\+Max\+Stack\+Depth@{k\+Max\+Stack\+Depth}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{34}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!k\+Max\+Stack\+Depth@{k\+Max\+Stack\+Depth}|hyperpage}{34}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}|hyperpage}{34}
+\indexentry{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{34}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}|hyperpage}{34}
+\indexentry{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{34}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}|hyperpage}{35}
+\indexentry{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}|hyperpage}{35}
+\indexentry{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}|hyperpage}{35}
+\indexentry{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!````~Error\+Stack@{$\sim$\+Error\+Stack}|hyperpage}{35}
+\indexentry{````~Error\+Stack@{$\sim$\+Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!append\+\_\+custom\+\_\+message@{append\+\_\+custom\+\_\+message}|hyperpage}{35}
+\indexentry{append\+\_\+custom\+\_\+message@{append\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!clear\+\_\+custom\+\_\+message@{clear\+\_\+custom\+\_\+message}|hyperpage}{35}
+\indexentry{clear\+\_\+custom\+\_\+message@{clear\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!copy\+\_\+custom\+\_\+message@{copy\+\_\+custom\+\_\+message}|hyperpage}{35}
+\indexentry{copy\+\_\+custom\+\_\+message@{copy\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{35}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!dump\+\_\+and\+\_\+abort@{dump\+\_\+and\+\_\+abort}|hyperpage}{36}
+\indexentry{dump\+\_\+and\+\_\+abort@{dump\+\_\+and\+\_\+abort}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+custom\+\_\+message@{get\+\_\+custom\+\_\+message}|hyperpage}{36}
+\indexentry{get\+\_\+custom\+\_\+message@{get\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+error\+\_\+code@{get\+\_\+error\+\_\+code}|hyperpage}{36}
+\indexentry{get\+\_\+error\+\_\+code@{get\+\_\+error\+\_\+code}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+filename@{get\+\_\+filename}|hyperpage}{36}
+\indexentry{get\+\_\+filename@{get\+\_\+filename}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+func@{get\+\_\+func}|hyperpage}{36}
+\indexentry{get\+\_\+func@{get\+\_\+func}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+linenum@{get\+\_\+linenum}|hyperpage}{36}
+\indexentry{get\+\_\+linenum@{get\+\_\+linenum}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+message@{get\+\_\+message}|hyperpage}{36}
+\indexentry{get\+\_\+message@{get\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+os\+\_\+errno@{get\+\_\+os\+\_\+errno}|hyperpage}{36}
+\indexentry{get\+\_\+os\+\_\+errno@{get\+\_\+os\+\_\+errno}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort@{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}|hyperpage}{36}
+\indexentry{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort@{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+stack\+\_\+depth@{get\+\_\+stack\+\_\+depth}|hyperpage}{36}
+\indexentry{get\+\_\+stack\+\_\+depth@{get\+\_\+stack\+\_\+depth}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{36}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!is\+\_\+error@{is\+\_\+error}|hyperpage}{37}
+\indexentry{is\+\_\+error@{is\+\_\+error}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{37}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!operator=@{operator=}|hyperpage}{37}
+\indexentry{operator=@{operator=}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{37}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!output@{output}|hyperpage}{37}
+\indexentry{output@{output}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{37}
+\indexentry{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!verify@{verify}|hyperpage}{37}
+\indexentry{verify@{verify}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}|hyperpage}{37}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{37}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+child\+\_\+element@{add\+\_\+child\+\_\+element}|hyperpage}{39}
+\indexentry{add\+\_\+child\+\_\+element@{add\+\_\+child\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+element@{add\+\_\+element}|hyperpage}{39}
+\indexentry{add\+\_\+element@{add\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+element@{add\+\_\+element}|hyperpage}{39}
+\indexentry{add\+\_\+element@{add\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+enum\+\_\+element@{add\+\_\+enum\+\_\+element}|hyperpage}{39}
+\indexentry{add\+\_\+enum\+\_\+element@{add\+\_\+enum\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!assign@{assign}|hyperpage}{39}
+\indexentry{assign@{assign}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+child\+\_\+element@{get\+\_\+child\+\_\+element}|hyperpage}{39}
+\indexentry{get\+\_\+child\+\_\+element@{get\+\_\+child\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}|hyperpage}{39}
+\indexentry{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}|hyperpage}{39}
+\indexentry{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{39}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}|hyperpage}{40}
+\indexentry{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+enum\+\_\+element@{get\+\_\+enum\+\_\+element}|hyperpage}{40}
+\indexentry{get\+\_\+enum\+\_\+element@{get\+\_\+enum\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+size\+\_\+element@{get\+\_\+size\+\_\+element}|hyperpage}{40}
+\indexentry{get\+\_\+size\+\_\+element@{get\+\_\+size\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}|hyperpage}{40}
+\indexentry{get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load@{load}|hyperpage}{40}
+\indexentry{load@{load}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+command\+\_\+options@{load\+\_\+from\+\_\+command\+\_\+options}|hyperpage}{40}
+\indexentry{load\+\_\+from\+\_\+command\+\_\+options@{load\+\_\+from\+\_\+command\+\_\+options}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}|hyperpage}{40}
+\indexentry{load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{40}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+string@{load\+\_\+from\+\_\+string}|hyperpage}{41}
+\indexentry{load\+\_\+from\+\_\+string@{load\+\_\+from\+\_\+string}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{41}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save@{save}|hyperpage}{41}
+\indexentry{save@{save}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{41}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save\+\_\+to\+\_\+file@{save\+\_\+to\+\_\+file}|hyperpage}{41}
+\indexentry{save\+\_\+to\+\_\+file@{save\+\_\+to\+\_\+file}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{41}
+\indexentry{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save\+\_\+to\+\_\+stream@{save\+\_\+to\+\_\+stream}|hyperpage}{41}
+\indexentry{save\+\_\+to\+\_\+stream@{save\+\_\+to\+\_\+stream}!alps\+::\+Externalizable@{alps\+::\+Externalizable}|hyperpage}{41}
+\indexentry{alps\+::\+File\+System\+Type\+Factory$<$ Object\+Type $>$@{alps\+::\+File\+System\+Type\+Factory$<$ Object\+Type $>$}|hyperpage}{42}
+\indexentry{alps\+::\+F\+R\+D\+Node@{alps\+::\+F\+R\+D\+Node}|hyperpage}{43}
+\indexentry{alps\+::\+Backtrace\+Context\+::\+Glibc\+Backtrace\+Info@{alps\+::\+Backtrace\+Context\+::\+Glibc\+Backtrace\+Info}|hyperpage}{43}
+\indexentry{alps\+::\+Hex@{alps\+::\+Hex}|hyperpage}{43}
+\indexentry{alps\+::\+Hex\+String@{alps\+::\+Hex\+String}|hyperpage}{44}
+\indexentry{alps\+::\+Inverted\+Table@{alps\+::\+Inverted\+Table}|hyperpage}{45}
+\indexentry{alps\+::\+Base\+Relative\+Pointer\+::\+I\+Ptr$<$ Region\+Type, Pointed\+Type $>$@{alps\+::\+Base\+Relative\+Pointer\+::\+I\+Ptr$<$ Region\+Type, Pointed\+Type $>$}|hyperpage}{45}
+\indexentry{alps\+::\+Lfs\+Options@{alps\+::\+Lfs\+Options}|hyperpage}{46}
+\indexentry{alps\+::\+Lfs\+Options@{alps\+::\+Lfs\+Options}!Lfs\+Options@{Lfs\+Options}|hyperpage}{47}
+\indexentry{Lfs\+Options@{Lfs\+Options}!alps\+::\+Lfs\+Options@{alps\+::\+Lfs\+Options}|hyperpage}{47}
+\indexentry{alps\+::\+Lfs\+Region\+File@{alps\+::\+Lfs\+Region\+File}|hyperpage}{47}
+\indexentry{alps\+::\+Lfs\+Topology@{alps\+::\+Lfs\+Topology}|hyperpage}{49}
+\indexentry{alps\+::\+Backtrace\+Context\+::\+Lib\+Backtrace\+Info@{alps\+::\+Backtrace\+Context\+::\+Lib\+Backtrace\+Info}|hyperpage}{50}
+\indexentry{alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$@{alps\+::\+Mappable$<$ Region\+Type, Memory\+Map\+Impl, Pointer\+Impl $>$}|hyperpage}{50}
+\indexentry{alps\+::\+Memory\+Manager@{alps\+::\+Memory\+Manager}|hyperpage}{51}
+\indexentry{alps\+::\+Multi\+Region\+File@{alps\+::\+Multi\+Region\+File}|hyperpage}{52}
+\indexentry{alps\+::\+P\+Addr@{alps\+::\+P\+Addr}|hyperpage}{54}
+\indexentry{alps\+::\+Pegas\+Thread@{alps\+::\+Pegas\+Thread}|hyperpage}{54}
+\indexentry{alps\+::\+Pegasus@{alps\+::\+Pegasus}|hyperpage}{55}
+\indexentry{alps\+::\+Pegasus@{alps\+::\+Pegasus}!init@{init}|hyperpage}{56}
+\indexentry{init@{init}!alps\+::\+Pegasus@{alps\+::\+Pegasus}|hyperpage}{56}
+\indexentry{alps\+::\+Pegasus@{alps\+::\+Pegasus}!load\+\_\+options@{load\+\_\+options}|hyperpage}{56}
+\indexentry{load\+\_\+options@{load\+\_\+options}!alps\+::\+Pegasus@{alps\+::\+Pegasus}|hyperpage}{56}
+\indexentry{alps\+::\+Pegasus\+Options@{alps\+::\+Pegasus\+Options}|hyperpage}{57}
+\indexentry{alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$@{alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$}|hyperpage}{58}
+\indexentry{alps\+::\+Process\+Map@{alps\+::\+Process\+Map}|hyperpage}{59}
+\indexentry{alps\+::\+Region@{alps\+::\+Region}|hyperpage}{59}
+\indexentry{alps\+::\+Region\+File@{alps\+::\+Region\+File}|hyperpage}{60}
+\indexentry{alps\+::\+Region\+File\+Factory@{alps\+::\+Region\+File\+Factory}|hyperpage}{62}
+\indexentry{alps\+::\+Rvma\+Region\+File@{alps\+::\+Rvma\+Region\+File}|hyperpage}{63}
+\indexentry{alps\+::\+Tmpfs\+Options@{alps\+::\+Tmpfs\+Options}|hyperpage}{64}
+\indexentry{alps\+::\+Tmpfs\+Options@{alps\+::\+Tmpfs\+Options}!Tmpfs\+Options@{Tmpfs\+Options}|hyperpage}{64}
+\indexentry{Tmpfs\+Options@{Tmpfs\+Options}!alps\+::\+Tmpfs\+Options@{alps\+::\+Tmpfs\+Options}|hyperpage}{64}
+\indexentry{alps\+::\+Tmpfs\+Region\+File@{alps\+::\+Tmpfs\+Region\+File}|hyperpage}{65}
+\indexentry{alps\+::\+Tmpfs\+Topology@{alps\+::\+Tmpfs\+Topology}|hyperpage}{66}
+\indexentry{alps\+::\+Topology@{alps\+::\+Topology}|hyperpage}{67}
+\indexentry{alps\+::\+Topology\+Factory@{alps\+::\+Topology\+Factory}|hyperpage}{68}
+\indexentry{alps\+::\+Base\+Relative\+Pointer\+::\+T\+Ptr$<$ Region\+Type, Pointed\+Type $>$@{alps\+::\+Base\+Relative\+Pointer\+::\+T\+Ptr$<$ Region\+Type, Pointed\+Type $>$}|hyperpage}{69}
+\indexentry{alps\+::\+Vm\+Area@{alps\+::\+Vm\+Area}|hyperpage}{70}
+\indexentry{alps\+::\+Z\+Addr@{alps\+::\+Z\+Addr}|hyperpage}{71}
+\indexentry{alps\+::\+Base\+Relative\+Pointer\+::\+Z\+Ptr$<$ Region\+Type, Pointed\+Type $>$@{alps\+::\+Base\+Relative\+Pointer\+::\+Z\+Ptr$<$ Region\+Type, Pointed\+Type $>$}|hyperpage}{71}

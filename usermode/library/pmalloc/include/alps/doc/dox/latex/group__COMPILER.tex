@@ -1,0 +1,60 @@
+\hypertarget{group__COMPILER}{}\section{Compiler Specific Optimizations}
+\label{group__COMPILER}\index{Compiler Specific Optimizations@{Compiler Specific Optimizations}}
+
+
+A few macros and functions to exploit compiler specific optimizations.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__COMPILER_gaffde14445f49f65ff4f5b592e44ee71a}{L\+I\+K\+E\+LY}(x)~(x)\hypertarget{group__COMPILER_gaffde14445f49f65ff4f5b592e44ee71a}{}\label{group__COMPILER_gaffde14445f49f65ff4f5b592e44ee71a}
+
+\begin{DoxyCompactList}\small\item\em Hints that x is highly likely true. G\+CC\textquotesingle{}s \+\_\+\+\_\+builtin\+\_\+expect. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{U\+N\+L\+I\+K\+E\+LY}(x)~(x)\hypertarget{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}{}\label{group__COMPILER_gab10d0a221f4d7a706701b806c8135fd7}
+
+\begin{DoxyCompactList}\small\item\em Hints that x is highly likely false. G\+CC\textquotesingle{}s \+\_\+\+\_\+builtin\+\_\+expect. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_gab5ce7bd7fe4169a9f709815f03f9870b}{N\+O\+\_\+\+I\+N\+L\+I\+NE}\hypertarget{group__COMPILER_gab5ce7bd7fe4169a9f709815f03f9870b}{}\label{group__COMPILER_gab5ce7bd7fe4169a9f709815f03f9870b}
+
+\begin{DoxyCompactList}\small\item\em A function suffix to hint that the function should never be inlined. G\+CC\textquotesingle{}s noinline. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_gaa1dec568e79152c892dcf63f445cbd7a}{A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}\hypertarget{group__COMPILER_gaa1dec568e79152c892dcf63f445cbd7a}{}\label{group__COMPILER_gaa1dec568e79152c892dcf63f445cbd7a}
+
+\begin{DoxyCompactList}\small\item\em A function suffix to hint that the function should always be inlined. G\+CC\textquotesingle{}s always\+\_\+inline. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_gae36a71bd5471dacafdfc44648ab7fd2b}{A\+S\+S\+U\+M\+E\+\_\+\+A\+L\+I\+G\+N\+ED}(x,  y)~x\hypertarget{group__COMPILER_gae36a71bd5471dacafdfc44648ab7fd2b}{}\label{group__COMPILER_gae36a71bd5471dacafdfc44648ab7fd2b}
+
+\begin{DoxyCompactList}\small\item\em Wraps G\+CC\textquotesingle{}s \+\_\+\+\_\+builtin\+\_\+assume\+\_\+aligned. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_ga6747712d26181b3a549cb55a69c3f4cb}{M\+A\+Y\+\_\+\+A\+L\+I\+AS}
+\begin{DoxyCompactList}\small\item\em Wraps G\+CC\textquotesingle{}s {\bfseries attribute}(({\bfseries may\+\_\+alias})). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__COMPILER_ga6decd303d90f9cd75d6bb79d51ea2154}{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}
+\begin{DoxyCompactList}\small\item\em Wraps G\+CC\textquotesingle{}s \+\_\+\+\_\+restrict. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains a few macros and functions analogous to linux/compiler.\+h \begin{DoxyParagraph}{Example\+: likely/unlikely macros}
+For example, Linux kernel wraps G\+CC\textquotesingle{}s \+\_\+\+\_\+builtin\+\_\+expect as follows. 
+\begin{DoxyCode}
+\textcolor{comment}{// from linux/compiler.h.}
+\textcolor{preprocessor}{#define likely(x)      \_\_builtin\_expect(!!(x), 1)}
+\textcolor{preprocessor}{#define unlikely(x)    \_\_builtin\_expect(!!(x), 0)}
+...
+if (likely(var == 42)) \{
+  ...
+\}
+\end{DoxyCode}
+ We provide macros/functions to do equivalent optimizations here. {\bfseries However}, we should minimize the use of such detailed and custom optimizations. In general, compiler is good enough to predict branches/inlining, and, even if it isn\textquotesingle{}t, we should rather use -\/fprofile-\/arcs. So far, we use it only for a few places that are V\+E\+RY important and V\+E\+RY easy to predict by human.
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\href{http://blog.man7.org/2012/10/how-much-do-builtinexpect-likely-and.html}{\tt http\+://blog.\+man7.\+org/2012/10/how-\/much-\/do-\/builtinexpect-\/likely-\/and.\+html} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\index{Compiler Specific Optimizations@{Compiler Specific Optimizations}!M\+A\+Y\+\_\+\+A\+L\+I\+AS@{M\+A\+Y\+\_\+\+A\+L\+I\+AS}}
+\index{M\+A\+Y\+\_\+\+A\+L\+I\+AS@{M\+A\+Y\+\_\+\+A\+L\+I\+AS}!Compiler Specific Optimizations@{Compiler Specific Optimizations}}
+\subsubsection[{\texorpdfstring{M\+A\+Y\+\_\+\+A\+L\+I\+AS}{MAY_ALIAS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+Y\+\_\+\+A\+L\+I\+AS}\hypertarget{group__COMPILER_ga6747712d26181b3a549cb55a69c3f4cb}{}\label{group__COMPILER_ga6747712d26181b3a549cb55a69c3f4cb}
+This is {\itshape Q\+U\+I\+TE} important for us. This keyword is not for performance but for correctness. I\textquotesingle{}m seeing weird behaviors even with -\/fno-\/strict-\/aliasing. This keyword might help. Otherwise, we have to memcpy to type-\/pun everything. uggggrrr. \index{Compiler Specific Optimizations@{Compiler Specific Optimizations}!R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS@{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}}
+\index{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS@{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}!Compiler Specific Optimizations@{Compiler Specific Optimizations}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}{RESTRICT_ALIAS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+S\+T\+R\+I\+C\+T\+\_\+\+A\+L\+I\+AS}\hypertarget{group__COMPILER_ga6decd303d90f9cd75d6bb79d51ea2154}{}\label{group__COMPILER_ga6decd303d90f9cd75d6bb79d51ea2154}
+O\+T\+OH, this explicitly helps compiler auto-\/vectorize and do other stuffs, saying that the variable is never aliased in the function. Seems like older gcc ignored \+\_\+\+\_\+restrict when fno-\/strict-\/aliasing is specified, but recent gcc doesn\textquotesingle{}t. \begin{DoxyAttention}{Attention}
+DO N\+OT U\+SE T\+H\+IS if you don\textquotesingle{}t know what \+\_\+\+\_\+restrict means. 
+\end{DoxyAttention}

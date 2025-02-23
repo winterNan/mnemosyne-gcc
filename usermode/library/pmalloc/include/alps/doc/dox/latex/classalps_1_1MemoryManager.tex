@@ -1,0 +1,43 @@
+\hypertarget{classalps_1_1MemoryManager}{}\section{alps\+:\+:Memory\+Manager Class Reference}
+\label{classalps_1_1MemoryManager}\index{alps\+::\+Memory\+Manager@{alps\+::\+Memory\+Manager}}
+
+
+The memory manager provides a mechanism for directly mapping persistent region files to virtual memory regions.  
+
+
+
+
+{\ttfamily \#include $<$mm.\+hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} (\hyperlink{classalps_1_1Region}{Region} $\ast$region, off\+\_\+t offset, size\+\_\+t length, void $\ast$addr\+\_\+hint, int prot, int flags, \hyperlink{classalps_1_1VmArea}{Vm\+Area} $\ast$$\ast$vmarea)\hypertarget{classalps_1_1MemoryManager_a0795e8c13ff24a1fd717fac961f9c797}{}\label{classalps_1_1MemoryManager_a0795e8c13ff24a1fd717fac961f9c797}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} (\hyperlink{classalps_1_1Region}{Region} $\ast$region, void $\ast$addr, size\+\_\+t length)\hypertarget{classalps_1_1MemoryManager_a7f9e8c4d40c4a2a6417de4fad89f8d46}{}\label{classalps_1_1MemoryManager_a7f9e8c4d40c4a2a6417de4fad89f8d46}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries rtrans} (void $\ast$addr, \hyperlink{classalps_1_1Region}{Region} $\ast$$\ast$pregion, Linear\+Addr $\ast$offset)\hypertarget{classalps_1_1MemoryManager_ad436265484fce31b03e714f031f28403}{}\label{classalps_1_1MemoryManager_ad436265484fce31b03e714f031f28403}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries rtrans} (uintptr\+\_\+t addr, \hyperlink{classalps_1_1Region}{Region} $\ast$$\ast$pregion, Linear\+Addr $\ast$offset)\hypertarget{classalps_1_1MemoryManager_a5f27ecadfe7b172003cdecca423ee56c}{}\label{classalps_1_1MemoryManager_a5f27ecadfe7b172003cdecca423ee56c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The manager is intended for use by a per-\/region memory mapper (Memory\+Map) that implements mapping policy.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Provide an A\+PI for picking address hints\+:
+\begin{DoxyItemize}
+\item best effort mapping\+: find the largest hole in the address space where we can map regions this can guide segment map to pick the right segment size
+\item guide underlying OS by picking an address\+\_\+hint based on our past knowledge about persistent regions to minimize address space fragmentation similar to the Mnemosyne runtime (this could be implemented in the map method) 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/mm.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/mm.\+cc\end{DoxyCompactItemize}

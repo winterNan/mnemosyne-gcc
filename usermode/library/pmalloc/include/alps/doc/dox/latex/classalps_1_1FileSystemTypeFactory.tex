@@ -1,0 +1,53 @@
+\hypertarget{classalps_1_1FileSystemTypeFactory}{}\section{alps\+:\+:File\+System\+Type\+Factory$<$ Object\+Type $>$ Class Template Reference}
+\label{classalps_1_1FileSystemTypeFactory}\index{alps\+::\+File\+System\+Type\+Factory$<$ Object\+Type $>$@{alps\+::\+File\+System\+Type\+Factory$<$ Object\+Type $>$}}
+
+
+A factory class for constructing objects based on the type of the underlying file system.  
+
+
+
+
+{\ttfamily \#include $<$fstype\+\_\+factory.\+hh$>$}
+
+
+
+Collaboration diagram for alps\+:\+:File\+System\+Type\+Factory$<$ Object\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classalps_1_1FileSystemTypeFactory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Object\+Type $\ast$($\ast$ {\bfseries Construct\+Callback}) (const boost\+::filesystem\+::path \&pathname, const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1FileSystemTypeFactory_ac969de7bdc5ea5846adb111c9b00154c}{}\label{classalps_1_1FileSystemTypeFactory_ac969de7bdc5ea5846adb111c9b00154c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries File\+System\+Type\+Factory} (const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1FileSystemTypeFactory_a1466c1689d4b9c4da885524fab0c4c61}{}\label{classalps_1_1FileSystemTypeFactory_a1466c1689d4b9c4da885524fab0c4c61}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries construct} (const boost\+::filesystem\+::path \&pathname, Object\+Type $\ast$$\ast$object)\hypertarget{classalps_1_1FileSystemTypeFactory_ad29eb6817e32392477d54bb8d4a00a5b}{}\label{classalps_1_1FileSystemTypeFactory_ad29eb6817e32392477d54bb8d4a00a5b}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries register\+\_\+fstype} (const std\+::string \&fstype, Construct\+Callback)\hypertarget{classalps_1_1FileSystemTypeFactory_aeb8d8c62187c4d6a9338be6b7bd2cec4}{}\label{classalps_1_1FileSystemTypeFactory_aeb8d8c62187c4d6a9338be6b7bd2cec4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Construct\+Callback\+Map {\bfseries callbacks\+\_\+}\hypertarget{classalps_1_1FileSystemTypeFactory_ab0e19021185da56a6b7c4c3c9c30a346}{}\label{classalps_1_1FileSystemTypeFactory_ab0e19021185da56a6b7c4c3c9c30a346}
+
+\item 
+\hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} {\bfseries pegasus\+\_\+options\+\_\+}\hypertarget{classalps_1_1FileSystemTypeFactory_a7a2c7e28160c6a42fa56c2f695766be5}{}\label{classalps_1_1FileSystemTypeFactory_a7a2c7e28160c6a42fa56c2f695766be5}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/fstype\+\_\+factory.\+hh\end{DoxyCompactItemize}

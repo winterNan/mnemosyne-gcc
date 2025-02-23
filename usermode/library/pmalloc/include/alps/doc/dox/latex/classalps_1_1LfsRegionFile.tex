@@ -1,0 +1,99 @@
+\hypertarget{classalps_1_1LfsRegionFile}{}\section{alps\+:\+:Lfs\+Region\+File Class Reference}
+\label{classalps_1_1LfsRegionFile}\index{alps\+::\+Lfs\+Region\+File@{alps\+::\+Lfs\+Region\+File}}
+
+
+Represents a region file backed by the Librarian FS.  
+
+
+
+
+{\ttfamily \#include $<$lfs\+\_\+region\+\_\+file.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Lfs\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classalps_1_1LfsRegionFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for alps\+:\+:Lfs\+Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classalps_1_1LfsRegionFile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Interleave\+Policy} \{ {\bfseries k\+Precise\+Allocate} = 0, 
+{\bfseries k\+Round\+Robin}
+ \}\hypertarget{classalps_1_1LfsRegionFile_a680a5b2fdfe08e752b30ae155901d118}{}\label{classalps_1_1LfsRegionFile_a680a5b2fdfe08e752b30ae155901d118}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Lfs\+Region\+File} (const boost\+::filesystem\+::path \&pathname, const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1LfsRegionFile_a81c1bef03c892fe27b3c436d541aa164}{}\label{classalps_1_1LfsRegionFile_a81c1bef03c892fe27b3c436d541aa164}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries create} (mode\+\_\+t mode)\hypertarget{classalps_1_1LfsRegionFile_aec4c0a975a453de5a92313a15febd797}{}\label{classalps_1_1LfsRegionFile_aec4c0a975a453de5a92313a15febd797}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags, mode\+\_\+t mode)\hypertarget{classalps_1_1LfsRegionFile_a40ed4ec47a3f8f294026c2599e0878f7}{}\label{classalps_1_1LfsRegionFile_a40ed4ec47a3f8f294026c2599e0878f7}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags)\hypertarget{classalps_1_1LfsRegionFile_a97048d3ee58fc7e2fb107dd7fa75c97d}{}\label{classalps_1_1LfsRegionFile_a97048d3ee58fc7e2fb107dd7fa75c97d}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unlink} ()\hypertarget{classalps_1_1LfsRegionFile_ac31fc14d0caf4b6448478032b859907c}{}\label{classalps_1_1LfsRegionFile_ac31fc14d0caf4b6448478032b859907c}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries close} ()\hypertarget{classalps_1_1LfsRegionFile_aafbc14718eaf10a372a7f7e1ce980cc0}{}\label{classalps_1_1LfsRegionFile_aafbc14718eaf10a372a7f7e1ce980cc0}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries truncate} (loff\+\_\+t length)\hypertarget{classalps_1_1LfsRegionFile_ae6b7e891a39e1fe2b35a3301a94e89f0}{}\label{classalps_1_1LfsRegionFile_ae6b7e891a39e1fe2b35a3301a94e89f0}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries size} (loff\+\_\+t $\ast$length)\hypertarget{classalps_1_1LfsRegionFile_a0e243bd2818afb0074c8b081ef832244}{}\label{classalps_1_1LfsRegionFile_a0e243bd2818afb0074c8b081ef832244}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} (void $\ast$addr\+\_\+hint, size\+\_\+t length, int prot, int flags, loff\+\_\+t offset, void $\ast$$\ast$mapped\+\_\+addr)\hypertarget{classalps_1_1LfsRegionFile_a0422a2e6993d2f9514f8b9d3f8591393}{}\label{classalps_1_1LfsRegionFile_a0422a2e6993d2f9514f8b9d3f8591393}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} (void $\ast$addr, size\+\_\+t length)\hypertarget{classalps_1_1LfsRegionFile_a45abfa040991646add32d5cfd032736a}{}\label{classalps_1_1LfsRegionFile_a45abfa040991646add32d5cfd032736a}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries getxattr} (const char $\ast$name, void $\ast$value, size\+\_\+t size)\hypertarget{classalps_1_1LfsRegionFile_ae6fc356df22d6ec82d97e35019013bdc}{}\label{classalps_1_1LfsRegionFile_ae6fc356df22d6ec82d97e35019013bdc}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries setxattr} (const char $\ast$name, const void $\ast$value, size\+\_\+t size, int flags)\hypertarget{classalps_1_1LfsRegionFile_ab3e7f8d216d341d4157444c2a5ae7625}{}\label{classalps_1_1LfsRegionFile_ab3e7f8d216d341d4157444c2a5ae7625}
+
+\item 
+size\+\_\+t {\bfseries booksize} ()\hypertarget{classalps_1_1LfsRegionFile_a526610896c98d23ddd9e29fbe20c04a6}{}\label{classalps_1_1LfsRegionFile_a526610896c98d23ddd9e29fbe20c04a6}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$ {\bfseries construct} (const boost\+::filesystem\+::path \&pathname, const \hyperlink{structalps_1_1PegasusOptions}{Pegasus\+Options} \&pegasus\+\_\+options)\hypertarget{classalps_1_1LfsRegionFile_a0137dec1c0ab38afd0d58c2433b20ab1}{}\label{classalps_1_1LfsRegionFile_a0137dec1c0ab38afd0d58c2433b20ab1}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Interleave\+Policy {\bfseries interleave\+\_\+policy\+\_\+}\hypertarget{classalps_1_1LfsRegionFile_a1dbc8a71fb39f79ea0884ccf80495bfb}{}\label{classalps_1_1LfsRegionFile_a1dbc8a71fb39f79ea0884ccf80495bfb}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/lfs\+\_\+region\+\_\+file.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/lfs\+\_\+region\+\_\+file.\+cc\end{DoxyCompactItemize}

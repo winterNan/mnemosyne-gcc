@@ -1,0 +1,309 @@
+\hypertarget{classalps_1_1ErrorStack}{}\section{alps\+:\+:Error\+Stack Class Reference}
+\label{classalps_1_1ErrorStack}\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+
+
+Brings error stacktrace information as return value of functions.  
+
+
+
+
+{\ttfamily \#include $<$error\+\_\+stack.\+hh$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997}{Constants} \{ \hyperlink{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997abd01de12344bb39aa89faef49805ac46}{k\+Max\+Stack\+Depth} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classalps_1_1ErrorStack_af45fef4cca00ffee757cc9cc3785a0a8}{Error\+Stack} ()
+\item 
+\hyperlink{classalps_1_1ErrorStack_ad40706ec9b58151b37fda5096f77b718}{Error\+Stack} (\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} code)
+\begin{DoxyCompactList}\small\item\em Instantiate a return code without a custom error message nor stacktrace. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack_aaee609e98f03c2733af1203036e3f6e0}{Error\+Stack} (const char $\ast$filename, const char $\ast$func, uint32\+\_\+t linenum, \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} code, const char $\ast$custom\+\_\+message=\hyperlink{group__CXX11_ga213f92e16813051c59cdccf6d28baa78}{C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR})
+\begin{DoxyCompactList}\small\item\em Instantiate a return code with stacktrace and optionally a custom error message. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack_a9222f3cb9055701981493a1451b321e4}{Error\+Stack} (const \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \&other)
+\item 
+\hyperlink{classalps_1_1ErrorStack_a5e43623d23880edd151f921dec114a5d}{Error\+Stack} (const \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \&other, const char $\ast$filename, const char $\ast$func, uint32\+\_\+t linenum, const char $\ast$more\+\_\+custom\+\_\+message=\hyperlink{group__CXX11_ga213f92e16813051c59cdccf6d28baa78}{C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR})
+\item 
+\hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \& \hyperlink{classalps_1_1ErrorStack_a9719a01f9e25cd67bbd632521524e888}{operator=} (const \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \&other)
+\item 
+\hyperlink{classalps_1_1ErrorStack_afb344b60c5d325aebbd6b9b278357df2}{$\sim$\+Error\+Stack} ()
+\item 
+bool \hyperlink{classalps_1_1ErrorStack_a6a1333e8b975b92de8628e8b3c5058dc}{is\+\_\+error} () const 
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1ErrorStack_acad692aa115b80ee36ad173c5aa9e2eb}{get\+\_\+error\+\_\+code} () const 
+\item 
+const char $\ast$ \hyperlink{classalps_1_1ErrorStack_ad6d3e825281c3bc8ed7aee7ba0a35b74}{get\+\_\+message} () const 
+\item 
+const char $\ast$ \hyperlink{classalps_1_1ErrorStack_aa5814d07d45601b0f54b77c2b456ba8c}{get\+\_\+custom\+\_\+message} () const 
+\item 
+void \hyperlink{classalps_1_1ErrorStack_a68a61726008208d49521db039a18d2d9}{copy\+\_\+custom\+\_\+message} (const char $\ast$message)
+\item 
+void \hyperlink{classalps_1_1ErrorStack_a416b4574f9f73063720cb20c620dad51}{clear\+\_\+custom\+\_\+message} ()
+\item 
+void \hyperlink{classalps_1_1ErrorStack_ae89827aafd6095698f9b223ebecea40b}{append\+\_\+custom\+\_\+message} (const char $\ast$more\+\_\+custom\+\_\+message)
+\item 
+uint16\+\_\+t \hyperlink{classalps_1_1ErrorStack_aeb0920c79b84e369eecd694cc8261ff1}{get\+\_\+stack\+\_\+depth} () const 
+\item 
+uint32\+\_\+t \hyperlink{classalps_1_1ErrorStack_ae4b6ae74770f2f45e9f6161785c05b2b}{get\+\_\+linenum} (uint16\+\_\+t stack\+\_\+index) const 
+\item 
+const char $\ast$ \hyperlink{classalps_1_1ErrorStack_ad13251b97c0b40b0901f606f9d6d5384}{get\+\_\+filename} (uint16\+\_\+t stack\+\_\+index) const 
+\item 
+const char $\ast$ \hyperlink{classalps_1_1ErrorStack_a738f149173bc7e9a7be827dd7a02de8f}{get\+\_\+func} (uint16\+\_\+t stack\+\_\+index) const 
+\item 
+int \hyperlink{classalps_1_1ErrorStack_a1d7e8a20295213f32de56a5b77b976c1}{get\+\_\+os\+\_\+errno} () const 
+\item 
+void \hyperlink{classalps_1_1ErrorStack_ad157dbc40b5c2eaccd44dd7347296a45}{verify} () const 
+\item 
+void \hyperlink{classalps_1_1ErrorStack_afe67ad7f9830b1ef263f867109230b54}{output} (std\+::ostream $\ast$ptr) const 
+\item 
+void \hyperlink{classalps_1_1ErrorStack_a30461e6b34692f7ee11db1995d52d0ac}{dump\+\_\+and\+\_\+abort} (const char $\ast$abort\+\_\+message) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classalps_1_1ErrorStack_a4e7dfdf688e6a33bbda2cfebf3a396a7}{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \&obj)\hypertarget{classalps_1_1ErrorStack_adfc96f96e5d8f4c12b4a9cea60c1fbb4}{}\label{classalps_1_1ErrorStack_adfc96f96e5d8f4c12b4a9cea60c1fbb4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is returned by many A\+PI functions. As it brings stacktrace information, it\textquotesingle{}s more informative than just returning Error\+Code. However, note that instantiating and augmenting this stack object has some overhead.
+
+\begin{DoxyParagraph}{Why not exception}
+A couple of reasons\+: \begin{DoxyItemize}
+\item Performance \item Portability \item Our Google C++ Coding Style overlord said so\end{DoxyItemize}
+We are not even sure what exceptions would look like in future environments. So, we don\textquotesingle{}t throw or catch any exceptions in our program.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Macros to help use Error\+Stack}
+In most places, you should use k\+Ret\+Ok, \hyperlink{group__ERRORCODES_ga72a80915c3588aea09c053ab567e19c4}{C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R(x)}, or \hyperlink{group__ERRORCODES_gaf2fc6952d71aa10a52c326a27a0746da}{E\+R\+R\+O\+R\+\_\+\+S\+T\+A\+C\+K(e)} to handle this class. See the doucments of those macros.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Forced return code checking}
+An error code must be checked by some code, else it will abort with an \char`\"{}error-\/not-\/checked\char`\"{} error in stderr. We might later make this warning instead of aborting, but we should keep the current setting for a while to check for undesired coding. Once you get used to, making it sure is quite effortless.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Maximum stack trace depth}
+When the return code is an error code, we propagate back the stack trace for easier debugging. We could have a linked-\/list for this and, to ameriolate allocate/delete cost for it, a T\+LS object pool. Unfortunately, it causes issues in some environments and is not so readable/maintainable. Instead, we limit the depth of stacktraces stored in this object to a reasonable number enough for debugging; \hyperlink{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997abd01de12344bb39aa89faef49805ac46}{k\+Max\+Stack\+Depth}. We then store just line numbers and const pointers to file names. No heap allocation. The only thing that has to be allocated on heap is a custom error message. However, there are not many places that use custom messages, so the cost usually doesn\textquotesingle{}t happen.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Moveable/\+Copiable}
+This object is {\itshape copiable}. Further, the copy constructor and copy assignment operator are equivalent to {\itshape move}. Although they take a const reference, we {\itshape steal} its checked\+\_\+ and custom\+\_\+message\+\_\+. This might be confusing, but much more efficient without C++11. As this object is copied so many times, we take this approach.
+\end{DoxyParagraph}
+This class is header-\/only {\bfseries except} \hyperlink{classalps_1_1ErrorStack_afe67ad7f9830b1ef263f867109230b54}{output()}, \hyperlink{classalps_1_1ErrorStack_a30461e6b34692f7ee11db1995d52d0ac}{dump\+\_\+and\+\_\+abort()}, and std\+::ostream redirect. 
+
+\subsection{Member Enumeration Documentation}
+\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Constants@{Constants}}
+\index{Constants@{Constants}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Constants}{Constants}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf alps\+::\+Error\+Stack\+::\+Constants}}\hypertarget{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997}{}\label{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997}
+Constant values. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\+Max\+Stack\+Depth@{k\+Max\+Stack\+Depth}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!k\+Max\+Stack\+Depth@{k\+Max\+Stack\+Depth}}\item[{\em 
+k\+Max\+Stack\+Depth\hypertarget{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997abd01de12344bb39aa89faef49805ac46}{}\label{classalps_1_1ErrorStack_a18b861743a2de89ca205ffa2d91e6997abd01de12344bb39aa89faef49805ac46}
+}]Maximum stack trace depth. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}}
+\index{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Error\+Stack()}{ErrorStack()}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::\+Error\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_af45fef4cca00ffee757cc9cc3785a0a8}{}\label{classalps_1_1ErrorStack_af45fef4cca00ffee757cc9cc3785a0a8}
+Empty constructor. This is same as duplicating k\+Ret\+Ok. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}}
+\index{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Error\+Stack(\+Error\+Code code)}{ErrorStack(ErrorCode code)}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::\+Error\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+Code}}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classalps_1_1ErrorStack_ad40706ec9b58151b37fda5096f77b718}{}\label{classalps_1_1ErrorStack_ad40706ec9b58151b37fda5096f77b718}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & Error code, either k\+Error\+Code\+Ok or real errors.\\
+\hline
+\end{DoxyParams}
+This is the most (next to k\+Ret\+Ok) light-\/weight way to create/propagate a return code. Use this one if you do not need a detail information to debug the error (eg, error whose cause is obvious, an expected error that is immediately caught, etc). \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}}
+\index{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Error\+Stack(const char $\ast$filename, const char $\ast$func, uint32\+\_\+t linenum, Error\+Code code, const char $\ast$custom\+\_\+message=\+C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+T\+R)}{ErrorStack(const char *filename, const char *func, uint32_t linenum, ErrorCode code, const char *custom_message=CXX11_NULLPTR)}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::\+Error\+Stack (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{func, }
+\item[{uint32\+\_\+t}]{linenum, }
+\item[{{\bf Error\+Code}}]{code, }
+\item[{const char $\ast$}]{custom\+\_\+message = {\ttfamily {\bf C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_aaee609e98f03c2733af1203036e3f6e0}{}\label{classalps_1_1ErrorStack_aaee609e98f03c2733af1203036e3f6e0}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & file name of the current place. It must be a const and permanent string, such as what \char`\"{}\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+\char`\"{} returns. Note that we do N\+OT do deep-\/copy of the strings. \\
+\hline
+\mbox{\tt in}  & {\em func} & functiona name of the current place. Must be a const-\/permanent as well, such as \char`\"{}\+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+\char`\"{} of gcc/\+M\+S\+VC or C++11\textquotesingle{}s {\bfseries func}. \\
+\hline
+\mbox{\tt in}  & {\em linenum} & line number of the current place. Usually \char`\"{}\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+\char`\"{}. \\
+\hline
+\mbox{\tt in}  & {\em code} & Error code, must be real errors. \\
+\hline
+\mbox{\tt in}  & {\em custom\+\_\+message} & Optional custom error message in addition to the default one inferred from error code. If you pass a non-\/\+N\+U\+LL string to this argument, we do deep-\/copy, so it\textquotesingle{}s E\+X\+P\+E\+N\+S\+I\+V\+E! \\
+\hline
+\end{DoxyParams}
+\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}}
+\index{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Error\+Stack(const Error\+Stack \&other)}{ErrorStack(const ErrorStack &other)}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::\+Error\+Stack (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\+Stack} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a9222f3cb9055701981493a1451b321e4}{}\label{classalps_1_1ErrorStack_a9222f3cb9055701981493a1451b321e4}
+Copy constructor. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!Error\+Stack@{Error\+Stack}}
+\index{Error\+Stack@{Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{Error\+Stack(const Error\+Stack \&other, const char $\ast$filename, const char $\ast$func, uint32\+\_\+t linenum, const char $\ast$more\+\_\+custom\+\_\+message=\+C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+T\+R)}{ErrorStack(const ErrorStack &other, const char *filename, const char *func, uint32_t linenum, const char *more_custom_message=CXX11_NULLPTR)}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::\+Error\+Stack (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\+Stack} \&}]{other, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{func, }
+\item[{uint32\+\_\+t}]{linenum, }
+\item[{const char $\ast$}]{more\+\_\+custom\+\_\+message = {\ttfamily {\bf C\+X\+X11\+\_\+\+N\+U\+L\+L\+P\+TR}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a5e43623d23880edd151f921dec114a5d}{}\label{classalps_1_1ErrorStack_a5e43623d23880edd151f921dec114a5d}
+Copy constructor to augment the stacktrace. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!````~Error\+Stack@{$\sim$\+Error\+Stack}}
+\index{````~Error\+Stack@{$\sim$\+Error\+Stack}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{$\sim$\+Error\+Stack()}{~ErrorStack()}}]{\setlength{\rightskip}{0pt plus 5cm}alps\+::\+Error\+Stack\+::$\sim$\+Error\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_afb344b60c5d325aebbd6b9b278357df2}{}\label{classalps_1_1ErrorStack_afb344b60c5d325aebbd6b9b278357df2}
+Will warn in stderr if the error code is not checked yet. 
+
+\subsection{Member Function Documentation}
+\index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!append\+\_\+custom\+\_\+message@{append\+\_\+custom\+\_\+message}}
+\index{append\+\_\+custom\+\_\+message@{append\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{append\+\_\+custom\+\_\+message(const char $\ast$more\+\_\+custom\+\_\+message)}{append_custom_message(const char *more_custom_message)}}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::append\+\_\+custom\+\_\+message (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{more\+\_\+custom\+\_\+message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_ae89827aafd6095698f9b223ebecea40b}{}\label{classalps_1_1ErrorStack_ae89827aafd6095698f9b223ebecea40b}
+Appends more custom error message at the end. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!clear\+\_\+custom\+\_\+message@{clear\+\_\+custom\+\_\+message}}
+\index{clear\+\_\+custom\+\_\+message@{clear\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{clear\+\_\+custom\+\_\+message()}{clear_custom_message()}}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::clear\+\_\+custom\+\_\+message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a416b4574f9f73063720cb20c620dad51}{}\label{classalps_1_1ErrorStack_a416b4574f9f73063720cb20c620dad51}
+Deletes custom message from this object. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!copy\+\_\+custom\+\_\+message@{copy\+\_\+custom\+\_\+message}}
+\index{copy\+\_\+custom\+\_\+message@{copy\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{copy\+\_\+custom\+\_\+message(const char $\ast$message)}{copy_custom_message(const char *message)}}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::copy\+\_\+custom\+\_\+message (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a68a61726008208d49521db039a18d2d9}{}\label{classalps_1_1ErrorStack_a68a61726008208d49521db039a18d2d9}
+Copy the given custom message into this object. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!dump\+\_\+and\+\_\+abort@{dump\+\_\+and\+\_\+abort}}
+\index{dump\+\_\+and\+\_\+abort@{dump\+\_\+and\+\_\+abort}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{dump\+\_\+and\+\_\+abort(const char $\ast$abort\+\_\+message) const }{dump_and_abort(const char *abort_message) const }}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::dump\+\_\+and\+\_\+abort (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{abort\+\_\+message}
+\end{DoxyParamCaption}
+) const}\hypertarget{classalps_1_1ErrorStack_a30461e6b34692f7ee11db1995d52d0ac}{}\label{classalps_1_1ErrorStack_a30461e6b34692f7ee11db1995d52d0ac}
+Describe this object to std\+::cerr and then abort. This also leaves the dump information in static variable so that a signal handler pick it up. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+custom\+\_\+message@{get\+\_\+custom\+\_\+message}}
+\index{get\+\_\+custom\+\_\+message@{get\+\_\+custom\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+custom\+\_\+message() const }{get_custom_message() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ alps\+::\+Error\+Stack\+::get\+\_\+custom\+\_\+message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_aa5814d07d45601b0f54b77c2b456ba8c}{}\label{classalps_1_1ErrorStack_aa5814d07d45601b0f54b77c2b456ba8c}
+Returns the custom error message. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+error\+\_\+code@{get\+\_\+error\+\_\+code}}
+\index{get\+\_\+error\+\_\+code@{get\+\_\+error\+\_\+code}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+error\+\_\+code() const }{get_error_code() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code} alps\+::\+Error\+Stack\+::get\+\_\+error\+\_\+code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_acad692aa115b80ee36ad173c5aa9e2eb}{}\label{classalps_1_1ErrorStack_acad692aa115b80ee36ad173c5aa9e2eb}
+Return the integer error code. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+filename@{get\+\_\+filename}}
+\index{get\+\_\+filename@{get\+\_\+filename}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+filename(uint16\+\_\+t stack\+\_\+index) const }{get_filename(uint16_t stack_index) const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ alps\+::\+Error\+Stack\+::get\+\_\+filename (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{stack\+\_\+index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_ad13251b97c0b40b0901f606f9d6d5384}{}\label{classalps_1_1ErrorStack_ad13251b97c0b40b0901f606f9d6d5384}
+Returns the file name of the given stack position. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+func@{get\+\_\+func}}
+\index{get\+\_\+func@{get\+\_\+func}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+func(uint16\+\_\+t stack\+\_\+index) const }{get_func(uint16_t stack_index) const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ alps\+::\+Error\+Stack\+::get\+\_\+func (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{stack\+\_\+index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a738f149173bc7e9a7be827dd7a02de8f}{}\label{classalps_1_1ErrorStack_a738f149173bc7e9a7be827dd7a02de8f}
+Returns the function name of the given stack position. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+linenum@{get\+\_\+linenum}}
+\index{get\+\_\+linenum@{get\+\_\+linenum}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+linenum(uint16\+\_\+t stack\+\_\+index) const }{get_linenum(uint16_t stack_index) const }}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t alps\+::\+Error\+Stack\+::get\+\_\+linenum (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{stack\+\_\+index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_ae4b6ae74770f2f45e9f6161785c05b2b}{}\label{classalps_1_1ErrorStack_ae4b6ae74770f2f45e9f6161785c05b2b}
+Returns the line number of the given stack position. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+message@{get\+\_\+message}}
+\index{get\+\_\+message@{get\+\_\+message}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+message() const }{get_message() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ alps\+::\+Error\+Stack\+::get\+\_\+message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_ad6d3e825281c3bc8ed7aee7ba0a35b74}{}\label{classalps_1_1ErrorStack_ad6d3e825281c3bc8ed7aee7ba0a35b74}
+Returns the error message inferred by the error code. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+os\+\_\+errno@{get\+\_\+os\+\_\+errno}}
+\index{get\+\_\+os\+\_\+errno@{get\+\_\+os\+\_\+errno}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+os\+\_\+errno() const }{get_os_errno() const }}]{\setlength{\rightskip}{0pt plus 5cm}int alps\+::\+Error\+Stack\+::get\+\_\+os\+\_\+errno (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a1d7e8a20295213f32de56a5b77b976c1}{}\label{classalps_1_1ErrorStack_a1d7e8a20295213f32de56a5b77b976c1}
+Global errno of the system as of instantiation of this error stack. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort@{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}}
+\index{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort@{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort()}{get_recent_dump_and_abort()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string alps\+::\+Error\+Stack\+::get\+\_\+recent\+\_\+dump\+\_\+and\+\_\+abort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classalps_1_1ErrorStack_a4e7dfdf688e6a33bbda2cfebf3a396a7}{}\label{classalps_1_1ErrorStack_a4e7dfdf688e6a33bbda2cfebf3a396a7}
+Signal handler can get the dump information via this. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!get\+\_\+stack\+\_\+depth@{get\+\_\+stack\+\_\+depth}}
+\index{get\+\_\+stack\+\_\+depth@{get\+\_\+stack\+\_\+depth}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{get\+\_\+stack\+\_\+depth() const }{get_stack_depth() const }}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t alps\+::\+Error\+Stack\+::get\+\_\+stack\+\_\+depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_aeb0920c79b84e369eecd694cc8261ff1}{}\label{classalps_1_1ErrorStack_aeb0920c79b84e369eecd694cc8261ff1}
+Returns the depth of stack this error code has collected. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!is\+\_\+error@{is\+\_\+error}}
+\index{is\+\_\+error@{is\+\_\+error}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{is\+\_\+error() const }{is_error() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool alps\+::\+Error\+Stack\+::is\+\_\+error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a6a1333e8b975b92de8628e8b3c5058dc}{}\label{classalps_1_1ErrorStack_a6a1333e8b975b92de8628e8b3c5058dc}
+Returns if this return code is not k\+Error\+Code\+Ok. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!operator=@{operator=}}
+\index{operator=@{operator=}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{operator=(const Error\+Stack \&other)}{operator=(const ErrorStack &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} \& alps\+::\+Error\+Stack\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\+Stack} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_a9719a01f9e25cd67bbd632521524e888}{}\label{classalps_1_1ErrorStack_a9719a01f9e25cd67bbd632521524e888}
+Assignment operator. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!output@{output}}
+\index{output@{output}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{output(std\+::ostream $\ast$ptr) const }{output(std::ostream *ptr) const }}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::output (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream $\ast$}]{ptr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classalps_1_1ErrorStack_afe67ad7f9830b1ef263f867109230b54}{}\label{classalps_1_1ErrorStack_afe67ad7f9830b1ef263f867109230b54}
+Describe this object to the given stream. \index{alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}!verify@{verify}}
+\index{verify@{verify}!alps\+::\+Error\+Stack@{alps\+::\+Error\+Stack}}
+\subsubsection[{\texorpdfstring{verify() const }{verify() const }}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Error\+Stack\+::verify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classalps_1_1ErrorStack_ad157dbc40b5c2eaccd44dd7347296a45}{}\label{classalps_1_1ErrorStack_ad157dbc40b5c2eaccd44dd7347296a45}
+Output a warning to stderr if the error is not checked yet. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/common/error\+\_\+stack.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/common/error\+\_\+stack.\+cc\end{DoxyCompactItemize}

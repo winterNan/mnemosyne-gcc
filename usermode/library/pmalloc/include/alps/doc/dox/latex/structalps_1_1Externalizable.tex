@@ -1,0 +1,316 @@
+\hypertarget{structalps_1_1Externalizable}{}\section{alps\+:\+:Externalizable Struct Reference}
+\label{structalps_1_1Externalizable}\index{alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+
+
+Represents an object that can be written to and read from files/bytes in Y\+A\+ML format.  
+
+
+
+
+{\ttfamily \#include $<$externalizable.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Externalizable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structalps_1_1Externalizable__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a3f29cb41a5b5201a1316480087902eed}{load} (Y\+A\+M\+L\+::\+Node $\ast$node, bool ignore\+\_\+missing=false)=0
+\begin{DoxyCompactList}\small\item\em Reads the content of this object from the given Y\+A\+ML element. \end{DoxyCompactList}\item 
+virtual \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a17a3cdc895ad343d18fd37ff6efd0aef}{save} (Y\+A\+M\+L\+::\+Emitter $\ast$out) const =0
+\begin{DoxyCompactList}\small\item\em Writes the content of this object to the given Y\+A\+ML element. \end{DoxyCompactList}\item 
+virtual \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a208181477d819b3023ce80c60d54a730}{add\+\_\+command\+\_\+options} (Command\+Option\+List $\ast$cmdopt)=0\hypertarget{structalps_1_1Externalizable_a208181477d819b3023ce80c60d54a730}{}\label{structalps_1_1Externalizable_a208181477d819b3023ce80c60d54a730}
+
+\begin{DoxyCompactList}\small\item\em Adds command options for parsing. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{structalps_1_1Externalizable_a865f0f3245014aafdd3133cc9d912cc5}{get\+\_\+tag\+\_\+name} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a Y\+A\+ML tag name for this object as a root element. \end{DoxyCompactList}\item 
+virtual void \hyperlink{structalps_1_1Externalizable_a5c289543724fdeff9b260f0d0db90f79}{assign} (const \hyperlink{structalps_1_1Externalizable}{alps\+::\+Externalizable} $\ast$other)=0
+\begin{DoxyCompactList}\small\item\em Polymorphic assign operator. This should invoke operator= of the derived class. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a3841c50c774b365f37d5adffd73d9951}{load\+\_\+from\+\_\+string} (const std\+::string \&yaml, bool ignore\+\_\+missing=false)
+\begin{DoxyCompactList}\small\item\em Load the content of this object from the given Y\+A\+ML string. \end{DoxyCompactList}\item 
+void \hyperlink{structalps_1_1Externalizable_abba9ffdd2e669137e214e5a499860b04}{save\+\_\+to\+\_\+stream} (std\+::ostream $\ast$ptr) const 
+\begin{DoxyCompactList}\small\item\em Invokes \hyperlink{structalps_1_1Externalizable_a17a3cdc895ad343d18fd37ff6efd0aef}{save()} and directs the resulting Y\+A\+ML text to the given stream. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a5793ccfb5fd521a3eb8dbde9764c1564}{load\+\_\+from\+\_\+file} (const fs\+::path \&path, bool ignore\+\_\+missing=false)
+\begin{DoxyCompactList}\small\item\em Load the content of this object from the specified Y\+A\+ML file. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a307766812750ba20517950d0caf554ae}{save\+\_\+to\+\_\+file} (const fs\+::path \&path) const 
+\begin{DoxyCompactList}\small\item\em Atomically and durably writes out this object to the specified Y\+A\+ML file. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_abf8a8a68cc0fc81aa8fec5b7d4092253}{load\+\_\+from\+\_\+command\+\_\+options} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Load content from command line options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} {\bfseries insert\+\_\+comment} (Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&comment)\hypertarget{structalps_1_1Externalizable_a28dd65d2a42ab29bd43e558068823724}{}\label{structalps_1_1Externalizable_a28dd65d2a42ab29bd43e558068823724}
+
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} {\bfseries append\+\_\+comment} (Y\+A\+M\+L\+::\+Emitter $\ast$parent, const std\+::string \&comment)\hypertarget{structalps_1_1Externalizable_acc02665189c05b0bb47cfb47f6cc158f}{}\label{structalps_1_1Externalizable_acc02665189c05b0bb47cfb47f6cc158f}
+
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a61f858f84debb03b04172d1a4b1f8fd2}{add\+\_\+element} (Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, T value, bool seq=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a8cffba39c5316b4adbf46e4a9244d2d8}{add\+\_\+element} (Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, const std\+::vector$<$ T $>$ \&value, bool seq=true)
+\item 
+{\footnotesize template$<$typename E\+N\+UM $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a6a684727a7e58fe41fba41b54ee95e7c}{add\+\_\+enum\+\_\+element} (Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, E\+N\+UM value)
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_acf463dfeffb23bd455eaf868d2e20de6}{add\+\_\+child\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, const std\+::string \&comment, const \hyperlink{structalps_1_1Externalizable}{Externalizable} \&child)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a880beff849c59fe09e4be608901ca5e3}{get\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, T $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, T value=0)
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a53b7384d8b707667d22cf293a4307a73}{get\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, std\+::string $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, const char $\ast$value=\char`\"{}\char`\"{})
+\item 
+{\footnotesize template$<$typename E\+N\+UM $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a88cbbc7033b72b78fea4dd6fc8ca1402}{get\+\_\+enum\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, E\+N\+UM $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, E\+N\+UM default\+\_\+value=static\+\_\+cast$<$ E\+N\+UM $>$(0))
+\item 
+{\footnotesize template$<$typename S\+I\+ZE $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a1a6df09ad89c2154cc94de784127ec1f}{get\+\_\+size\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, S\+I\+ZE $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, S\+I\+ZE default\+\_\+value=static\+\_\+cast$<$ S\+I\+ZE $>$(0))
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a02ca000360b9ab5fc30b4cf30ade1354}{get\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, std\+::vector$<$ T $>$ $\ast$out, bool ignore\+\_\+missing=false, bool optional=false)
+\item 
+static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} \hyperlink{structalps_1_1Externalizable_a03e9ab31323b870ba49408a9cd2720bc}{get\+\_\+child\+\_\+element} (Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, \hyperlink{structalps_1_1Externalizable}{Externalizable} $\ast$child, bool ignore\+\_\+missing=false, bool optional=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \hyperlink{classalps_1_1ErrorStack}{Error\+Stack} {\bfseries add\+\_\+command\+\_\+option} (Command\+Option\+List $\ast$cmdlist, const std\+::string \&tag, T $\ast$out, std\+::string desc)\hypertarget{structalps_1_1Externalizable_a6a54f3965c85284e18b2d2acdb936f59}{}\label{structalps_1_1Externalizable_a6a54f3965c85284e18b2d2acdb936f59}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived classes must implement \hyperlink{structalps_1_1Externalizable_a3f29cb41a5b5201a1316480087902eed}{load()} and \hyperlink{structalps_1_1Externalizable_a17a3cdc895ad343d18fd37ff6efd0aef}{save()}. 
+
+\subsection{Member Function Documentation}
+\index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+child\+\_\+element@{add\+\_\+child\+\_\+element}}
+\index{add\+\_\+child\+\_\+element@{add\+\_\+child\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{add\+\_\+child\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, const std\+::string \&comment, const Externalizable \&child)}{add_child_element(YAML::Node *parent, const std::string &tag, const std::string &comment, const Externalizable &child)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Error\+Stack} alps\+::\+Externalizable\+::add\+\_\+child\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{const std\+::string \&}]{comment, }
+\item[{const {\bf Externalizable} \&}]{child}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_acf463dfeffb23bd455eaf868d2e20de6}{}\label{structalps_1_1Externalizable_acf463dfeffb23bd455eaf868d2e20de6}
+child \hyperlink{structalps_1_1Externalizable}{Externalizable} version \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+element@{add\+\_\+element}}
+\index{add\+\_\+element@{add\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{add\+\_\+element(\+Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, T value, bool seq=false)}{add_element(YAML::Emitter *out, const std::string &tag, const std::string &comment, T value, bool seq=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Error\+Stack} alps\+::\+Externalizable\+::add\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Emitter $\ast$}]{out, }
+\item[{const std\+::string \&}]{tag, }
+\item[{const std\+::string \&}]{comment, }
+\item[{T}]{value, }
+\item[{bool}]{seq = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a61f858f84debb03b04172d1a4b1f8fd2}{}\label{structalps_1_1Externalizable_a61f858f84debb03b04172d1a4b1f8fd2}
+Only declaration in header. Explicitly instantiated in cpp for each type this func handles. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+element@{add\+\_\+element}}
+\index{add\+\_\+element@{add\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{add\+\_\+element(\+Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, const std\+::vector$<$ T $>$ \&value, bool seq=true)}{add_element(YAML::Emitter *out, const std::string &tag, const std::string &comment, const std::vector< T > &value, bool seq=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Error\+Stack} alps\+::\+Externalizable\+::add\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Emitter $\ast$}]{out, }
+\item[{const std\+::string \&}]{tag, }
+\item[{const std\+::string \&}]{comment, }
+\item[{const std\+::vector$<$ T $>$ \&}]{value, }
+\item[{bool}]{seq = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a8cffba39c5316b4adbf46e4a9244d2d8}{}\label{structalps_1_1Externalizable_a8cffba39c5316b4adbf46e4a9244d2d8}
+vector version
+
+Only declaration in header. Explicitly instantiated in cpp for each type this func handles. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!add\+\_\+enum\+\_\+element@{add\+\_\+enum\+\_\+element}}
+\index{add\+\_\+enum\+\_\+element@{add\+\_\+enum\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{add\+\_\+enum\+\_\+element(\+Y\+A\+M\+L\+::\+Emitter $\ast$out, const std\+::string \&tag, const std\+::string \&comment, E\+N\+U\+M value)}{add_enum_element(YAML::Emitter *out, const std::string &tag, const std::string &comment, ENUM value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E\+N\+UM $>$ static {\bf Error\+Stack} alps\+::\+Externalizable\+::add\+\_\+enum\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Emitter $\ast$}]{out, }
+\item[{const std\+::string \&}]{tag, }
+\item[{const std\+::string \&}]{comment, }
+\item[{E\+N\+UM}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a6a684727a7e58fe41fba41b54ee95e7c}{}\label{structalps_1_1Externalizable_a6a684727a7e58fe41fba41b54ee95e7c}
+enum version \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!assign@{assign}}
+\index{assign@{assign}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{assign(const alps\+::\+Externalizable $\ast$other)=0}{assign(const alps::Externalizable *other)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void alps\+::\+Externalizable\+::assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf alps\+::\+Externalizable} $\ast$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{structalps_1_1Externalizable_a5c289543724fdeff9b260f0d0db90f79}{}\label{structalps_1_1Externalizable_a5c289543724fdeff9b260f0d0db90f79}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & assigned value. It must be dynamic-\/castable to the assignee class. \\
+\hline
+\end{DoxyParams}
+\index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+child\+\_\+element@{get\+\_\+child\+\_\+element}}
+\index{get\+\_\+child\+\_\+element@{get\+\_\+child\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+child\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, Externalizable $\ast$child, bool ignore\+\_\+missing=false, bool optional=false)}{get_child_element(YAML::Node *parent, const std::string &tag, Externalizable *child, bool ignore_missing=false, bool optional=false)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+child\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{{\bf Externalizable} $\ast$}]{child, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a03e9ab31323b870ba49408a9cd2720bc}{}\label{structalps_1_1Externalizable_a03e9ab31323b870ba49408a9cd2720bc}
+child \hyperlink{structalps_1_1Externalizable}{Externalizable} version \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}}
+\index{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, T $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, T value=0)}{get_element(YAML::Node *parent, const std::string &tag, T *out, bool ignore_missing=false, bool optional=false, T value=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{T $\ast$}]{out, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}, }
+\item[{T}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a880beff849c59fe09e4be608901ca5e3}{}\label{structalps_1_1Externalizable_a880beff849c59fe09e4be608901ca5e3}
+Only declaration in header. Explicitly instantiated in cpp for each type this func handles. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}}
+\index{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, std\+::string $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, const char $\ast$value="""")}{get_element(YAML::Node *parent, const std::string &tag, std::string *out, bool ignore_missing=false, bool optional=false, const char *value="")}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{std\+::string $\ast$}]{out, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}, }
+\item[{const char $\ast$}]{value = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a53b7384d8b707667d22cf293a4307a73}{}\label{structalps_1_1Externalizable_a53b7384d8b707667d22cf293a4307a73}
+string type is bit special. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+element@{get\+\_\+element}}
+\index{get\+\_\+element@{get\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, std\+::vector$<$ T $>$ $\ast$out, bool ignore\+\_\+missing=false, bool optional=false)}{get_element(YAML::Node *parent, const std::string &tag, std::vector< T > *out, bool ignore_missing=false, bool optional=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{std\+::vector$<$ T $>$ $\ast$}]{out, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a02ca000360b9ab5fc30b4cf30ade1354}{}\label{structalps_1_1Externalizable_a02ca000360b9ab5fc30b4cf30ade1354}
+vector version. Only declaration in header. Explicitly instantiated in cpp for each type this func handles. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+enum\+\_\+element@{get\+\_\+enum\+\_\+element}}
+\index{get\+\_\+enum\+\_\+element@{get\+\_\+enum\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+enum\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, E\+N\+U\+M $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, E\+N\+U\+M default\+\_\+value=static\+\_\+cast$<$ E\+N\+U\+M $>$(0))}{get_enum_element(YAML::Node *parent, const std::string &tag, ENUM *out, bool ignore_missing=false, bool optional=false, ENUM default_value=static_cast< ENUM >(0))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E\+N\+UM $>$ static {\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+enum\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{E\+N\+UM $\ast$}]{out, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}, }
+\item[{E\+N\+UM}]{default\+\_\+value = {\ttfamily static\+\_\+cast$<$ENUM$>$(0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a88cbbc7033b72b78fea4dd6fc8ca1402}{}\label{structalps_1_1Externalizable_a88cbbc7033b72b78fea4dd6fc8ca1402}
+enum version \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+size\+\_\+element@{get\+\_\+size\+\_\+element}}
+\index{get\+\_\+size\+\_\+element@{get\+\_\+size\+\_\+element}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+size\+\_\+element(\+Y\+A\+M\+L\+::\+Node $\ast$parent, const std\+::string \&tag, S\+I\+Z\+E $\ast$out, bool ignore\+\_\+missing=false, bool optional=false, S\+I\+Z\+E default\+\_\+value=static\+\_\+cast$<$ S\+I\+Z\+E $>$(0))}{get_size_element(YAML::Node *parent, const std::string &tag, SIZE *out, bool ignore_missing=false, bool optional=false, SIZE default_value=static_cast< SIZE >(0))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S\+I\+ZE $>$ static {\bf Error\+Stack} alps\+::\+Externalizable\+::get\+\_\+size\+\_\+element (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{parent, }
+\item[{const std\+::string \&}]{tag, }
+\item[{S\+I\+ZE $\ast$}]{out, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}, }
+\item[{bool}]{optional = {\ttfamily false}, }
+\item[{S\+I\+ZE}]{default\+\_\+value = {\ttfamily static\+\_\+cast$<$SIZE$>$(0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{structalps_1_1Externalizable_a1a6df09ad89c2154cc94de784127ec1f}{}\label{structalps_1_1Externalizable_a1a6df09ad89c2154cc94de784127ec1f}
+size version \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}}
+\index{get\+\_\+tag\+\_\+name@{get\+\_\+tag\+\_\+name}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{get\+\_\+tag\+\_\+name() const =0}{get_tag_name() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ alps\+::\+Externalizable\+::get\+\_\+tag\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{structalps_1_1Externalizable_a865f0f3245014aafdd3133cc9d912cc5}{}\label{structalps_1_1Externalizable_a865f0f3245014aafdd3133cc9d912cc5}
+We might want to give a different name for same externalizable objects, so this is used only when it is the root element of yaml. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load@{load}}
+\index{load@{load}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{load(\+Y\+A\+M\+L\+::\+Node $\ast$node, bool ignore\+\_\+missing=false)=0}{load(YAML::Node *node, bool ignore_missing=false)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Error\+Stack} alps\+::\+Externalizable\+::load (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Node $\ast$}]{node, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{structalps_1_1Externalizable_a3f29cb41a5b5201a1316480087902eed}{}\label{structalps_1_1Externalizable_a3f29cb41a5b5201a1316480087902eed}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & the Y\+A\+ML node that represents this object\\
+\hline
+\end{DoxyParams}
+Expect errors due to missing-\/elements, out-\/of-\/range values, etc. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+command\+\_\+options@{load\+\_\+from\+\_\+command\+\_\+options}}
+\index{load\+\_\+from\+\_\+command\+\_\+options@{load\+\_\+from\+\_\+command\+\_\+options}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{load\+\_\+from\+\_\+command\+\_\+options(int argc, char $\ast$argv[])}{load_from_command_options(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::load\+\_\+from\+\_\+command\+\_\+options (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{structalps_1_1Externalizable_abf8a8a68cc0fc81aa8fec5b7d4092253}{}\label{structalps_1_1Externalizable_abf8a8a68cc0fc81aa8fec5b7d4092253}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & number of strings that make up the command line. \\
+\hline
+\mbox{\tt in}  & {\em argv} & arguments passed to a program through the command line.\\
+\hline
+\end{DoxyParams}
+Expect errors due to missing-\/elements, out-\/of-\/range values, etc. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}}
+\index{load\+\_\+from\+\_\+file@{load\+\_\+from\+\_\+file}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{load\+\_\+from\+\_\+file(const fs\+::path \&path, bool ignore\+\_\+missing=false)}{load_from_file(const fs::path &path, bool ignore_missing=false)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::load\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const fs\+::path \&}]{path, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{structalps_1_1Externalizable_a5793ccfb5fd521a3eb8dbde9764c1564}{}\label{structalps_1_1Externalizable_a5793ccfb5fd521a3eb8dbde9764c1564}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & path of the Y\+A\+ML file. \\
+\hline
+\mbox{\tt in}  & {\em ignore\+\_\+missing} & whether to ignore missing options.\\
+\hline
+\end{DoxyParams}
+Expect errors due to missing-\/elements, out-\/of-\/range values, etc. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!load\+\_\+from\+\_\+string@{load\+\_\+from\+\_\+string}}
+\index{load\+\_\+from\+\_\+string@{load\+\_\+from\+\_\+string}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{load\+\_\+from\+\_\+string(const std\+::string \&yaml, bool ignore\+\_\+missing=false)}{load_from_string(const std::string &yaml, bool ignore_missing=false)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::load\+\_\+from\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{yaml, }
+\item[{bool}]{ignore\+\_\+missing = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{structalps_1_1Externalizable_a3841c50c774b365f37d5adffd73d9951}{}\label{structalps_1_1Externalizable_a3841c50c774b365f37d5adffd73d9951}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em yaml} & Y\+A\+ML string. \\
+\hline
+\mbox{\tt in}  & {\em ignore\+\_\+missing} & whether to ignore missing options.\\
+\hline
+\end{DoxyParams}
+Expect errors due to missing-\/elements, out-\/of-\/range values, etc. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save@{save}}
+\index{save@{save}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{save(\+Y\+A\+M\+L\+::\+Emitter $\ast$out) const =0}{save(YAML::Emitter *out) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Error\+Stack} alps\+::\+Externalizable\+::save (
+\begin{DoxyParamCaption}
+\item[{Y\+A\+M\+L\+::\+Emitter $\ast$}]{out}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{structalps_1_1Externalizable_a17a3cdc895ad343d18fd37ff6efd0aef}{}\label{structalps_1_1Externalizable_a17a3cdc895ad343d18fd37ff6efd0aef}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & the Y\+A\+ML node that represents this object\\
+\hline
+\end{DoxyParams}
+Expect only out-\/of-\/memory error. We receive the Y\+A\+ML node this object will represent, so this method does not determine the Y\+A\+ML node name of itself. The parent object determines children\textquotesingle{}s tag names because one parent object might have multiple child objects of the same type with different Y\+A\+ML element name. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save\+\_\+to\+\_\+file@{save\+\_\+to\+\_\+file}}
+\index{save\+\_\+to\+\_\+file@{save\+\_\+to\+\_\+file}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{save\+\_\+to\+\_\+file(const fs\+::path \&path) const }{save_to_file(const fs::path &path) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Stack} alps\+::\+Externalizable\+::save\+\_\+to\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const fs\+::path \&}]{path}
+\end{DoxyParamCaption}
+) const}\hypertarget{structalps_1_1Externalizable_a307766812750ba20517950d0caf554ae}{}\label{structalps_1_1Externalizable_a307766812750ba20517950d0caf554ae}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & path of the Y\+A\+ML file.\\
+\hline
+\end{DoxyParams}
+If the file exists, this method atomically overwrites it via P\+O\+S\+IX\textquotesingle{}s atomic rename semantics. If the parent folder doesn\textquotesingle{}t exist, this method automatically creates the folder. Expect errors due to file-\/permission (and other file I/O issue), out-\/of-\/memory, etc. \index{alps\+::\+Externalizable@{alps\+::\+Externalizable}!save\+\_\+to\+\_\+stream@{save\+\_\+to\+\_\+stream}}
+\index{save\+\_\+to\+\_\+stream@{save\+\_\+to\+\_\+stream}!alps\+::\+Externalizable@{alps\+::\+Externalizable}}
+\subsubsection[{\texorpdfstring{save\+\_\+to\+\_\+stream(std\+::ostream $\ast$ptr) const }{save_to_stream(std::ostream *ptr) const }}]{\setlength{\rightskip}{0pt plus 5cm}void alps\+::\+Externalizable\+::save\+\_\+to\+\_\+stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream $\ast$}]{ptr}
+\end{DoxyParamCaption}
+) const}\hypertarget{structalps_1_1Externalizable_abba9ffdd2e669137e214e5a499860b04}{}\label{structalps_1_1Externalizable_abba9ffdd2e669137e214e5a499860b04}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ptr} & ostream to write to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/common/externalizable.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/common/externalizable.\+cc\end{DoxyCompactItemize}

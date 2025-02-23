@@ -1,0 +1,71 @@
+\hypertarget{classalps_1_1Region}{}\section{alps\+:\+:Region Class Reference}
+\label{classalps_1_1Region}\index{alps\+::\+Region@{alps\+::\+Region}}
+
+
+Persistent memory region.  
+
+
+
+
+{\ttfamily \#include $<$region.\+hh$>$}
+
+
+
+Collaboration diagram for alps\+:\+:Region\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classalps_1_1Region__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Region} (\hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$\hyperlink{classalps_1_1Region_a0468534d0b84744f4ae689afb13ae0b5}{address\+\_\+space}, \hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$region\+\_\+file)\hypertarget{classalps_1_1Region_a49be6b716e4cd1ac246c51c975511438}{}\label{classalps_1_1Region_a49be6b716e4cd1ac246c51c975511438}
+
+\item 
+\hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$ \hyperlink{classalps_1_1Region_ace503ff06288ae02cae4f9b2b7b391d8}{file} ()\hypertarget{classalps_1_1Region_ace503ff06288ae02cae4f9b2b7b391d8}{}\label{classalps_1_1Region_ace503ff06288ae02cae4f9b2b7b391d8}
+
+\begin{DoxyCompactList}\small\item\em Returns the region file backing this region. \end{DoxyCompactList}\item 
+loff\+\_\+t {\bfseries length} ()\hypertarget{classalps_1_1Region_affad93da622e09a41e9c5a78cf724fac}{}\label{classalps_1_1Region_affad93da622e09a41e9c5a78cf724fac}
+
+\item 
+Region\+Id \hyperlink{classalps_1_1Region_a44af36c129f944a859a1ef45bd1ddf74}{id} ()\hypertarget{classalps_1_1Region_a44af36c129f944a859a1ef45bd1ddf74}{}\label{classalps_1_1Region_a44af36c129f944a859a1ef45bd1ddf74}
+
+\begin{DoxyCompactList}\small\item\em Returns a global identifier identifying the region. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$ \hyperlink{classalps_1_1Region_a0468534d0b84744f4ae689afb13ae0b5}{address\+\_\+space} ()\hypertarget{classalps_1_1Region_a0468534d0b84744f4ae689afb13ae0b5}{}\label{classalps_1_1Region_a0468534d0b84744f4ae689afb13ae0b5}
+
+\begin{DoxyCompactList}\small\item\em Returns the Address Space object the region is mapped to. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1Region_a61ad82fe33c08b158c0ec5dec9403f8c}{set\+\_\+interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, const std\+::vector$<$ Interleave\+Group $>$ \&vig)\hypertarget{classalps_1_1Region_a61ad82fe33c08b158c0ec5dec9403f8c}{}\label{classalps_1_1Region_a61ad82fe33c08b158c0ec5dec9403f8c}
+
+\begin{DoxyCompactList}\small\item\em Sets interleave group hint for pages mapped in the range \mbox{[}{\itshape offset}, {\itshape offset} + {\itshape length}). \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1Region_adf07690fef596f4839404b3651019640}{interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, std\+::vector$<$ Interleave\+Group $>$ $\ast$vig)\hypertarget{classalps_1_1Region_adf07690fef596f4839404b3651019640}{}\label{classalps_1_1Region_adf07690fef596f4839404b3651019640}
+
+\begin{DoxyCompactList}\small\item\em Returns assigned interleave group for pages mapped in the range \mbox{[}{\itshape offset}, {\itshape offset} + {\itshape length}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Region\+Id {\bfseries region\+\_\+id\+\_\+}\hypertarget{classalps_1_1Region_a0742daaa798c7f500c3cf6ec624a2a1c}{}\label{classalps_1_1Region_a0742daaa798c7f500c3cf6ec624a2a1c}
+
+\item 
+\hyperlink{classalps_1_1AddressSpace}{Address\+Space} $\ast$ {\bfseries address\+\_\+space\+\_\+}\hypertarget{classalps_1_1Region_a58a86cf05f9f3f6de58fb05be7a5e0ec}{}\label{classalps_1_1Region_a58a86cf05f9f3f6de58fb05be7a5e0ec}
+
+\item 
+loff\+\_\+t \hyperlink{classalps_1_1Region_ac55de996c3c976303cfe396034565f12}{length\+\_\+}\hypertarget{classalps_1_1Region_ac55de996c3c976303cfe396034565f12}{}\label{classalps_1_1Region_ac55de996c3c976303cfe396034565f12}
+
+\begin{DoxyCompactList}\small\item\em cached value of the backing file\textquotesingle{}s length \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$ \hyperlink{classalps_1_1Region_a4212a00156815c7d00b221086e9d30f3}{file\+\_\+}\hypertarget{classalps_1_1Region_a4212a00156815c7d00b221086e9d30f3}{}\label{classalps_1_1Region_a4212a00156815c7d00b221086e9d30f3}
+
+\begin{DoxyCompactList}\small\item\em the file backing the persistent memory region \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A base class that represents a persistent memory region in the logical address space (\hyperlink{classalps_1_1AddressSpace}{alps\+::\+Address\+Space}).
+
+A region is instantiated by mapping (and optionally binding) a region file (or a set of region files) to an \hyperlink{classalps_1_1AddressSpace}{Address\+Space} object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/pegasus/region.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/region.\+cc\end{DoxyCompactItemize}

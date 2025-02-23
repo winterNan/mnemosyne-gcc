@@ -1,0 +1,81 @@
+\hypertarget{classalps_1_1RegionFile}{}\section{alps\+:\+:Region\+File Class Reference}
+\label{classalps_1_1RegionFile}\index{alps\+::\+Region\+File@{alps\+::\+Region\+File}}
+
+
+Persistent region file.  
+
+
+
+
+{\ttfamily \#include $<$region\+\_\+file.\+hh$>$}
+
+
+
+Inheritance diagram for alps\+:\+:Region\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classalps_1_1RegionFile__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unlink} ()=0\hypertarget{classalps_1_1RegionFile_aebc5927a8ea77dd8b5e5dacade6caadb}{}\label{classalps_1_1RegionFile_aebc5927a8ea77dd8b5e5dacade6caadb}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries close} ()=0\hypertarget{classalps_1_1RegionFile_a8173d825ad1971a27f3c32063c5e3fae}{}\label{classalps_1_1RegionFile_a8173d825ad1971a27f3c32063c5e3fae}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries truncate} (loff\+\_\+t length)=0\hypertarget{classalps_1_1RegionFile_ac03917df3c8e74f7110b7c8226c69e6f}{}\label{classalps_1_1RegionFile_ac03917df3c8e74f7110b7c8226c69e6f}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries size} (loff\+\_\+t $\ast$length)=0\hypertarget{classalps_1_1RegionFile_a8ca8db1813b07d36eef4c04221724f47}{}\label{classalps_1_1RegionFile_a8ca8db1813b07d36eef4c04221724f47}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries map} (void $\ast$addr\+\_\+hint, size\+\_\+t length, int prot, int flags, loff\+\_\+t offset, void $\ast$$\ast$mapped\+\_\+addr)=0\hypertarget{classalps_1_1RegionFile_a10d615eb7caa3613f75bd36b62ccb5d8}{}\label{classalps_1_1RegionFile_a10d615eb7caa3613f75bd36b62ccb5d8}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries unmap} (void $\ast$addr, size\+\_\+t length)=0\hypertarget{classalps_1_1RegionFile_a0b116f89f3f3ff685d7b942e52f64cb5}{}\label{classalps_1_1RegionFile_a0b116f89f3f3ff685d7b942e52f64cb5}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries getxattr} (const char $\ast$name, void $\ast$value, size\+\_\+t size)=0\hypertarget{classalps_1_1RegionFile_a93bd994b1d794e52dae032bc1a61035d}{}\label{classalps_1_1RegionFile_a93bd994b1d794e52dae032bc1a61035d}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries setxattr} (const char $\ast$name, const void $\ast$value, size\+\_\+t size, int flags)=0\hypertarget{classalps_1_1RegionFile_a6f39ed54e11e78196fefdae39fe124cb}{}\label{classalps_1_1RegionFile_a6f39ed54e11e78196fefdae39fe124cb}
+
+\item 
+virtual size\+\_\+t {\bfseries booksize} ()=0\hypertarget{classalps_1_1RegionFile_aeaacd93f0bbb9fa9f0d27a7c743b91b5}{}\label{classalps_1_1RegionFile_aeaacd93f0bbb9fa9f0d27a7c743b91b5}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries create} (mode\+\_\+t mode)=0\hypertarget{classalps_1_1RegionFile_a5e8d30c5750eeda8d90778b57719a4e2}{}\label{classalps_1_1RegionFile_a5e8d30c5750eeda8d90778b57719a4e2}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags, mode\+\_\+t mode)=0\hypertarget{classalps_1_1RegionFile_af452bd729854c0ed2b37a7e18ce9b559}{}\label{classalps_1_1RegionFile_af452bd729854c0ed2b37a7e18ce9b559}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries open} (int flags)=0\hypertarget{classalps_1_1RegionFile_a906925033130d1fa0cc679b4d497c6e2}{}\label{classalps_1_1RegionFile_a906925033130d1fa0cc679b4d497c6e2}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries set\+\_\+interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, const std\+::vector$<$ Interleave\+Group $>$ \&vig)\hypertarget{classalps_1_1RegionFile_a6c291d58ef854587c8e50f6e3e3a8f88}{}\label{classalps_1_1RegionFile_a6c291d58ef854587c8e50f6e3e3a8f88}
+
+\item 
+virtual \hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries interleave\+\_\+group} (loff\+\_\+t offset, loff\+\_\+t length, std\+::vector$<$ Interleave\+Group $>$ $\ast$vig)\hypertarget{classalps_1_1RegionFile_a62642f3729211b7e02239f6d099ab3e8}{}\label{classalps_1_1RegionFile_a62642f3729211b7e02239f6d099ab3e8}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Region\+File\+Factory}\hypertarget{classalps_1_1RegionFile_a76c88d2d08e2b3f7c7245690dfa65d84}{}\label{classalps_1_1RegionFile_a76c88d2d08e2b3f7c7245690dfa65d84}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This base class implements a common interface to region files backed by different types of memory file systems (e.\+g., T\+M\+P\+FS, L\+FS, E\+X\+T4+\+D\+AX). The A\+PI method names are self-\/described; they do what you expect them to do. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/region\+\_\+file.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/region\+\_\+file.\+cc\end{DoxyCompactItemize}

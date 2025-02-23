@@ -1,0 +1,146 @@
+\hypertarget{classalps_1_1AddressSpace}{}\section{alps\+:\+:Address\+Space Class Reference}
+\label{classalps_1_1AddressSpace}\index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+
+
+Logical address space.  
+
+
+
+
+{\ttfamily \#include $<$address\+\_\+space.\+hh$>$}
+
+
+
+Collaboration diagram for alps\+:\+:Address\+Space\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classalps_1_1AddressSpace__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Address\+Space} (const \hyperlink{structalps_1_1AddressSpaceOptions}{Address\+Space\+Options} \&address\+\_\+space\+\_\+options)\hypertarget{classalps_1_1AddressSpace_a4111cdf0156a0d6d0a865bef8d6a97b3}{}\label{classalps_1_1AddressSpace_a4111cdf0156a0d6d0a865bef8d6a97b3}
+
+\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} {\bfseries init} ()\hypertarget{classalps_1_1AddressSpace_aacc0bbb475a53159d582cb3c9a15109a}{}\label{classalps_1_1AddressSpace_aacc0bbb475a53159d582cb3c9a15109a}
+
+\item 
+{\footnotesize template$<$class RegionT $>$ }\\\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1AddressSpace_a91628b6c9afb5796c4745d10d721c7df}{map} (\hyperlink{classalps_1_1RegionFile}{Region\+File} $\ast$region\+\_\+file, RegionT $\ast$$\ast$pregion)
+\begin{DoxyCompactList}\small\item\em Maps a region file into the global address space. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class RegionT $>$ }\\\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1AddressSpace_a94f33857ada089b1fb35bb7b3efc22f0}{bind} (RegionT $\ast$\hyperlink{classalps_1_1AddressSpace_a3f32659a01f535e8b787556c08270a68}{region}, Region\+Id region\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Binds a region to a shorthand name identifier. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class RegionT $>$ }\\\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1AddressSpace_a23441f4279dbbf6f9d6fdb7da5c0626a}{unmap} (RegionT $\ast$\hyperlink{classalps_1_1AddressSpace_a3f32659a01f535e8b787556c08270a68}{region})
+\begin{DoxyCompactList}\small\item\em Unmaps a previously mapped region. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1Region}{Region} $\ast$ \hyperlink{classalps_1_1AddressSpace_a3f32659a01f535e8b787556c08270a68}{region} (Region\+Id region\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Returns region identified by region identifier {\itshape region\+\_\+id}. \end{DoxyCompactList}\item 
+\hyperlink{group__ERRORCODES_ga6263a3c9a0b8d36aea21cdd835ac99fe}{Error\+Code} \hyperlink{classalps_1_1AddressSpace_ae9c5ec2ca94b68aa80643676c3029de0}{rtrans} (void $\ast$vaddr, \hyperlink{classalps_1_1Region}{Region} $\ast$$\ast$pregion, Linear\+Addr $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Performs reverse translation of a virtual address to a $<${\itshape pregion}, {\itshape offset$>$} pair. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1MemoryManager}{Memory\+Manager} $\ast$ {\bfseries mm} ()\hypertarget{classalps_1_1AddressSpace_ac250b1b2b365f21f489a99e36122c679}{}\label{classalps_1_1AddressSpace_ac250b1b2b365f21f489a99e36122c679}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structalps_1_1AddressSpaceOptions}{Address\+Space\+Options} \hyperlink{classalps_1_1AddressSpace_ae41a0caf654a278553e05427538cd377}{address\+\_\+space\+\_\+options\+\_\+}\hypertarget{classalps_1_1AddressSpace_ae41a0caf654a278553e05427538cd377}{}\label{classalps_1_1AddressSpace_ae41a0caf654a278553e05427538cd377}
+
+\begin{DoxyCompactList}\small\item\em Address space runtime options. \end{DoxyCompactList}\item 
+\hyperlink{classalps_1_1MemoryManager}{Memory\+Manager} $\ast$ \hyperlink{classalps_1_1AddressSpace_ab4e162ae17ddc0c15873e910c075169d}{mm\+\_\+}\hypertarget{classalps_1_1AddressSpace_ab4e162ae17ddc0c15873e910c075169d}{}\label{classalps_1_1AddressSpace_ab4e162ae17ddc0c15873e910c075169d}
+
+\begin{DoxyCompactList}\small\item\em Memory manager mapping regions into virtual memory. \end{DoxyCompactList}\item 
+std\+::multimap$<$ Region\+Id, \hyperlink{classalps_1_1Region}{Region} $\ast$ $>$ \hyperlink{classalps_1_1AddressSpace_a6cba6ed6bb0ffee7682fc665b4eaa035}{regions\+\_\+}\hypertarget{classalps_1_1AddressSpace_a6cba6ed6bb0ffee7682fc665b4eaa035}{}\label{classalps_1_1AddressSpace_a6cba6ed6bb0ffee7682fc665b4eaa035}
+
+\begin{DoxyCompactList}\small\item\em A table mapping region\+\_\+id to region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a logical address space where region files can be bound and mapped to. There should be a single \hyperlink{classalps_1_1AddressSpace}{Address\+Space} object instance per process even though nothing prevents a user from having multiple instances.
+
+Mapping and binding a region file to a global address space results in a named region. The global address space supports different modes of region mappings to allow users select different performance and flexibility tradeoffs. These modes are supported through template polymorphism rather than virtual polymorphish to reduce the runtime overhead for accessing regions.
+
+Mapping modes include\+:
+\begin{DoxyItemize}
+\item single segment direct relocatable mapping, where the whole region is directly mapped to an arbitraty address. This mode enables using relative offset pointers (similar to offset\+\_\+ptr) for flexible mapping and addressing at the expense of performance (i.\+e., some overhead to perform simple pointer arithmetic relative to the base of region). 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!bind@{bind}}
+\index{bind@{bind}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+\subsubsection[{\texorpdfstring{bind(\+Region\+T $\ast$region, Region\+Id region\+\_\+id)}{bind(RegionT *region, RegionId region_id)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class RegionT $>$ {\bf Error\+Code} alps\+::\+Address\+Space\+::bind (
+\begin{DoxyParamCaption}
+\item[{RegionT $\ast$}]{region, }
+\item[{Region\+Id}]{region\+\_\+id}
+\end{DoxyParamCaption}
+)}\hypertarget{classalps_1_1AddressSpace_a94f33857ada089b1fb35bb7b3efc22f0}{}\label{classalps_1_1AddressSpace_a94f33857ada089b1fb35bb7b3efc22f0}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & The region object to bind. \\
+\hline
+\mbox{\tt in}  & {\em region\+\_\+id} & The shorthand name identifier to bind the region to.\\
+\hline
+\end{DoxyParams}
+After binding, pointers can identify the region using the shorthand name identifier. \index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!map@{map}}
+\index{map@{map}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+\subsubsection[{\texorpdfstring{map(\+Region\+File $\ast$region\+\_\+file, Region\+T $\ast$$\ast$pregion)}{map(RegionFile *region_file, RegionT **pregion)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class RegionT $>$ template {\bf Error\+Code} alps\+::\+Address\+Space\+::map$<$ {\bf R\+Region} $>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Region\+File} $\ast$}]{region\+\_\+file, }
+\item[{RegionT $\ast$$\ast$}]{pregion}
+\end{DoxyParamCaption}
+)}\hypertarget{classalps_1_1AddressSpace_a91628b6c9afb5796c4745d10d721c7df}{}\label{classalps_1_1AddressSpace_a91628b6c9afb5796c4745d10d721c7df}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region\+\_\+file} & The region file to map into the global address space. \\
+\hline
+\mbox{\tt out}  & {\em pregion} & An object representing the region of the global address space where the file is mapped to. \\
+\hline
+\end{DoxyParams}
+\index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!region@{region}}
+\index{region@{region}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+\subsubsection[{\texorpdfstring{region(\+Region\+Id region\+\_\+id)}{region(RegionId region_id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Region} $\ast$ alps\+::\+Address\+Space\+::region (
+\begin{DoxyParamCaption}
+\item[{Region\+Id}]{region\+\_\+id}
+\end{DoxyParamCaption}
+)}\hypertarget{classalps_1_1AddressSpace_a3f32659a01f535e8b787556c08270a68}{}\label{classalps_1_1AddressSpace_a3f32659a01f535e8b787556c08270a68}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region\+\_\+id} & \hyperlink{classalps_1_1Region}{Region} identifier \\
+\hline
+\end{DoxyParams}
+\index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!rtrans@{rtrans}}
+\index{rtrans@{rtrans}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+\subsubsection[{\texorpdfstring{rtrans(void $\ast$vaddr, Region $\ast$$\ast$pregion, Linear\+Addr $\ast$offset)}{rtrans(void *vaddr, Region **pregion, LinearAddr *offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code} alps\+::\+Address\+Space\+::rtrans (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{vaddr, }
+\item[{{\bf Region} $\ast$$\ast$}]{pregion, }
+\item[{Linear\+Addr $\ast$}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{classalps_1_1AddressSpace_ae9c5ec2ca94b68aa80643676c3029de0}{}\label{classalps_1_1AddressSpace_ae9c5ec2ca94b68aa80643676c3029de0}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vaddr} & The virtual address to reverse translate. \\
+\hline
+\mbox{\tt out}  & {\em pregion} & The region the virtual address is mapped to. \\
+\hline
+\mbox{\tt out}  & {\em offset} & The offset relative to the region base. \\
+\hline
+\end{DoxyParams}
+\index{alps\+::\+Address\+Space@{alps\+::\+Address\+Space}!unmap@{unmap}}
+\index{unmap@{unmap}!alps\+::\+Address\+Space@{alps\+::\+Address\+Space}}
+\subsubsection[{\texorpdfstring{unmap(\+Region\+T $\ast$region)}{unmap(RegionT *region)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class RegionT $>$ template {\bf Error\+Code} alps\+::\+Address\+Space\+::unmap$<$ {\bf R\+Region} $>$ (
+\begin{DoxyParamCaption}
+\item[{RegionT $\ast$}]{region}
+\end{DoxyParamCaption}
+)}\hypertarget{classalps_1_1AddressSpace_a23441f4279dbbf6f9d6fdb7da5c0626a}{}\label{classalps_1_1AddressSpace_a23441f4279dbbf6f9d6fdb7da5c0626a}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & The region object to unmap. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/pegasus/address\+\_\+space.\+hh\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/src/pegasus/address\+\_\+space.\+cc\end{DoxyCompactItemize}

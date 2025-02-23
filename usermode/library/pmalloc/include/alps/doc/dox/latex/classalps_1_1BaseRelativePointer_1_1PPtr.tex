@@ -1,0 +1,95 @@
+\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr}{}\section{alps\+:\+:Base\+Relative\+Pointer\+:\+:P\+Ptr$<$ Region\+Type, Pointed\+Type $>$ Class Template Reference}
+\label{classalps_1_1BaseRelativePointer_1_1PPtr}\index{alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$@{alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$}}
+
+
+Represents a linear persistent pointer.  
+
+
+
+
+{\ttfamily \#include $<$pointer.\+hh$>$}
+
+
+
+Collaboration diagram for alps\+:\+:Base\+Relative\+Pointer\+:\+:P\+Ptr$<$ Region\+Type, Pointed\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classalps_1_1BaseRelativePointer_1_1PPtr__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Pointed\+Type $\ast$ {\bfseries pointer}\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a5f717b3a58c7c552bf047eea9f22fb6c}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a5f717b3a58c7c552bf047eea9f22fb6c}
+
+\item 
+typedef boost\+::add\+\_\+reference$<$ Pointed\+Type $>$\+::type {\bfseries reference}\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a88f51b3310a8e4422bf1391f1a88d8d9}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a88f51b3310a8e4422bf1391f1a88d8d9}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries P\+Ptr} (Linear\+Addr offset)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a3d30f50e8ff9606e1a70e9243e7435c5}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a3d30f50e8ff9606e1a70e9243e7435c5}
+
+\item 
+{\bfseries P\+Ptr} (const \hyperlink{classalps_1_1BaseRelativePointer_1_1PPtr}{P\+Ptr}$<$ Region\+Type, void $>$ \&other)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a72d3074d889b18799a26545ff70fb9fc}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a72d3074d889b18799a26545ff70fb9fc}
+
+\item 
+{\bfseries P\+Ptr} (\hyperlink{classalps_1_1BaseRelativePointer_1_1IPtr}{I\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ \&other)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_af2c23a1a1e4a25b955c0a19e742734f1}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_af2c23a1a1e4a25b955c0a19e742734f1}
+
+\item 
+{\bfseries operator I\+Ptr$<$ Region\+Type, Pointed\+Type $>$} ()\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_acea6bf55fc7565381b9dde632f0d8efc}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_acea6bf55fc7565381b9dde632f0d8efc}
+
+\item 
+\hyperlink{classalps_1_1BaseRelativePointer_1_1PPtr}{P\+Ptr} \& {\bfseries operator=} (Pointed\+Type $\ast$from)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_aafa170c5c498ad4f508f88fc0ae6ec38}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_aafa170c5c498ad4f508f88fc0ae6ec38}
+
+\item 
+\hyperlink{classalps_1_1BaseRelativePointer_1_1PPtr}{P\+Ptr} \& {\bfseries operator=} (const \hyperlink{classalps_1_1BaseRelativePointer_1_1IPtr}{I\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ \&other)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a788caa799b260204b7d39fe6de99fd0f}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a788caa799b260204b7d39fe6de99fd0f}
+
+\item 
+\hyperlink{classalps_1_1BaseRelativePointer_1_1PPtr}{P\+Ptr} \& {\bfseries operator=} (const \hyperlink{classalps_1_1BaseRelativePointer_1_1TPtr}{T\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ \&tptr)\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_ad802b446e818406ec4295efade695a1e}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_ad802b446e818406ec4295efade695a1e}
+
+\item 
+pointer {\bfseries get} () const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a4a0ca4093873f2dab30e990cd8174dd7}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a4a0ca4093873f2dab30e990cd8174dd7}
+
+\item 
+pointer {\bfseries operator-\/$>$} () const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_ac823159a9ea8a2f901ff061c59664565}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_ac823159a9ea8a2f901ff061c59664565}
+
+\item 
+reference {\bfseries operator$\ast$} () const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a4cd8e0384027d714e3ceb5c217db38ad}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a4cd8e0384027d714e3ceb5c217db38ad}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classalps_1_1BaseRelativePointer_1_1IPtr}{I\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ \&other\+\_\+iptr) const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_adbaccb816260a3431aaa33c12397e0c6}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_adbaccb816260a3431aaa33c12397e0c6}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classalps_1_1BaseRelativePointer_1_1IPtr}{I\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ \&other\+\_\+iptr) const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a20a5a643be92c5cd98ad2b3496831c33}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a20a5a643be92c5cd98ad2b3496831c33}
+
+\item 
+reference {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::ptrdiff\+\_\+t idx) const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a7e32a2e734ef7725c125f24f73d82ce7}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a7e32a2e734ef7725c125f24f73d82ce7}
+
+\item 
+\hyperlink{classalps_1_1BaseRelativePointer_1_1TPtr}{T\+Ptr}$<$ Region\+Type, Pointed\+Type $>$ {\bfseries operator+} (std\+::ptrdiff\+\_\+t offset) const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a859680f5e1d4838dd30d09e8c17f3a71}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a859680f5e1d4838dd30d09e8c17f3a71}
+
+\item 
+void {\bfseries stream\+\_\+to} (std\+::ostream \&os) const \hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_ac840656da125bdf6d480a5794e7d13ee}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_ac840656da125bdf6d480a5794e7d13ee}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structalps_1_1PAddr}{P\+Addr} {\bfseries addr\+\_\+}\hypertarget{classalps_1_1BaseRelativePointer_1_1PPtr_a90eca717658a9ca6943ae4172393a759}{}\label{classalps_1_1BaseRelativePointer_1_1PPtr_a90eca717658a9ca6943ae4172393a759}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Region\+Type, typename Pointed\+Type$>$\\*
+class alps\+::\+Base\+Relative\+Pointer\+::\+P\+Ptr$<$ Region\+Type, Pointed\+Type $>$}
+
+Represents a smart persistent pointer that points to a persistent logical linear address (i.\+e., the pointer stores a persistent logical linear address). The pointer is valid for exchanging and sharing a reference to memory location among multiple processes mapping a region. It works with both fixed virtual address mappings and relocatable regions. It does not support inter-\/region pointers. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/yuan/\+Benchmarks/whisper/mnemosyne-\/gcc/usermode/library/pmalloc/include/alps/include/alps/pegasus/pointer.\+hh\end{DoxyCompactItemize}
